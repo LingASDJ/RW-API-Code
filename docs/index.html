@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>RW-Code-API</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+</head>
+
+<body>
+  <div data-app id="main">
+    <noscript>
+      <div class="nojs">
+        <div class="nojs-content">
+          <h1>⚠️ JavaScript-JS已被禁用</h1>
+          <p>
+            很抱歉，当你看见这个界面，代表你的浏览器可能尚未启用JS,因此我们无法构建<font color="#00cc00">[铁锈战争API-Code]</font>页面。
+          </p>
+          <p>
+            若您确信自己已开启JS技术，那么可能是您的浏览器不支持；请使用我们为你推荐的浏览器进行使用。
+          </p>
+          <hr />
+          <a class="nojs-btn" href="https://viayoo.com/zh-cn/" target="_blank" rel="noopener">Via-大道至简 (手机端)</a>
+          <a class="nojs-btn" href="https://www.google.cn/chrome/" target="_blank" rel="noopener">Google Chrome
+            (PC端)</a>
+          <br /><br />
+          <p>
+          <h1>RTS-API-Code-2023</h1>
+          </p>
+        </div>
+      </div>
+    </noscript>
+    <style>
+      /* JS报错页面优化升级 */
+      .nojs {
+        -webkit-text-size-adjust: 100%;
+        font-size: 16px;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        box-sizing: inherit;
+        padding: 0;
+        margin: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 9999999999;
+        background: repeating-linear-gradient(-45deg,
+            #d7ba01,
+            #d7ba01 90px,
+            #1d0d0d 0,
+            #1d0d0d 180px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .nojs del {
+        padding: 4px 8px;
+        background: #1d1d1d;
+        background: repeating-linear-gradient(-45deg,
+            #e6c700,
+            #e6c700 45px,
+            rgba(0, 0, 0, 0.5) 0,
+            rgba(0, 0, 0, 0.5) 30px);
+        color: #cbcbcb;
+        border-radius: 4px;
+      }
+
+      .nojs-content {
+        -webkit-text-size-adjust: 100%;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        box-sizing: inherit;
+        margin: 0;
+        vertical-align: middle;
+        width: 70%;
+        font-weight: 700;
+        font-size: 18px;
+        font-family: -apple-system, Noto Sans SC, BlinkMacSystemFont,
+          Segoe UI, Microsoft YaHei UI, Microsoft Yahei, 微软雅黑,
+          Helvetica, Arial, sans-serif;
+        padding: 48px 64px;
+        word-break: break-word;
+        text-align: center;
+        line-height: 2;
+        border-radius: 16px;
+        background: rgba(45, 42, 43, 0.8);
+        backdrop-filter: blur(16px);
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        border: 4px solid #0d0d0d;
+        color: #beb9b9;
+        box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5),
+          inset 0 0 2rem rgba(0, 0, 0, 0.5);
+      }
+
+      .nojs .nojs-btn {
+        -webkit-text-size-adjust: 100%;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        font-weight: 700;
+        word-break: break-word;
+        line-height: 2;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        box-sizing: inherit;
+        outline-width: 0;
+        display: inline-block;
+        border: 2px solid #000;
+        padding: 8px 24px;
+        margin: 0 8px;
+        text-decoration: none;
+        color: #fff;
+        font-family: sans-serif;
+        font-size: 14px;
+        cursor: pointer;
+        text-align: center;
+        transition: background 50ms ease-out, transform 0.15s ease;
+        background: #368dff;
+        border-radius: 24px;
+        transform: scale(1.05);
+      }
+
+      /* 公用样式 */
+      .nojs .nojs-btn:hover {
+        background: #0366e8;
+        transform: scale(1.05);
+      }
+
+      .nojs .nojs-btn:focus {
+        outline: 1px solid #fff;
+        outline-offset: -4px;
+      }
+
+      .nojs .nojs-btn:active {
+        transform: scale(0.99);
+      }
+
+      .nojs del {
+        padding: 4px 8px;
+        background: #1d1d1d;
+        background: repeating-linear-gradient(-45deg,
+            #995d22,
+            #995d22 15px,
+            rgba(0, 0, 0, 0.5) 0,
+            rgba(0, 0, 0, 0.5) 30px);
+        color: #cbcbcb;
+        border-radius: 4px;
+      }
+
+      .nojs .nojs-link {
+        background: #0d47a1;
+        color: #fff;
+        border: 2px solid #093777;
+        padding: 4px 6px;
+        text-decoration: none;
+        border-radius: 4px;
+      }
+
+      .nojs .nojs-btn:focus,
+      .nojs .nojs-link:hover {
+        background: #0f5ad6;
+      }
+
+      .nojs .nojs-link:active {
+        background: #0d4fba;
+      }
+    </style>
+  </div>
+
+  <script>
+    window.$docsify = {
+      el: '#main',
+      loadSidebar: true,
+
+      coverpage: true,
+      name: '铁锈战争API-Code',
+
+
+      scrollToTop: {
+        auto: true,
+        text: 'Top↑',
+        right: 15,
+        bottom: 15,
+        offset: 500
+      },
+      // 完整配置参数
+      search: {
+        maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+        paths: 'auto', // or 'auto'
+
+        // 支持本地化
+        placeholder: {
+          '/': '搜索你需要的！'
+        },
+
+        // 支持本地化
+        noData: {
+          '/': '未找到结果……'
+        },
+
+        // 搜索标题的最大层级, 1 - 6
+        depth: 6,
+
+        hideOtherSidebarContent: true, // 是否隐藏其他侧边栏内容
+
+        // 避免搜索索引冲突
+        // 同一域下的多个网站之间
+        //namespace: 'website-1',
+
+        // 使用不同的索引作为路径前缀（namespaces）
+        // 注意：仅适用于 paths: 'auto' 模式
+        //
+        // 初始化索引时，我们从侧边栏查找第一个路径
+        // 如果它与列表中的前缀匹配，我们将切换到相应的索引
+        pathNamespaces: ['/zh-cn', '/ru-ru', '/ru-ru/v1'],
+
+        // 您可以提供一个正则表达式来匹配前缀。在这种情况下，
+        // 匹配到的字符串将被用来识别索引
+        pathNamespaces: /^(\/(zh-cn|ru-ru))?(\/(v1|v2))?/
+      }
+    }
+  </script>
+  <!-- Docsify v4 -->
+  </script>
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+
+  <!-- 插件引入 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="//unpkg.com/docsify-scroll-to-top/dist/docsify-scroll-to-top.min.js"></script>
+  <script src="/js/RW-ini-1.15.js"></script>
+  <script src="/js/docsify-copy-code.min.js"></script>
+  <style>
+    /* 主页样式 */
+    #main {
+      color: #0080ff;
+    }
+
+    #anchors {
+      color: #ffffff;
+    }
+
+    /* 公用样式 */
+    .token.selector {
+      color: #42b983;
+    }
+
+    .token.punctuation {
+      color: #42b983;
+    }
+
+    .search .matching-post:hover {
+      border-bottom: 1px solid #eee;
+      background:rgba(163, 230, 40, 0.5);
+      border-radius: 12px;
+    }
+
+    .markdown-section code,
+    .markdown-section pre {
+      border-radius: 21px
+    }
+
+    .sidebar ul li.active>a {
+      border-right: 2px solid;
+      color: #42b983;
+      color: #42b983;
+      font-weight: 600;
+      background: azure;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    section.cover.has-mask .mask {
+      background-color: #070707;
+      opacity: .75;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .sidebar ul li a:hover {
+      text-decoration: #42b983;
+    }
+
+    .markdown-section a {
+      color: #42b983;
+      color: var(--theme-color, #42b983);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .markdown-section a:hover {
+      color: #075632;
+      color: var(--theme-color, #075632);
+      font-weight: 600;
+    }
+
+    .markdown-section output:after,
+    .markdown-section pre:after {
+      color: #42b983;
+      font-size: .6rem;
+      font-weight: 600;
+      height: 15px;
+      line-height: 15px;
+      padding: 5px 10px 0;
+      position: absolute;
+      right: 0;
+      text-align: right;
+      top: 0;
+      content: attr(data-lang);
+    }
+  </style>
+</body>
+
+</html>

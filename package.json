@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "prism-liquibase": "^0.0.4"
+  }
+}
