@@ -12,4 +12,4 @@
 
 [快速开始旅程](/README.md)
 
-![](/images/back.png)
+![](http://39.105.229.249/ftp/ling/cdnpng/rts-api/back.png)

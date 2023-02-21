@@ -1,7 +1,7 @@
 
 <div style="display:flex;align-content: flex-start;flex-wrap: nowrap;flex-direction: row;justify-content: center;">
-    <img src="/images/title.png">
-    <img src="/images/logo.png">
+    <img src="http://39.105.229.249/ftp/ling/cdnpng/rts-api/title.png">
+    <img src="http://39.105.229.249/ftp/ling/cdnpng/rts-api/logo.png">
 </div>
 
 
