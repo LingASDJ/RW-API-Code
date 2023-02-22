@@ -11,169 +11,192 @@
 </head>
 
 <body>
-  <div data-app id="main">
-    <noscript>
-      <div class="nojs">
-        <div class="nojs-content">
-          <h1>⚠️ JavaScript-JS已被禁用</h1>
-          <p>
-            很抱歉，当你看见这个界面，代表你的浏览器可能尚未启用JS,因此我们无法构建<font color="#00cc00">[铁锈战争API-Code]</font>页面。
-          </p>
-          <p>
-            若您确信自己已开启JS技术，那么可能是您的浏览器不支持；请使用我们为你推荐的浏览器进行使用。
-          </p>
-          <hr />
-          <a class="nojs-btn" href="https://viayoo.com/zh-cn/" target="_blank" rel="noopener">Via-大道至简 (手机端)</a>
-          <a class="nojs-btn" href="https://www.google.cn/chrome/" target="_blank" rel="noopener">Google Chrome
-            (PC端)</a>
-          <br /><br />
-          <p>
-          <h1>RTS-API-Code-2023</h1>
-          </p>
-        </div>
-      </div>
-    </noscript>
-    <style>
-      /* JS报错页面优化升级 */
-      .nojs {
-        -webkit-text-size-adjust: 100%;
-        font-size: 16px;
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-        box-sizing: inherit;
-        padding: 0;
-        margin: 0;
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        z-index: 9999999999;
-        background: repeating-linear-gradient(-45deg,
-            #d7ba01,
-            #d7ba01 90px,
-            #1d0d0d 0,
-            #1d0d0d 180px);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .nojs del {
-        padding: 4px 8px;
-        background: #1d1d1d;
-        background: repeating-linear-gradient(-45deg,
-            #e6c700,
-            #e6c700 45px,
-            rgba(0, 0, 0, 0.5) 0,
-            rgba(0, 0, 0, 0.5) 30px);
-        color: #cbcbcb;
-        border-radius: 4px;
-      }
-
-      .nojs-content {
-        -webkit-text-size-adjust: 100%;
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-        box-sizing: inherit;
-        margin: 0;
-        vertical-align: middle;
-        width: 70%;
-        font-weight: 700;
-        font-size: 18px;
-        font-family: -apple-system, Noto Sans SC, BlinkMacSystemFont,
-          Segoe UI, Microsoft YaHei UI, Microsoft Yahei, 微软雅黑,
-          Helvetica, Arial, sans-serif;
-        padding: 48px 64px;
-        word-break: break-word;
-        text-align: center;
-        line-height: 2;
-        border-radius: 16px;
-        background: rgba(45, 42, 43, 0.8);
-        backdrop-filter: blur(16px);
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-        border: 4px solid #0d0d0d;
-        color: #beb9b9;
-        box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5),
-          inset 0 0 2rem rgba(0, 0, 0, 0.5);
-      }
-
-      .nojs .nojs-btn {
-        -webkit-text-size-adjust: 100%;
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-        font-weight: 700;
-        word-break: break-word;
-        line-height: 2;
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-        box-sizing: inherit;
-        outline-width: 0;
-        display: inline-block;
-        border: 2px solid #000;
-        padding: 8px 24px;
-        margin: 0 8px;
-        text-decoration: none;
-        color: #fff;
-        font-family: sans-serif;
-        font-size: 14px;
-        cursor: pointer;
-        text-align: center;
-        transition: background 50ms ease-out, transform 0.15s ease;
-        background: #368dff;
-        border-radius: 24px;
-        transform: scale(1.05);
-      }
-
-      /* 公用样式 */
-      .nojs .nojs-btn:hover {
-        background: #0366e8;
-        transform: scale(1.05);
-      }
-
-      .nojs .nojs-btn:focus {
-        outline: 1px solid #fff;
-        outline-offset: -4px;
-      }
-
-      .nojs .nojs-btn:active {
-        transform: scale(0.99);
-      }
-
-      .nojs del {
-        padding: 4px 8px;
-        background: #1d1d1d;
-        background: repeating-linear-gradient(-45deg,
-            #995d22,
-            #995d22 15px,
-            rgba(0, 0, 0, 0.5) 0,
-            rgba(0, 0, 0, 0.5) 30px);
-        color: #cbcbcb;
-        border-radius: 4px;
-      }
-
-      .nojs .nojs-link {
-        background: #0d47a1;
-        color: #fff;
-        border: 2px solid #093777;
-        padding: 4px 6px;
-        text-decoration: none;
-        border-radius: 4px;
-      }
-
-      .nojs .nojs-btn:focus,
-      .nojs .nojs-link:hover {
-        background: #0f5ad6;
-      }
-
-      .nojs .nojs-link:active {
-        background: #0d4fba;
-      }
-    </style>
+  <div data-app id="main" style="margin: 0 auto;">
+    <div class="loading">
+    <h1>正在载入数据中……</h1>
+    </div>
   </div>
+  <noscript>
+    <div class="nojs">
+      <div class="nojs-content">
+        <h1>⚠️ JavaScript-JS已被禁用</h1>
+        <p>
+          很抱歉，当你看见这个界面，代表你的浏览器可能尚未启用JS,因此我们无法构建<font color="#00cc00">[铁锈战争API-Code]</font>页面。
+        </p>
+        <p>
+          若您确信自己已开启JS技术，那么可能是您的浏览器不支持；请使用我们为你推荐的浏览器进行使用。
+        </p>
+        <hr />
+        <a class="nojs-btn" href="https://viayoo.com/zh-cn/" target="_blank" rel="noopener">Via-大道至简 (手机端)</a>
+        <a class="nojs-btn" href="https://www.google.cn/chrome/" target="_blank" rel="noopener">Google Chrome
+          (PC端)</a>
+        <br /><br />
+        <p>
+        <h1>RTS-API-Code-2023</h1>
+        </p>
+      </div>
+    </div>
+  </noscript>
+  <style>
 
+.loading {
+      -webkit-text-size-adjust: 100%;
+      font-size: 16px;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      box-sizing: inherit;
+      padding: 0;
+      margin: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 9999999999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* JS报错页面优化升级 */
+    .nojs {
+      -webkit-text-size-adjust: 100%;
+      font-size: 16px;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      box-sizing: inherit;
+      padding: 0;
+      margin: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 9999999999;
+      background: repeating-linear-gradient(-45deg,
+          #d7ba01,
+          #d7ba01 90px,
+          #1d0d0d 0,
+          #1d0d0d 180px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nojs del {
+      padding: 4px 8px;
+      background: #1d1d1d;
+      background: repeating-linear-gradient(-45deg,
+          #e6c700,
+          #e6c700 45px,
+          rgba(0, 0, 0, 0.5) 0,
+          rgba(0, 0, 0, 0.5) 30px);
+      color: #cbcbcb;
+      border-radius: 4px;
+    }
+
+    .nojs-content {
+      -webkit-text-size-adjust: 100%;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      box-sizing: inherit;
+      margin: 0;
+      vertical-align: middle;
+      width: 70%;
+      font-weight: 700;
+      font-size: 18px;
+      font-family: -apple-system, Noto Sans SC, BlinkMacSystemFont,
+        Segoe UI, Microsoft YaHei UI, Microsoft Yahei, 微软雅黑,
+        Helvetica, Arial, sans-serif;
+      padding: 48px 64px;
+      word-break: break-word;
+      text-align: center;
+      line-height: 2;
+      border-radius: 16px;
+      background: rgba(45, 42, 43, 0.8);
+      backdrop-filter: blur(16px);
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      border: 4px solid #0d0d0d;
+      color: #beb9b9;
+      box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5),
+        inset 0 0 2rem rgba(0, 0, 0, 0.5);
+    }
+
+    .nojs .nojs-btn {
+      -webkit-text-size-adjust: 100%;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      font-weight: 700;
+      word-break: break-word;
+      line-height: 2;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      box-sizing: inherit;
+      outline-width: 0;
+      display: inline-block;
+      border: 2px solid #000;
+      padding: 8px 24px;
+      margin: 0 8px;
+      text-decoration: none;
+      color: #fff;
+      font-family: sans-serif;
+      font-size: 14px;
+      cursor: pointer;
+      text-align: center;
+      transition: background 50ms ease-out, transform 0.15s ease;
+      background: #368dff;
+      border-radius: 24px;
+      transform: scale(1.05);
+    }
+
+    /* 公用样式 */
+    .nojs .nojs-btn:hover {
+      background: #0366e8;
+      transform: scale(1.05);
+    }
+
+    .nojs .nojs-btn:focus {
+      outline: 1px solid #fff;
+      outline-offset: -4px;
+    }
+
+    .nojs .nojs-btn:active {
+      transform: scale(0.99);
+    }
+
+    .nojs del {
+      padding: 4px 8px;
+      background: #1d1d1d;
+      background: repeating-linear-gradient(-45deg,
+          #995d22,
+          #995d22 15px,
+          rgba(0, 0, 0, 0.5) 0,
+          rgba(0, 0, 0, 0.5) 30px);
+      color: #cbcbcb;
+      border-radius: 4px;
+    }
+
+    .nojs .nojs-link {
+      background: #0d47a1;
+      color: #fff;
+      border: 2px solid #093777;
+      padding: 4px 6px;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+
+    .nojs .nojs-btn:focus,
+    .nojs .nojs-link:hover {
+      background: #0f5ad6;
+    }
+
+    .nojs .nojs-link:active {
+      background: #0d4fba;
+    }
+  </style>
   <script>
     window.$docsify = {
       el: '#main',
