@@ -1,8 +1,11 @@
 
-# 1.15-代码表-核心组
+# 铁锈战争-1.15-单位代码表-Beta1
 
+
+<!-- tabs:start -->
+
+#### **core组**
 !> 以下的代码为通用代码,多半是必要的代码，如果不包括这些，可能在绝大多数情况下导致错误。
-
 ## [core组]
 ### name
 #### name-代码简介
@@ -88,4 +91,29 @@ maxHp可以通过`单位参考.maxHp()`来获取，也可以通过`[action]setUn
 [core]
 maxHp:600
 ```
+
+### altNames
+### altNames-代码简介
+?> 代码:altNames 中文释义:别名 类型:字符型 隶属于:通用代码组
+### altNames-要点指示
+!> altNames代码要点指示:
+主要在'启用多个自定义Mod'进行优先级定义
+以逗号分隔的名称列表。像名称一样，但优先级较低，对于'启用多个自定义mod'有用。
+### altNames-演示例子:
+```ini
+[core]
+altNames:ling,tobby3600,coldmint
+```
+
+#### **can_build组**
+
+
+
+#### **action组**
+
+Ciao!
+
+<!-- tabs:end -->
+
+
 
