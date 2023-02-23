@@ -1,5 +1,5 @@
 <div align=center>
-  <img src="http://39.105.229.249/ftp/ling/cdnpng/rts-api/title.png">
+  <img src="/images/title.png">
 </div>
 
 
