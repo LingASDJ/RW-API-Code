@@ -1,6 +1,6 @@
 
 <div style="display:flex;align-content: flex-start;flex-wrap: nowrap;flex-direction: row;justify-content: center;">
-    <img src="/images/logo.png">
+    <img src="https://rwapi-code.netlify.app/images/logo.png">
 </div>
 
 
