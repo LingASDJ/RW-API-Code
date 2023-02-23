@@ -130,7 +130,7 @@ altNames:ling,tobby3600,coldmint
 ## **[canBuild_Name]组**
 
 ## **[graphics]组**
-## **折叠该页**
+## **折叠第1页**
 该页已被折叠，点击其他选项卡可以再次展开。
 <!-- tabs:end -->
 
@@ -142,7 +142,7 @@ altNames:ling,tobby3600,coldmint
 # **[turret_Name]组**
 
 # **[projectile_Name]组**
-## **折叠该页**
+## **折叠第2页**
 该页已被折叠，点击其他选项卡可以再次展开。
 <!-- tabs:end -->
 # Page 3
@@ -152,7 +152,7 @@ altNames:ling,tobby3600,coldmint
 # **[ai]组**
 
 # **[leg_#]/[arm_#]集合组**
-## **折叠该页**
+## **折叠第3页**
 该页已被折叠，点击其他选项卡可以再次展开。
 <!-- tabs:end -->
 # Page 4
@@ -162,7 +162,7 @@ altNames:ling,tobby3600,coldmint
 # **[effect_Name]组**
 
 # **[animation_Name]组**
-## **折叠该页**
+## **折叠第4页**
 该页已被折叠，点击其他选项卡可以再次展开。
 <!-- tabs:end -->
 # Page 5
@@ -172,7 +172,7 @@ altNames:ling,tobby3600,coldmint
 # **[spawn unit] 刷兵序列组**
 
 # **[placementRule_Name] 放置规则组**
-## **折叠该页**
+## **折叠第5页**
 该页已被折叠，点击其他选项卡可以再次展开。
 <!-- tabs:end -->
 # Page 6
@@ -182,7 +182,7 @@ altNames:ling,tobby3600,coldmint
 # **[Prices/Resources] 价格/资源序列组**
 
 # **[global_resource_Name] 全局资源组**
-## **折叠该页**
+## **折叠第6页**
 该页已被折叠，点击其他选项卡可以再次展开。
 <!-- tabs:end -->
 # Page 7
@@ -194,7 +194,7 @@ altNames:ling,tobby3600,coldmint
 
 # **[comment_Name] 注解组**
 
-## **折叠该页**
+## **折叠第7页**
 该页已被折叠，点击其他选项卡可以再次展开。
 <!-- tabs:end -->
 
@@ -207,6 +207,6 @@ altNames:ling,tobby3600,coldmint
 
 # **[hidden-code] 隐藏代码扩展组**
 
-## **折叠该页**
+## **折叠第8页**
 该页已被折叠，点击其他选项卡可以再次展开。
 <!-- tabs:end -->
