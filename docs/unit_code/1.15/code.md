@@ -16,8 +16,6 @@
 
 <!-- chat:start -->
 #### **JDSALing**
-
-
 定义单位原始名称，可以是中文。<br>
 游戏使用它区分其它单位。<br>
 如果没有在[displayText或者语言文件设置显示名称]，<br>
@@ -56,9 +54,12 @@ displayDescription_zh:-中文描述
 #### price-要点指示
 !> price代码要点指示:
 定义单位的价格，显示在单位信息中，建造时也以此价格为准。
-
+<!-- chat:start -->
+#### **tobby3600**
 默认情况下，price只需要填写一个整数，此时使用的是游戏内自带的资金credit；
 想要更改资源类型，可以使用 `price:资源1=数值1,资源2=数值2,...` 的格式（前提是此资源要在使用的单位进行定义）。
+<!-- chat:end -->
+
 #### price-演示例子
 ```ini
 [core]
@@ -95,8 +96,14 @@ mass:2000
 ?> 代码:maxHp 中文释义:最大生命值 类型:整数 隶属于:通用代码组
 #### maxHp-要点指示
 !> maxHp代码要点指示:
-最大生命值定义单位在不修改它时最多能够有多少血量，单位默认生成时即是这个血量。
-maxHp可以通过`单位参考.maxHp()`来获取，也可以通过`[action]setUnitStatus`进行修改。
+
+<!-- chat:start -->
+#### **tobby3600**
+最大生命值定义单位在不修改它时最多能够有多少血量，单位默认生成时即是这个血量。<br>
+maxHp可以通过<font color=orange>单位参考.maxHp()</font>来获取，也可以通过<font color=orange>[action]setUnitStatus</font>进行修改。
+
+<!-- chat:end -->
+
 #### maxHp-演示例子
 ```ini
 [core]
@@ -104,27 +111,30 @@ maxHp:600
 ```
 
 ### altNames
-### altNames-代码简介
+#### altNames-代码简介
 ?> 代码:altNames 中文释义:别名 类型:字符型 隶属于:通用代码组
-### altNames-要点指示
+#### altNames-要点指示
+
 !> altNames代码要点指示:
-主要在`启用多个自定义Mod`进行优先级定义
-以逗号分隔的名称列表。像`名称一样，但优先级较低`，对于`启用多个自定义mod`有用。
-### altNames-演示例子:
+<!-- chat:start -->
+#### **JDSALing**
+主要在<font color=orange>启用多个自定义Mod</font>进行优先级定义<br>
+以逗号分隔的名称列表。像<font color=orange>名称一样，但优先级较低</font>，对于<font color=orange>启用多个自定义mod</font>有用。
+<!-- chat:end -->
+
+#### altNames-演示例子:
 ```ini
 [core]
 altNames:ling,tobby3600,coldmint
 ```
+## **[canBuild_Name]组**
 
-# **[canBuild_Name]组**
-
-# **[graphics]组**
-
+## **[graphics]组**
 ## **折叠该页**
 该页已被折叠，点击其他选项卡可以再次展开。
-
-
 <!-- tabs:end -->
+
+
 # Page 2
 <!-- tabs:start -->
 # **[attack]组**
