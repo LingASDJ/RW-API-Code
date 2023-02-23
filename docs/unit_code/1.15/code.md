@@ -1,6 +1,7 @@
 
 
 # 
+
 # Page 1
 <!-- tabs:start -->
 
@@ -10,19 +11,28 @@
 #### name-代码简介
 ?> 代码:name 中文释义:名字 类型:字符型 隶属于:通用代码组
 #### name-要点指示
-!> name代码的要点指示：  
-定义单位原始名称，可以是中文。  
-游戏使用它区分其它单位。如果没有在`displayText或者语言文件设置显示名称`，那么它也将作为单位的显示名称。  
-<br>
-具体描述文件位置(内部):    
-1.assets/translationsStrings_zh.properties 
-格式:units.单位名称.name=写单位显示的名称   
-units.单位名称.description= [[填单位显示的描述]]    
-<br>
-ini文件的单独定义(外部-推荐):  
-2.displayText: 单位的标题  
-&nbsp;&nbsp;&nbsp;displayDescription: -单位的描述  
-<br>
+
+> [!NOTE] name代码的要点指示：  
+
+<!-- chat:start -->
+#### **JDSALing**
+
+
+定义单位原始名称，可以是中文。<br>
+游戏使用它区分其它单位。<br>
+如果没有在[displayText或者语言文件设置显示名称]，<br>
+那么它也将作为单位的显示名称。  <br>
+具体描述文件位置(内部):    <br>
+1.assets/translationsStrings_zh.properties <br>
+格式:units.单位名称.name=写单位显示的名称   <br>
+units.单位名称.description= [[填单位显示的描述]]   <br> 
+#### **tobby3600**
+
+ini文件的单独定义(外部-推荐):  <br>
+2.displayText: 单位的标题  <br>
+&nbsp;&nbsp;&nbsp;displayDescription: -单位的描述  <br>
+
+<!-- chat:end -->
 
 特别提醒:`displayText支持本地化`，例如如果要写一个`多语言的单位描述`，可以通过以下例子：
 
@@ -180,8 +190,6 @@ altNames:ling,tobby3600,coldmint
 
 # Page 8
 <!-- tabs:start -->
-
-
 
 # **[decal_Name] 贴花组**
 

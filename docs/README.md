@@ -18,7 +18,9 @@
 # 站点简介：
 > * 本站点主要提供铁锈战争的代码API教程与指导，皆在为铁锈带来更好的Mod质量。  
 > * 本站点提供--地图Mapping代码表，单位Unit代码表，调试Debug代码表。
+<div style="display:flex;align-content: flex-start;flex-wrap: nowrap;flex-direction: row;justify-content: center;">
+    <font size="6px" color="#42b983">RTS-Code-API-1.15-CopyRight-2023</font>
+</div>
 
-<font size="6px" color="#42b983">RTS-Code-API-1.15-CopyRight-2023</font>
 
 <!-- docsify serve docs -->

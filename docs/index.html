@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
   <meta charset="UTF-8">
@@ -203,6 +203,7 @@
       background: #0d4fba;
     }
   </style>
+
   <script>
     window.$docsify = {
       el: '#main',
@@ -219,6 +220,27 @@
         tabHeadings: true       // default
       },
 
+      'flexible-alerts': {
+        note: {
+          label: "随录笔记"
+        },
+        tip: {
+          label: "特别注意"
+        },
+        warning: {
+          label: "警告"
+        },
+        attention: {
+          label: "不推荐"
+        }
+      },
+
+      Valine: {
+        appId: 'e3Ipwd8kr6LEeNRLk487mmtB-gzGzoHsz',
+        appKey: 'gQYoj8j4KehzLWLGvpr5sKeP',
+        placeholder: "可以将你的一些见解发表到这里，说不定能帮助到其他萌新或者让一些陷入迷途的人豁然开朗呢！支持MarkDown语法。",
+        avatar: 'hide'
+      },
       scrollToTop: {
         auto: true,
         text: 'Top↑',
@@ -226,23 +248,46 @@
         bottom: 15,
         offset: 500
       },
+      timeUpdater: {
+        text: "> 最后编写更新时间: {docsify-updated}",
+        formatUpdated: "{YYYY}/{MM}/{DD}",
+        whereToPlace: "top",  // "top" or "bottom", default to "bottom"
+      },
+      chat: {
+        // chat panel title
+        title: '',
+        // set avatar url
+        users: [
+          { nickname: 'tobby3600', avatar: '/images/avaters/tobby3600.jpg' },
+          { nickname: 'JDSALing', avatar: '/images/avaters/ling.jpg' },
+        ],
+        myself: 'JDSALing',
+        animation: 50,
+        // Panel navigation bar style, supporting "mac" and "windows"
+        os: 'none',
+      },
+
       // 完整配置参数
       search: {
-        maxAge: 114514, // 过期时间，单位毫秒，1.9分钟
+        maxAge: 86400000, // 过期时间，单位毫秒，1.9分钟
         paths: 'auto', // or 'auto'
+
+        search: [
+          'auto',         // => /zh-cn/README.md
+        ],
 
         // 支持本地化
         placeholder: {
-          '/': '搜索你需要的！'
+          '/': '搜索你需要的！探索你所想的！'
         },
 
         // 支持本地化
         noData: {
-          '/': '未找到结果……'
+          '/': '尚未找到匹配结果……'
         },
 
         // 搜索标题的最大层级, 1 - 6
-        depth: 6,
+        depth: 3,
 
         hideOtherSidebarContent: true, // 是否隐藏其他侧边栏内容
 
@@ -269,14 +314,23 @@
 
   <!-- 插件引入 -->
   <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-updated/src/time-updater.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
   <script src="//unpkg.com/docsify-scroll-to-top/dist/docsify-scroll-to-top.min.js"></script>
   <script src="https://lingasdj.github.io/RW-API-Code/js/RW-ini-1.15.js"></script>
   <script src="https://lingasdj.github.io/RW-API-Code/js/docsify-copy-code.min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script src="//unpkg.com/docsify-valine/dist/docsify-valine.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-chat/lib/docsify-chat.min.js"></script>
+  <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
   <style>
     /* 主页样式 */
-    #main {
+    #mainx {
       color: #0080ff;
+    }
+
+    #main {
+      font-size: large;
     }
 
     #anchors {
