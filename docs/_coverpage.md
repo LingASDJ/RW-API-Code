@@ -10,6 +10,10 @@
 <h3 id="anchors">Map Code/Unit Code/Debug Code</h3>
 <h3 id="anchors">铁锈战争代码API站点--欢迎您！</h3>
 
-[快速开始旅程](/README.md)
+
+[地图代码表](https://lingasdj.github.io/RW-API-Code/#/map_code/1.14/code)
+[调试代码表](https://lingasdj.github.io/RW-API-Code/#/debug_code/1.15/code)
+[单位代码表](https://lingasdj.github.io/RW-API-Code/#/unit_code/1.15/code?id=铁锈战争-115-单位代码表-beta1)
+[致谢人员表](/README.md)
 
 ![](https://rwapi-code.netlify.app/images/back.png)
