@@ -7,7 +7,7 @@
 
 ![](https://img.shields.io/badge/language-MarkDown&Node.js-skyblue) ![](https://img.shields.io/github/license/XMuli/QtExamples) ![](https://img.shields.io/badge/powered%20by-Docsity-00ffff) 
 
-![](https://img.shields.io/github/languages/code-size/LingASDJ/RW-API-Code)   ![](https://img.shields.io/github/stars/LingASDJ/RW-API-Code?style=social) ![](https://img.shields.io/github/forks/LingASDJ/RW-API-Code?style=social&label=Fork)
+![](https://img.shields.io/github/stars/LingASDJ/RW-API-Code?style=social) ![](https://img.shields.io/github/forks/LingASDJ/RW-API-Code?style=social&label=Fork)
 
 <br>
 
