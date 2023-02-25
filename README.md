@@ -5,6 +5,8 @@
 
 # RW-API-Code--Demo 0.1
 
+[![Netlify 部署状态：](https://api.netlify.com/api/v1/badges/0196ec3f-1dd3-420a-be0c-abee4c0a1334/deploy-status)](https://app.netlify.com/sites/rwapi-code/deploys)
+
 ![](https://img.shields.io/badge/language-MarkDown&Node.js-skyblue) ![](https://img.shields.io/github/license/XMuli/QtExamples) ![](https://img.shields.io/badge/powered%20by-Docsity-00ffff) 
 
 ![](https://img.shields.io/github/stars/LingASDJ/RW-API-Code?style=social) ![](https://img.shields.io/github/forks/LingASDJ/RW-API-Code?style=social&label=Fork)
