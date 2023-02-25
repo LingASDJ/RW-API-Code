@@ -35,17 +35,19 @@
 > [!TIP] 重要提示文本
 > [!ATTENTION] 不推荐文本
 
-注意：以下必须在START-END内进行使用才能生效：
-
+注意：以下必须在START-END内进行使用才能生效,
+且将chat后面的"*"换为空格：
+<!--chat*:start -->
 #### **tobby3600**
-我是第二个消息文本
+我是第一个消息文本
 #### **JDSALing**
 我是第二个消息文本
+<!--chat*:end -->
 
 实际生成代码：
 <!-- chat:start -->
 #### **tobby3600**
-我是第二个消息文本
+我是第一个消息文本
 #### **JDSALing**
 我是第二个消息文本
 <!-- chat:end -->
@@ -59,10 +61,23 @@
 由于插件众多，为避免MD格式冲突，换行建议最好使用<br>进行换行，
 如果要在一些扩展格式渲染演示，请使用<font>标签,
 ```
-如果要本地测试，请确保设备有<font color=green>Node.js</font>
 
-并在项目根目录使用以下命令：
-> [!NOTE] npm i docsify-cli -g<br>docsify serve docs
+#### 部署策略：
+
+!> 1.本地部署
+
+> [!NOTE] 如果要本地测试，请确保设备有<font color=green>Node.js</font>
+并在项目根目录使用以下命令：<br>
+> npm i docsify-cli -g<br>docsify serve docs
+
+!> 2.Netlify部署
+
+> [!NOTE] 如果你已经发送了PR请求，可以通过我的Netlify预览站点进行预览，<br>
+Netlify会在你的PR请求下面显示你的预览页面地址。<br>
+如下图所示，点击<b><font color=orange>😎 Deploy Preview后面的链接</font></b>即可看见效果<br>
+由于某些原因，TX会拦截Netlify的站点，请使用浏览器预览。
+
+<img src="images/example.png" width="50%">
 
 
 #### 实际格式演示：
@@ -80,7 +95,7 @@
 
 <!-- chat:start -->
 #### **tobby3600**
-我是第二个消息文本
+我是第一个消息文本
 #### **JDSALing**
 我是第二个消息文本
 <!-- chat:end -->
@@ -89,4 +104,4 @@
 
 !> 该文档可能还有很多缺陷，如果你有更好的建议，请发送Issues或者PR给我。
 
-?> 编写于2023-2-25 RTS-Code-API[第一版]
+?> 编写于2023-2-25 RTS-Code-API[第一版-修订2版]
