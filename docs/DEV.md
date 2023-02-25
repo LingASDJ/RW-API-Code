@@ -77,7 +77,7 @@ Netlify会在你的PR请求下面显示你的预览页面地址。<br>
 如下图所示，点击<b><font color=orange>😎 Deploy Preview后面的链接</font></b>即可看见效果<br>
 由于某些原因，TX会拦截Netlify的站点，请使用浏览器预览。
 
-<img src="images/example.png" width="50%">
+<img src="images/example.png" width="70%">
 
 
 #### 实际格式演示：
