@@ -130,6 +130,67 @@ altNames:ling,tobby3600,coldmint
 ## **[canBuild_Name]组**
 
 ## **[graphics]组**
+
+### image
+#### image-代码简介
+?> 代码:image 中文释义:主体图像 类型:文件(图像文件) 隶属于:通用代码组
+#### image-要点指示
+!> image代码要点指示:
+<!-- chat:start -->
+#### **tobby3600**
+主体图像定义单位的图像。<br>
+在不进行额外修改的情况下，主体图像会显示在<font color=orange>单位</font>、<font color=orange>单位列表</font>、<font color=orange>单位信息</font>处。
+#### **JDSALing**
+填写的值可以包含路径，若只包含文件名，则会在和当前ini相同文件夹内寻找图片文件。<br>
+可以通过<font color=orange>`ROOT:路径\文件`</font>的形式来访问在模组目录下的任何文件。
+#### **tobby3600**
+上述方法还可以在路径中添加`..`来访问外部文件
+<!-- chat:end -->
+
+#### image-演示例子
+```ini
+[graphics]
+image:main.png
+```
+
+### image_wreak
+#### image_wreak-代码简介
+?> 代码:image_wreak 中文释义:死亡图像 类型:文件(图像文件) 隶属于:通用代码组
+#### image_wreak-要点指示
+!> image_wreak代码要点指示:
+<!-- chat:start -->
+#### **tobby3600**
+死亡图像定义单位死亡后产生的图像。<br>
+文件定义方式与image相同。
+#### **JDSALing**
+填写`NONE`可以让单位死亡后不产生死亡图像。
+<!-- chat:end -->
+
+#### image_wreak-演示例子
+```ini
+[graphics]
+image_wreak:dead.png
+或者
+image_wreak:NONE
+```
+
+### imageScale
+#### imageScale-代码简介
+?> 代码:imageScale 中文释义:图像缩放比例 类型:文件(图像文件) 隶属于:通用代码组
+#### imageScale-要点指示
+!> imageScale代码要点指示:
+<!-- chat:start -->
+#### **tobby3600**
+填写后，铁锈会将图像大小乘以缩放比例。<br>
+默认值为1。
+<!-- chat:end -->
+
+#### imageScale-演示例子
+```ini
+[graphics]
+imageScale:1.2
+```
+
 ## **折叠第1页**
 该页已被折叠，点击其他选项卡可以再次展开。
 <!-- tabs:end -->
