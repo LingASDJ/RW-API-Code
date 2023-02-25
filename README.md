@@ -50,3 +50,5 @@ docsify serve docs
 
 ## 多人协作策略
 请提交PR,并且说明提交的内容与介绍。
+有关于文档书写规范，请阅读以下指南：
+[RTS-Code-API--文档开发指南](/devrules/DEV.md)

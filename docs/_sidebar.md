@@ -6,4 +6,5 @@
         * [1.14地图代码表-Beta版](map_code/1.14/code.md  "RTS-1.14的地图代码表")
     * [调试Mod代码表](debug_code/index.md "学习高级调试代码的代码表")
         * [1.15调试代码表-Beta版](debug_code/1.15/code.md  "RTS-1.15的调试代码表")
-* [开放型教程中心](/comingsoon.md "敬请期待")        
+* [开放型教程中心](/comingsoon.md "敬请期待")
+* [RTS-Code-API文档指南](/DEV.md)        
