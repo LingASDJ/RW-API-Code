@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <script src="https://lingasdj.github.io/RW-API-Code/js/EditMd.js"></script>
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
 </head>
 
@@ -211,7 +212,15 @@
       subMaxLevel: 3,
       coverpage: true,
       name: '铁锈战争API-Code',
-
+      plugins: [
+        EditOnGithubPlugin.create(
+          'https://github.com/LingASDJ/RW-API-Code/tree/main/docs/',
+          null,
+          function (file) {
+              return '在GitHub上合作编辑RTS-Code-API的文档'
+          }
+        )
+      ],
       tabs: {
         persist: true,      // default
         sync: true,      // default
@@ -311,8 +320,8 @@
   </script>
   <!-- Docsify v4 -->
   </script>
-  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
 
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <!-- 插件引入 -->
   <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify-updated/src/time-updater.js"></script>
@@ -324,6 +333,7 @@
   <script src="//unpkg.com/docsify-valine/dist/docsify-valine.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-chat/lib/docsify-chat.min.js"></script>
   <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
+
   <style>
     /* 主页样式 */
     #mainx {

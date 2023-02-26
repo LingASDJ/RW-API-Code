@@ -127,6 +127,76 @@ maxHp:600
 [core]
 altNames:ling,tobby3600,coldmint
 ```
+### class
+#### class-代码简介
+
+?> 代码:class 中文释义:类 类型:字符型 隶属于:通用代码组
+
+> [!ATTENTION] 无实际用处，可以删除。<br>
+Luke：保留供将来使用，默认情况下必须为CustomUnitMetadata。由于该代码无实际用途，可以忽略该代码<br>
+该代码后面什么都可以输，但没有实际用途。或许在未来会有用。
+
+#### class-演示例子:
+```ini
+[core]
+class:CustomUnitMetadata
+```
+
+### strictLevel
+#### strictLevel-代码简介
+
+?> 代码:strictLevel 中文释义:严格级别 类型:数字固定型 隶属于:通用代码组
+
+> [!TIP] 建议添加到"all-units.template"以应用于所有单位,进行统一查错。<br>
+默认值为0，忽略代码重复。设为1时如果当前单位内有重复代码，则报错。
+
+#### strictLevel-演示例子:
+```all-units.template & ini
+[core]
+strictLevel:1
+```
+
+### techLevel
+#### techLevel-代码简介:
+?> 代码:techLevel 中文释义:科技等级 类型:数字固定型 隶属于:通用代码组
+
+> [!TIP] 早期是用于在<font color=orange>builtFrom</font>的代码,并结合科技等级使用。如果工厂的等级低于单位的目标科技等级，则会在工厂里面隐藏该单位。<br>自铁锈1.09后出现<font color=orange>overrideAndReplace</font>后，该方法则不建议使用。有关于新策略，请参考<font color=orange>overrideAndReplace</font>代码文档指南。<br>
+设置单位的科技等级，共有3个级别，1级GUI显示为绿色，2、3级显示为黄色。超过3报错。
+
+#### techLevel-演示例子:
+```ini
+[core]
+techLevel:2
+```
+
+### buildSpeed
+#### buildSpeed-代码简介
+
+?> 代码:buildSpeed 中文释义:建造速度 类型:浮点/秒型 隶属于:通用代码组
+
+> [!TIP] 建造此单位需要的时间，填秒。<br>
+以前的计算方式为：此处所填时间=1÷(60x你需要的秒)如果定义了工厂速率则需要乘以建造乘数。
+
+#### buildSpeed-演示例子:
+```ini
+[core]
+buildSpeed:30s
+#或者：
+## 下方可能有误差
+buildSpeed:0.0006
+```
+
+### isBio
+#### isBio-代码简介
+
+?> 代码:xxxx 中文释义:xxxx 类型:xxxx 隶属于:xxxx
+
+> [!TIP] xxxxxx
+
+```ini
+xxxx
+```
+
 ## **[canBuild_Name]组**
 
 ## **[graphics]组**
