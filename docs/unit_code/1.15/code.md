@@ -189,13 +189,71 @@ buildSpeed:0.0006
 ### isBio
 #### isBio-代码简介
 
-?> 代码:xxxx 中文释义:xxxx 类型:xxxx 隶属于:xxxx
 
-> [!TIP] xxxxxx
+?> 代码:isBio 中文释义:是生物 类型:布尔型 隶属于:通用代码组
 
+> [!TIP] 若设置成true,则会在单位死亡时产生血迹,  
+图像在drawable/blood_mark.png，hideScorchMark：true时可以隐藏）非生物则为黑色爆炸效果。
+#### isBio-演示例子:
 ```ini
-xxxx
+[core]
+isBio:true
 ```
+
+### isBug
+#### isBug-代码简介
+
+?> 代码:isBug 中文释义:是虫子 类型:布尔型 隶属于:通用代码组
+
+> [!TIP] 若设置成true,则会认定为虫子，用于沙盒中的单独分类。
+#### isBio-演示例子:
+```ini
+[core]
+isBug:true
+```
+
+### isBuilder
+#### isBuilder-代码简介
+
+?> 代码:isBuilder 中文释义:是建造者 类型:布尔型 隶属于:通用代码组
+
+> [!TIP] 若设置成true,则会需要此单位建造建筑物，则通常需要此代码。
+并且默认设为[ai] useAsBuilder。
+#### isBuilder-演示例子:
+```ini
+[core]
+isBuilder:true
+```
+
+### streamingCost
+#### streamingCost-代码简介
+
+?> 代码:streamingCost 中文释义:流式资金 类型:整数型 隶属于:通用代码组
+
+> [!TIP] 和价格一样，但在建造时逐渐消耗资金，如果在构建过程中资源耗尽，  
+建造或生产队列将暂停。就像是红警中那样。铁锈默认是预先扣除资金。  
+若使用该代码，则玩家的每秒资金将会根据流式资金的算法进行扣减。
+#### streamingCost-演示例子:
+```ini
+[core]
+streamingCost:1145
+```
+
+### switchPriceWithStreamingCost
+
+#### switchPriceWithStreamingCost-代码简介
+
+?> 代码:switchPriceWithStreamingCost 中文释义:流式资金模式全局切换 类型:布尔型 隶属于:通用代码组
+
+> [!TIP] 快捷设置为默认资金消耗方式或为流式建造方式。
+建议使用模板快速将一个模组为所有单位切换流资源。
+例如all-units.template.
+#### switchPriceWithStreamingCost-演示例子:
+```ini,all-units.templateE
+[core]
+switchPriceWithStreamingCost:true
+```
+
 
 ## **[canBuild_Name]组**
 
