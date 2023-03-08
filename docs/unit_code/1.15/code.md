@@ -376,13 +376,12 @@ imageScale:1.2
 
 #### 数据类型
 数据类型指数据的种类，在铁锈中，不同的数据有不同的类型，不同的数据类型之间通常不能直接进行运算。
-| 常见数据类型英文 | 存储的值类型 |
-| -------- | ------------ |
-| string   | 字符串       |
-| number   | 整数         |
-| float    | 浮点数(小数) |
-| boolean  | 布尔值       |
-| unit     | 单位         |
+
+ string   字符串       
+ number   整数         
+ float    浮点数(小数) 
+ boolean  布尔值       
+ unit     单位         
 
 
 
@@ -398,7 +397,7 @@ autoTrigger:if self.maxHp() > memory.emx_hp
 ```
 
 #### 小于
-?> 代码:< 中文释义:小于
+?> 代码:< 中文释义:小于<br>
 小于用于在逻辑布尔值中比较两个数的大小，格式为`数据a < 数据b`，若`a<b`则整个式子的值为`true`，否则为`false`。
 > [!NOTE] 演示例子:
 ```ini
@@ -407,33 +406,33 @@ autoTrigger:if memory.a < memory.b
 ```
 
 #### 大于
-?> 代码:> 中文释义:大于
+?> 代码:> 中文释义:大于<br>
 同上，格式为`数据a > 数据b`，若`a>b`则整个式子的值为`true`，否则为`false`。
 
 #### 小于等于
-?> 代码:<= 中文释义:小于等于
+?> 代码:<= 中文释义:小于等于<br>
 同上，若`a<=b`则整个式子的值为`true`，否则为`false`。
 
 #### 大于等于
-?> 代码:>= 中文释义:大于等于
+?> 代码:>= 中文释义:大于等于<br>
 同上，若`a>=b`则整个式子的值为`true`，否则为`false`。
 
 #### 等于
-?> 代码:== 中文释义:等于
+?> 代码:== 中文释义:等于<br>
 > [!TIP] 请注意，铁锈中等于的符号为<font color=orange>==</font>，<font color=orange>=</font>在铁锈中用于赋值或参数。
 > 
 同上，若`a=b`则整个式子的值为`true`，否则为`false`。
 
 #### 不等于
-?> 代码:!= 中文释义:不等于
+?> 代码:!= 中文释义:不等于<br>
 同上，若`a!=b`则整个式子的值为`true`，否则为`false`。
 
 ### 逻辑运算符
 
 #### 且
-?> 代码:and 中文释义:且
+?> 代码:and 中文释义:且<br>
 > [!TIP] <font color=orange>and</font>用于连接两个逻辑判断，只有在这两个逻辑判断的值都为<font color=orange>true</font>时，<font color=orange>and</font>的值才为true。
-> 
+<br>
 > [!NOTE] 演示例子:
 ```ini
 [action]
@@ -442,11 +441,11 @@ autoTrigger:if memory.a < memory.b and memory.a > memory.c
 ```
 
 #### 或
-?> 代码:or 中文释义:或
+?> 代码:or 中文释义:或<br>
 > [!TIP] <font color=orange>or</font>用于连接两个逻辑判断，只要这两个逻辑判断的值有一个为<font color=orange>true</font>时，<font color=orange>or</font>的值就为true。
 
 #### 非
-?> 代码:not 中文释义:非
+?> 代码:not 中文释义:非<br>
 > [!TIP] <font color=orange>not</font>用于将某个逻辑判断的值取反，即`true`变`false`，`false`变`true`。
 > [!NOTE] 多个逻辑运算符同时使用时，优先级为`not>and>or`，同时<font color=orange>支持使用括号改变运算优先级</font>。推荐<font color=orange>在不确定优先级时打括号</font>。
 > [!NOTE] 演示例子:
