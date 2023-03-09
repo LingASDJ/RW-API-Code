@@ -367,6 +367,115 @@ imageScale:1.2
 # Page 6
 <!-- tabs:start -->
 # **[LogicBoolean] 逻辑序列组**
+> [!ATTENTION] 由于这个组的特殊性，格式不标准，请勿参考这个组的写法。
+
+### 前置知识
+
+#### 布尔值
+<font color=orange>布尔值</font>表达“真(true)”或“假(false)”的一个状态。在铁锈中，布尔值(`boolean`)被运用于逻辑判断。
+
+#### 数据类型
+数据类型指数据的种类，在铁锈中，不同的数据有不同的类型，不同的数据类型之间通常不能直接进行运算。
+
+|常见数据类型英文 |存储的值类型 |
+| -------- | ------------ |
+| string   | 字符串       |
+| number   | 整数         |
+| float    | 浮点数(小数) |
+| boolean  | 布尔值       |
+| unit     | 单位         |
+<!-- MarkDown表格必须有上方的分割线以告诉浏览器是表格 -->
+
+
+
+### 比较运算符
+
+#### 如果
+?> 代码:if 中文释义:如果
+`if`是大部分逻辑运算的开头(select等不需要if)，用于在支持逻辑的键引入逻辑判断。
+
+<!-- 若要连续嵌套，请直接使用Html原生代码 -->
+<div class="alert callout tip">
+<p>演示例子:</p>
+</div>
+
+```ini
+[action]
+autoTrigger:if self.maxHp() > memory.emx_hp
+```
+
+#### 小于
+?> 代码:< 中文释义:小于<br>
+小于用于在逻辑布尔值中比较两个数的大小，格式为`数据a < 数据b`，若`a<b`则整个式子的值为`true`，否则为`false`。
+
+<!-- 自定义的提示框请使用原生Html进行套入 -->
+<div class="alert callout note">
+  <p class="title">
+  <span class="icon icon-note"></span>要点指示:</p>
+</div>
+
+
+```ini
+[action]
+autoTrigger:if memory.a < memory.b
+```
+
+#### 大于
+?> 代码:> 中文释义:大于<br>
+同上，格式为`数据a > 数据b`，若`a>b`则整个式子的值为`true`，否则为`false`。
+
+#### 小于等于
+?> 代码:<= 中文释义:小于等于<br>
+同上，若`a<=b`则整个式子的值为`true`，否则为`false`。
+
+#### 大于等于
+?> 代码:>= 中文释义:大于等于<br>
+同上，若`a>=b`则整个式子的值为`true`，否则为`false`。
+
+#### 等于
+?> 代码:== 中文释义:等于<br>
+> [!TIP] 请注意，铁锈中等于的符号为<font color=orange>==</font>，<font color=orange>=</font>在铁锈中用于赋值或参数。
+> 
+同上，若`a=b`则整个式子的值为`true`，否则为`false`。
+
+#### 不等于
+?> 代码:!= 中文释义:不等于<br>
+同上，若`a!=b`则整个式子的值为`true`，否则为`false`。
+
+### 逻辑运算符
+
+#### 且
+?> 代码:and 中文释义:且<br>
+> [!TIP] <font color=orange>and</font>用于连接两个逻辑判断，只有在这两个逻辑判断的值都为<font color=orange>true</font>时，<font color=orange>and</font>的值才为true。
+<br>
+
+<!-- 自定义的提示框请使用原生Html进行套入 -->
+<div class="alert callout note">
+  <p class="title">
+  <span class="icon icon-note"></span>要点指示:</p>
+</div>
+<!-- 并保证首尾留有一行换行以便Markdown正确解析 -->
+
+```ini
+[action]
+autoTrigger:if memory.a < memory.b and memory.a > memory.c
+# 在这个例子中，只有a小于b且a大于c时，自动触发才会被触发
+```
+
+#### 或
+?> 代码:or 中文释义:或<br>
+> [!TIP] <font color=orange>or</font>用于连接两个逻辑判断，只要这两个逻辑判断的值有一个为<font color=orange>true</font>时，<font color=orange>or</font>的值就为true。
+
+#### 非
+?> 代码:not 中文释义:非<br>
+> [!TIP] <font color=orange>not</font>用于将某个逻辑判断的值取反，即`true`变`false`，`false`变`true`。
+> [!NOTE] 多个逻辑运算符同时使用时，优先级为`not>and>or`，同时<font color=orange>支持使用括号改变运算优先级</font>。推荐<font color=orange>在不确定优先级时打括号</font>。
+> [!NOTE] 演示例子:
+```ini
+[action]
+autoTrigger:if (memory.a < memory.b or memory.a > memory.c) and not memory.a < memory.d
+# 在这个例子中，a必须满足小于b和大于c中的一个，且a必须小于c，自动触发才会被触发
+```
 
 # **[Prices/Resources] 价格/资源序列组**
 
