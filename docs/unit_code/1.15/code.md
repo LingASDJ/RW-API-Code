@@ -377,11 +377,14 @@ imageScale:1.2
 #### 数据类型
 数据类型指数据的种类，在铁锈中，不同的数据有不同的类型，不同的数据类型之间通常不能直接进行运算。
 
- string   字符串       
- number   整数         
- float    浮点数(小数) 
- boolean  布尔值       
- unit     单位         
+|常见数据类型英文 |存储的值类型 |
+| -------- | ------------ |
+| string   | 字符串       |
+| number   | 整数         |
+| float    | 浮点数(小数) |
+| boolean  | 布尔值       |
+| unit     | 单位         |
+<!-- MarkDown表格必须有上方的分割线以告诉浏览器是表格 -->
 
 
 
@@ -390,7 +393,12 @@ imageScale:1.2
 #### 如果
 ?> 代码:if 中文释义:如果
 `if`是大部分逻辑运算的开头(select等不需要if)，用于在支持逻辑的键引入逻辑判断。
-> [!NOTE] 演示例子:
+
+<!-- 若要连续嵌套，请直接使用Html原生代码 -->
+<div class="alert callout tip">
+<p>演示例子:</p>
+</div>
+
 ```ini
 [action]
 autoTrigger:if self.maxHp() > memory.emx_hp
@@ -399,7 +407,14 @@ autoTrigger:if self.maxHp() > memory.emx_hp
 #### 小于
 ?> 代码:< 中文释义:小于<br>
 小于用于在逻辑布尔值中比较两个数的大小，格式为`数据a < 数据b`，若`a<b`则整个式子的值为`true`，否则为`false`。
-> [!NOTE] 演示例子:
+
+<!-- 自定义的提示框请使用原生Html进行套入 -->
+<div class="alert callout note">
+  <p class="title">
+  <span class="icon icon-note"></span>要点指示:</p>
+</div>
+
+
 ```ini
 [action]
 autoTrigger:if memory.a < memory.b
@@ -433,7 +448,14 @@ autoTrigger:if memory.a < memory.b
 ?> 代码:and 中文释义:且<br>
 > [!TIP] <font color=orange>and</font>用于连接两个逻辑判断，只有在这两个逻辑判断的值都为<font color=orange>true</font>时，<font color=orange>and</font>的值才为true。
 <br>
-> [!NOTE] 演示例子:
+
+<!-- 自定义的提示框请使用原生Html进行套入 -->
+<div class="alert callout note">
+  <p class="title">
+  <span class="icon icon-note"></span>要点指示:</p>
+</div>
+<!-- 并保证首尾留有一行换行以便Markdown正确解析 -->
+
 ```ini
 [action]
 autoTrigger:if memory.a < memory.b and memory.a > memory.c
