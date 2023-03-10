@@ -138,6 +138,9 @@ xxxx
 |1|2|3|
 ```
 
+如果你仍然不会Markdown表格写法，这里给你一个链接：
+<h3><a href="https://tableconvert.com/zh-cn/markdown-to-markdown" target="_blank">TableConvert-MD-点击进入</a></h3>
+
 ### 扩展写法(高级)
 
 有一些时候，我们可能需要在已经标记的后面再添加东西，
@@ -150,4 +153,4 @@ xxxx
 
 !> 该文档可能还有很多缺陷，如果你有更好的建议，请发送Issues或者PR给我。
 
-?> 编写于2023-3-9 RTS-Code-API[第2版-第1次修订]
+?> 编写于2023-3-9 RTS-Code-API[第2版-第2次修订]
