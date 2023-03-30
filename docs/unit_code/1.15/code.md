@@ -671,6 +671,7 @@ autoTrigger:if (memory.a < memory.b or memory.a > memory.c) and not memory.a < m
 
 #### 加
 ?> 代码:+ 中文释义:加<br>
+
 加用于将两个逻辑值相加，得到结果，格式为`数据a + 数据b`。
 
 > [!NOTE] 不同数据类型通常<font color=orange>不能直接进行算数运算</font>，但在部分情况下，<font color=orange>number</font>和<font color=orange>float</font>类型可以混用（建议<font color=orange>所有数值全部使用float</font>来避免混淆）。
@@ -686,6 +687,7 @@ autoTrigger:if (memory.a + memory.c) < memory.b
 
 #### 减
 ?> 代码:- 中文释义:减<br>
+
 减用于将两个逻辑值相减，得到结果，格式为`数据a - 数据b`。
 
 > [!NOTE] 对于<font color=orange>不满足交换律的运算符</font>，需要注意<font color=orange>运算优先级</font>是否正确。由于铁锈本身bug，<font color=orange>在数学上正确的优先级不一定在铁锈中正确</font>，因此可能出现减法顺序混乱等问题。
@@ -693,10 +695,12 @@ autoTrigger:if (memory.a + memory.c) < memory.b
 
 #### 乘
 ?> 代码:* 中文释义:乘<br>
+
 乘用于将两个逻辑值相乘，得到结果，格式为`数据a * 数据b`。
 
 #### 除
 ?> 代码:/ 中文释义:除<br>
+
 除用于将两个逻辑值相除，得到结果，格式为`数据a / 数据b`。
 
 #### 求余
