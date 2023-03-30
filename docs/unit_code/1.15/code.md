@@ -249,10 +249,178 @@ streamingCost:1145
 建议使用模板快速将一个模组为所有单位切换流资源。
 例如all-units.template.
 #### switchPriceWithStreamingCost-演示例子:
-```ini,all-units.templateE
+```ini,all-units.template
 [core]
 switchPriceWithStreamingCost:true
 ```
+
+!> 以下的代码为`单位统计代码组`,非必须存在的代码，请根据情况自行使用
+
+### selfRegenRate
+#### selfRegenRate-代码简介
+
+?> 代码:selfRegenRate 中文释义:生命恢复速度 类型:浮点型 隶属于:单位统计代码组
+
+> [!TIP] 此数值决定每帧增加血量。游戏内默认速度下，一秒为60逻辑帧，而你看到的FPS帧数为渲染帧，所以电脑上几百帧和手机上60帧和省电模式下30帧并不影响计算。所以不要写太大。可以写负值用于自毁。
+#### selfRegenRate-演示例子:
+```ini
+[core]
+maxHp:500
+selfRegenRate:0.5
+```
+
+### maxShield
+#### maxShield-代码简介
+
+?> 代码:maxShield 中文释义:护盾值 类型:整型 隶属于:单位统计代码组
+
+> [!TIP] 单位最大护盾值，默认生成时即为此值。如果设置了startShieldAtZero:true，则初始为0.
+#### maxShield-演示例子:
+```ini
+[core]
+maxShield:3000
+```
+
+### startShieldAtZero
+#### startShieldAtZero-代码简介
+
+?> 代码:startShieldAtZero 中文释义:护盾初始值为0 类型:布尔型 隶属于:单位统计代码组
+
+> [!TIP] 如果为true，则单位护盾值从0开始增加。
+#### startShieldAtZero-演示例子:
+```ini
+[core]
+maxShield:3000
+startShieldAtZero:true
+```
+
+### shieldRegen
+#### shieldRegen-代码简介
+
+?> 代码:shieldRegen 中文释义:护盾恢复速度 类型:浮点型 隶属于:单位统计代码组
+
+> [!TIP] 此数值决定每帧增加护盾值，游戏内一秒为60帧，所以不要写太大。可以写负值。
+#### shieldRegen-演示例子:
+```ini
+[core]
+maxShield:3000
+shieldRegen:0.5
+```
+
+### energyMax
+#### energyMax-代码简介
+
+?> 代码:energyMax 中文释义:能量值 类型:浮点型 隶属于:单位统计代码组
+
+> [!TIP] 默认值为0。可以用作炮塔，激光防御和行动的弹药的能量。
+#### energyMax-演示例子:
+```ini
+[core]
+energyMax:5
+```
+
+### energyRegen
+#### energyRegen-代码简介
+
+?> 代码:energyRegen 中文释义:能量恢复速度 类型:浮点型 隶属于:单位统计代码组
+
+> [!TIP] 能量每帧恢复速度，游戏内一秒为60帧，所以不要写太大。可以写负值。
+#### energyRegen-演示例子:
+```ini
+[core]
+energyRegen:0.4
+```
+
+### energyRegenWhenRecharging
+
+#### energyRegenWhenRecharging-代码简介
+
+?> 代码:energyRegenWhenRecharging
+ 中文释义:充能时能量恢复速度 类型:浮点型 隶属于:单位统计代码组
+
+> [!TIP] 能量恢复是持续的，如果你设置了energyNeedsToRechargeToFull，那么攻击时按energyRegen恢复，耗尽时的灰条按此处设定值恢复。
+#### energyRegenWhenRecharging-演示例子:
+```ini
+[core]
+energyMax:1
+energyRegenWhenRecharging:0.4
+```
+
+### energyNeedsToRechargeToFull
+
+#### energyNeedsToRechargeToFull-代码简介
+
+?> 代码:energyNeedsToRechargeToFull
+ 中文释义:能量需要充满 类型:布尔型 隶属于:单位统计代码组
+
+> [!TIP] 如果能量耗尽，则需要完全充能才能进行攻击。
+#### energyRegenWhenRecharging-演示例子:
+```ini
+[core]
+energyMax:4
+energyNeedsToRechargeToFull:true
+```
+
+### armour
+#### armour-代码简介
+
+?> 代码:armour
+ 中文释义:装甲 类型:整型 隶属于:单位统计代码组
+
+> [!TIP] 抵消敌方攻击所造成的伤害。
+#### armour-演示例子:
+```ini
+[core]
+armour:40
+#如果受到40以上的常规攻击，则进行抵消，反之返回1伤害点。
+#例如45伤害，40护甲，那么将获得5点伤害。
+```
+
+### armourMinDamageToKeep
+#### armourMinDamageToKeep-代码简介
+
+?> 代码:armour
+ 中文释义:装甲最低伤害 类型:整型 隶属于:单位统计代码组
+
+> [!TIP] 至少造成多少点伤害，默认为1.防止护甲太高完全打不动。
+#### armourMinDamageToKeep-演示例子:
+```ini
+[core]
+armour:40
+armourMinDamageToKeep:2
+#如果受到40以下的常规攻击，则进行最低伤害判定
+```
+
+### borrowResourcesWhileAlive
+#### borrowResourcesWhileAlive-代码简介
+
+?> 代码:armour
+ 中文释义:资源活着时借用 类型:Price型 隶属于:单位统计代码组
+
+> [!TIP] 创建时获取这些资源，删除或销毁时将其返回。例如用于电力逻辑，负数供电和正数耗电。
+#### borrowResourcesWhileAlive-演示例子:
+```ini
+[core]
+borrowResourcesWhileAlive:5000
+#单位活着的时候给予5000金币，死亡扣除5000金币
+#一个小型贷款系统，
+
+### 考考你：
+如果这里要通过这个代码做一个小的贷款系统，并经过一段时间让单位死亡。
+只需要4行代码即可实现，试试看。
+
+提示：dieOnZeroEnergy:true---(无能量时死亡|如果能量值为零，该单位死亡)
+```
+
+<html>
+<button @click="borrowResourcesWhileAlivequestion" class="rtsqs">点击显示参考答案</button>
+<!-- 修改在Index.html vueGlobalOptions 的全局配置 -->
+ <p id="borrowResourcesWhileAlivequestionOK">&nbsp;</p>
+</html>
+
+
+## **[canBuild_Name]组**
+
 
 
 ## **[canBuild_Name]组**
