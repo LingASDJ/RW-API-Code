@@ -658,16 +658,14 @@ autoTrigger:if memory.a < memory.b and memory.a > memory.c
 ```ini
 [action]
 autoTrigger:if (memory.a < memory.b or memory.a > memory.c) and not memory.a < memory.d
-
 ```
-<!-- tabs:start -->
 
+<!-- tabs:start -->
 <!-- 换行两个空格 或者 <br> -->
 #### **动动脑，考考你**
 #### 考考你，在上述这个例子中，满足什么条件才会触发？
 #### **显示参考答案**
 #### 答案：a必须满足小于b和大于c中的一个，且a必须小于c，自动触发才会被触发。
-
 <!-- tabs:end -->
 
 
