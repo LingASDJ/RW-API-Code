@@ -404,19 +404,28 @@ armourMinDamageToKeep:2
 borrowResourcesWhileAlive:5000
 #单位活着的时候给予5000金币，死亡扣除5000金币
 #一个小型贷款系统，
+```
 
-### 考考你：
-如果这里要通过这个代码做一个小的贷款系统，并经过一段时间让单位死亡。
+<!-- tabs:start -->
+
+<!-- 换行两个空格 或者 <br> -->
+#### **动动脑，考考你**
+如果这里要通过这个代码做一个小的贷款系统，并经过一段时间让单位死亡。  
 只需要4行代码即可实现，试试看。
 
 提示：dieOnZeroEnergy:true---(无能量时死亡|如果能量值为零，该单位死亡)
+#### **显示参考答案**
+```txt
+#参考答案为：
+[core]
+borrowResourcesWhileAlive:5000
+energyMax:1
+energyRegen:-0.4
+dieOnZeroEnergy:true
+#原理是通过能量为0单位死亡并通过这个代码还钱，是很简陋的贷款思路，当然，在后续会有更加高级的思路。
 ```
 
-<html>
-<button @click="borrowResourcesWhileAlivequestion" class="rtsqs">点击显示参考答案</button>
-<!-- 修改在Index.html vueGlobalOptions 的全局配置 -->
- <p id="borrowResourcesWhileAlivequestionOK">&nbsp;</p>
-</html>
+<!-- tabs:end -->
 
 
 ## **[canBuild_Name]组**

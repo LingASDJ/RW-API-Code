@@ -232,22 +232,6 @@
           }
         )
       ],
-      vueGlobalOptions: {
-        data: function () {
-          return {
-            count: 0,
-            //文本索引
-            borrowResourcesWhileAlive: '#参考答案为：\n[core]\nborrowResourcesWhileAlive:5000\nenergyMax:1\nenergyRegen:-0.4\ndieOnZeroEnergy:true\n#原理是通过能量为0单位死亡并通过这个代码还钱，是很简陋的贷款思路，当然，在后续会有更加高级的思路。'
-          };
-        },
-        // 请参考方法调用
-        methods: {
-          borrowResourcesWhileAlivequestion() {
-            // 参考方法进行调用，this.xxxx 与上面一致。
-            document.getElementById("borrowResourcesWhileAlivequestionOK").innerText = this.borrowResourcesWhileAlive;
-          },
-        },
-      },
       tabs: {
         persist: true,      // default
         sync: true,      // default
@@ -352,16 +336,6 @@
 
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <!-- 插件引入 -->
-
-  <!-- 兼容Vue -->
-  <!-- Production -->
-  <script src="//cdn.jsdelivr.net/npm/vue@2/dist/vue.min.js"></script>
-
-  <!-- Development -->
-  <script src="//cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-
-
-
   <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify-updated/src/time-updater.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
