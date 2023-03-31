@@ -563,7 +563,8 @@ imageScale:1.2
 | unit     | 单位         |
 <!-- MarkDown表格必须有上方的分割线以告诉浏览器是表格 -->
 
-
+#### 算数优先级
+与数学中计算符一样，铁锈中算数运算符有优先级区别。`%`和`*`和`/`的优先级大于`+`和`-`。
 
 ### 比较运算符
 
@@ -646,13 +647,180 @@ autoTrigger:if memory.a < memory.b and memory.a > memory.c
 #### 非
 ?> 代码:not 中文释义:非<br>
 > [!TIP] <font color=orange>not</font>用于将某个逻辑判断的值取反，即`true`变`false`，`false`变`true`。
-> [!NOTE] 多个逻辑运算符同时使用时，优先级为`not>and>or`，同时<font color=orange>支持使用括号改变运算优先级</font>。推荐<font color=orange>在不确定优先级时打括号</font>。
-> [!NOTE] 演示例子:
+
+> [!NOTE] 多个逻辑运算符同时使用时，优先级为`not>and>or`，同时<font color=orange>支持使用括号改变运算优先级</font>。
+<br>推荐<font color=orange>在不确定优先级时打括号</font>。
+
+<div class="alert callout tip">
+<p>演示例子:</p>
+</div>
+
 ```ini
 [action]
 autoTrigger:if (memory.a < memory.b or memory.a > memory.c) and not memory.a < memory.d
-# 在这个例子中，a必须满足小于b和大于c中的一个，且a必须小于c，自动触发才会被触发
+# 考考你，在这个例子中，满足什么条件才会触发？
 ```
+
+<!-- 鼠标放上显示测试 -->
+<p id="onMouseMoveView_not">鼠标放上显示参考答案</p>
+<p id="onMouseOutView_not"></p>
+<script>
+    var onMouseMoveView_not = document.getElementById("onMouseMoveView_not").onmousemove = function () {
+        var onMouseOutView_not = document.getElementById("onMouseOutView_not");
+        onMouseOutView_not.innerHTML="答案：a必须满足小于b和大于c中的一个，且a必须小于c，自动触发才会被触发。";
+    };
+    var onMouseMoveView_not = document.getElementById("onMouseMoveView_not").onmouseout = function () {
+        var onMouseOutView_not = document.getElementById("onMouseOutView_not");
+        onMouseOutView_not.innerHTML=""
+    }
+</script>
+<!-- 好屎山（ -->
+
+### 算数运算符
+
+#### 加
+?> 代码:+ 中文释义:加<br>
+
+加用于将两个逻辑值相加，得到结果，格式为`数据a + 数据b`。
+
+> [!NOTE] 不同数据类型通常<font color=orange>不能直接进行算数运算</font>，但在部分情况下，<font color=orange>number</font>和<font color=orange>float</font>类型可以混用（建议<font color=orange>所有数值全部使用float</font>来避免混淆）。
+
+<div class="alert callout tip">
+<p>演示例子:</p>
+</div>
+
+```ini
+[action]
+autoTrigger:if (memory.a + memory.c) < memory.b
+```
+
+#### 减
+?> 代码:- 中文释义:减<br>
+
+减用于将两个逻辑值相减，得到结果，格式为`数据a - 数据b`。
+
+> [!NOTE] 对于<font color=orange>不满足交换律的运算符</font>，需要注意<font color=orange>运算优先级</font>是否正确。由于铁锈本身bug，<font color=orange>在数学上正确的优先级不一定在铁锈中正确</font>，因此可能出现减法顺序混乱等问题。
+<br>为了避免可能的问题，请尽量在任何<font color=orange>不满足交换律的运算符</font>两边打上括号。
+
+#### 乘
+?> 代码:* 中文释义:乘<br>
+
+乘用于将两个逻辑值相乘，得到结果，格式为`数据a * 数据b`。
+
+#### 除
+?> 代码:/ 中文释义:除<br>
+
+除用于将两个逻辑值相除，得到结果，格式为`数据a / 数据b`。
+
+#### 求余
+?> 代码:% 中文释义:求余(取模)<br>
+
+求余用于获取两个逻辑值中，第一个除第二个的余数，格式为`数据a % 数据b`。
+例如`7%3=1(7除3余1)`
+
+### 单位统计
+
+#### 通用统计关键字
+单位统计中部分通用的关键字：
+1. `greaterThan` 大于
+2. `lessThan` 小于
+3. `empty` 空
+4. `full` 满
+5. `equalTo` 等于
+
+#### 内置参数
+单位统计中部分内置参数返回代码（由于过于简单不单独列出）：
+1. `self.hp()` 生命值
+2. `self.maxHp()` 最大生命值
+3. `self.energy()` 能量
+4. `self.shield()` 护盾
+5. `self.kills()` 击杀数
+6. `self.maxEnergy()` 最大能量
+7. `self.maxShield()` 最大护盾
+8. `self.height()/self.x()` 高度
+9. `self.ammo()` 弹药
+10. `self.isAmmoEmpty()` 弹药为空(快捷方式:`self.ammo(empty=true)`)
+11. `self.ammoIncludingQueued()` 包括队列中的弹药
+12. `self.energyIncludingQueued()` 包括队列中的能量
+13. `self.isEnergyFull()` 能量满(快捷方式:`self.energy(full=true)`)
+14. `self.isEnergyEmpty()` 能量空(快捷方式:`self.energy(empty=true)`)
+15. `self.isEnergyRecharing()` 能量充能中
+16. `self.playerName()` 玩家名称
+17. `self.teamName()` 队伍名称
+18. `self.x(),self.y()` x,y坐标
+19. `self.dir()` 方向
+20. `self.priceCredits()` 金钱价格
+21. `self.speed()` 当前速度
+22. `self.maxMoveSpeed()` 最大速度
+23. `self.id()` 单位id(每个单位的序号)
+24. `self.builtAmount()` 建造数量
+25. `self.complate()` 自身建造完成
+26. `self.teamDefeatedTech()` 队伍失败
+27. `self.teamWipedOut()` 队伍全部死亡
+28. `self.teamVictory()` 队伍获胜
+29. `self.queueSize()` 自身队列大小
+
+#### self.hasResources()
+?> 代码:self.hasResources() 中文释义:有资源 返回类型:boolean<br>
+
+`self.hasResources()` 用于检测自身某资源是否大于等于某数值，格式为`self.hasResources(资源名=数值)`
+
+<div class="alert callout tip">
+<p>演示例子:</p>
+</div>
+
+```ini
+self.hasResources(hp=10,energy=5) 
+```
+
+#### self.resource()
+?> 代码:self.resource() 中文释义:资源 返回类型:float<br>
+
+与`self.hasResources()`不同，`self.resource()`直接返回某个资源的数值。格式为`self.resource(type="资源名")`。
+
+> [!NOTE] 引用资源时，请确保<font color=orange>这个资源在这个单位定义过</font>，否则会报错。
+
+#### self.resource.RESOURCE_TYPE
+?> 代码:self.resource.RESOURCE_TYPE 中文释义:资源 返回类型:float<br>
+
+`self.resource.RESOURCE_TYPE`是`self.resource()`的快捷方式。格式为`self.resource.资源名称`，引用更加方便。
+
+#### self.isResourceLargerThan()
+?> 代码:self.isResourceLargerThan() 中文释义:资源是否大于 返回类型:boolean<br>
+
+> [!ATTENTION] 此代码为老旧解决方案，不推荐使用。
+
+`self.isResourceLargerThan()`用于比较两种资源的大小。格式为`self.isResourceLargerThan(source=资源A,compareTarget=资源B,byMoreThan=大于资源B数量,multiplyTargetBy=资源B倍数)`
+
+#### self.numberOfQueuedWaypoints()
+?> 代码:self.numberOfQueuedWaypoints() 中文释义:队列中路径点数量 返回类型:float<br>
+
+`self.numberOfQueuedWaypoints()`用于返回队列中路径点的数量。格式为`self.numberOfQueuedWaypoints(type="路径点类型")`。
+
+### 单位计时
+
+#### self.hasTakenDemage()
+?> 代码:self.hasTakenDemage() 中文释义:受到伤害 返回类型:bool<br>
+
+> [!NOTE] 单位计时部分能返回到最小时间精度为<font color=orange>0.1秒</font>。
+
+`self.hasTakenDemage()`用于获取指定时间内是否收到伤害。使用`self.hasTakenDemage(withInSecounds=多少秒内,laterThanSecounds=多少秒后)`格式时，返回bool类型。
+
+#### self.timeAlive()
+?> 代码:self.timeAlive() 中文释义:存活时间 返回类型:float/bool<br>
+
+`self.timeAlive()`用于获取单位存活时间。使用`self.timeAlive(withInSecounds=多少秒内,laterThanSecounds=多少秒后)`格式时，返回bool类型（是否符合此范围）；使用`self.timeAlive()`格式时，返回float类型。（更推荐使用后者）
+
+#### self.lastConverted()
+?> 代码:self.lastConverted() 中文释义:最后转换时间 返回类型:float/bool<br>
+
+`self.timeAlive()`用于获取单位上次转换后的时间。使用`self.lastConverted(withInSecounds=多少秒内,laterThanSecounds=多少秒后)`格式时，返回bool类型（是否符合此范围）；使用`self.lastConverted()`格式时，返回float类型。
+
+#### self.customTimer()
+?> 代码:self.customTimer() 中文释义:自定义计时器 返回类型:float/bool<br>
+
+`self.timeAlive()`用于获取自定义计时器的时间。使用`self.customTimer(withInSecounds=多少秒内,laterThanSecounds=多少秒后)`格式时，返回bool类型（是否符合此范围）；使用`self.customTimer()`格式时，返回float类型。
+
 
 # **[Prices/Resources] 价格/资源序列组**
 
