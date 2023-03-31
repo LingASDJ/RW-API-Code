@@ -658,23 +658,19 @@ autoTrigger:if memory.a < memory.b and memory.a > memory.c
 ```ini
 [action]
 autoTrigger:if (memory.a < memory.b or memory.a > memory.c) and not memory.a < memory.d
-# 考考你，在这个例子中，满足什么条件才会触发？
-```
 
-<!-- 鼠标放上显示测试 -->
-<p id="onMouseMoveView_not">鼠标放上显示参考答案</p>
-<p id="onMouseOutView_not"></p>
-<script>
-    var onMouseMoveView_not = document.getElementById("onMouseMoveView_not").onmousemove = function () {
-        var onMouseOutView_not = document.getElementById("onMouseOutView_not");
-        onMouseOutView_not.innerHTML="答案：a必须满足小于b和大于c中的一个，且a必须小于c，自动触发才会被触发。";
-    };
-    var onMouseMoveView_not = document.getElementById("onMouseMoveView_not").onmouseout = function () {
-        var onMouseOutView_not = document.getElementById("onMouseOutView_not");
-        onMouseOutView_not.innerHTML=""
-    }
-</script>
-<!-- 好屎山（ -->
+```
+<!-- tabs:start -->
+
+<!-- 换行两个空格 或者 <br> -->
+#### **动动脑，考考你**
+#### 考考你，在上述这个例子中，满足什么条件才会触发？
+#### **显示参考答案**
+#### 答案：a必须满足小于b和大于c中的一个，且a必须小于c，自动触发才会被触发。
+
+<!-- tabs:end -->
+
+
 
 ### 算数运算符
 
