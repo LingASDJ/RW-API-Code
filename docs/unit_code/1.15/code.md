@@ -414,7 +414,7 @@ borrowResourcesWhileAlive:5000
 只需要4行代码即可实现，试试看。
 
 提示：dieOnZeroEnergy:true---(无能量时死亡|如果能量值为零，该单位死亡)
-#### **显示参考答案**
+#### **显示答案-#1**
 ```txt
 #参考答案为：
 [core]
@@ -665,7 +665,7 @@ autoTrigger:if (memory.a < memory.b or memory.a > memory.c) and not memory.a < m
 <!-- 换行两个空格 或者 <br> -->
 #### **动动脑考考你**
 #### 考考你，在上述这个例子中，满足什么条件才会触发？
-#### **显示参考答案**
+#### **显示答案-#2**
 #### 答案：a必须满足小于b和大于c中的一个，且a必须小于c，自动触发才会被触发。
 <!-- tabs:end -->
 
