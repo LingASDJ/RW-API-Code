@@ -431,10 +431,6 @@ dieOnZeroEnergy:true
 
 ## **[canBuild_Name]组**
 
-
-
-## **[canBuild_Name]组**
-
 ## **[graphics]组**
 
 ### image
@@ -535,6 +531,14 @@ imageScale:1.2
 # Page 5
 <!-- tabs:start -->
 # **[action_Name]/[hiddenAction_Name]集合组**
+
+### text
+#### text-代码简介
+
+?> 代码:text 中文释义:显示文本 类型:字符串 隶属于:行为代码组
+
+> [!TIP] 支持%动态显示，其内容为该action的名称
+
 
 # **[spawn unit] 刷兵序列组**
 
