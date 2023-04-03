@@ -699,7 +699,9 @@ projectile:1
 [projectile_2]
 ```
 > [!TIP] fireTurretXAtGround_withTarget同时只能有一个fireTurretXAtGround_withOffset。如果俩的没有则是手动选择攻击点.
+
 > [!TIP] 当使用fireTurretXAtGround_withProjectile重新指定抛射体后，使用的不再是fireTurretXAtGround的炮塔的抛射体
+
 > [!TIP] fireTurretX中的"X"是可以替换成数字。
 ```ini
 [hiddenAction_fire]
