@@ -563,7 +563,7 @@ imageScale:1.2
 
 #### Message-演示例子
 A单位：
-```
+```ini
 [core]
 @memory num:number
 
@@ -574,7 +574,7 @@ sendMessageWithData:data1="abc",data2=1,hp=self.hp,memory1=memory.num
 ```
 > [!TIP] data1 data2这些都不用提前声明。A单位的self.customTarget1为B单位,data1为字符串,data2为数字1,hp为A单位的血量,memory1的值为num这个memory的值
 B单位：
-```
+```ini
 [hiddenAction_接受1]
 #能够触发
 autoTriggerOnEvent:newMessage(withTag="tag1")
