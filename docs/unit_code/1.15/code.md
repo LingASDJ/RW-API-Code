@@ -587,7 +587,7 @@ showMessageToAllPlayers:%{eventSource}+eventData("data1",type="string")
 [hiddenAction_接受2]
 #不能够触发，因为A单位发送的message没有附带tag3
 autoTriggerOnEvent:newMessage(withTag="tag3")
-showMessageToAllPlayers:abab
+showMessageToAllPlayers:ababab
 ```
 # **[spawn unit] 刷兵序列组**
 
