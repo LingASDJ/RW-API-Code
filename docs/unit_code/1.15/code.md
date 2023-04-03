@@ -596,8 +596,8 @@ setUnitMemory:str="hello shishanyue"
 ### autoTriggerOnEvent
 #### autoTriggerOnEvent-代码简介
 ?> 代码:autoTriggerOnEvent 中文释义:自动触发事件 类型:字符串 隶属于:行为代码组
-> [!TIP] 满足此条件则自动触发
-。参数表：
+> [!TIP] 满足此条件则自动触发。
+
 |参数表 |参数表 |
 | -------- | ------------  |
 |创建      |created       |
