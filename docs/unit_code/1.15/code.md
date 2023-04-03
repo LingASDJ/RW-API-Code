@@ -534,9 +534,63 @@ imageScale:1.2
 
 ### text
 #### text-代码简介
-
 ?> 代码:text 中文释义:显示文本 类型:字符串 隶属于:行为代码组
-
+> [!TIP] 支持%动态显示，其内容为该action的名称
+### buildSpeed
+#### buildSpeed-代码简介
+?> 代码:buildSpeed 中文释义:建造速度 类型:字符串 隶属于:行为代码组
+> [!TIP] 支持%动态显示，其内容为该action的名称
+### alsoTriggerAction
+#### alsoTriggerAction-代码简介
+?> 代码:requireConditional 中文释义:显示文本 类型:字符串 隶属于:行为代码组
+> [!TIP] 支持%动态显示，其内容为该action的名称
+### requireConditional
+#### requireConditional-代码简介
+?> 代码:requireConditional 中文释义:显示文本 类型:字符串 隶属于:行为代码组
+> [!TIP] 支持%动态显示，其内容为该action的名称
+### alsoTriggerActionRepeat
+#### alsoTriggerActionRepeat-代码简介
+?> 代码:alsoTriggerActionRepeat 中文释义:显示文本 类型:字符串 隶属于:行为代码组
+> [!TIP] 支持%动态显示，其内容为该action的名称
+### setUnitMemory
+#### setUnitMemory-代码简介
+?> 代码:setUnitMemory 中文释义:显示文本 类型:字符串 隶属于:行为代码组
+> [!TIP] 支持%动态显示，其内容为该action的名称
+### alsoQueueAction
+#### alsoQueueAction-代码简介
+?> 代码:alsoQueueAction 中文释义:显示文本 类型:字符串 隶属于:行为代码组
+> [!TIP] 支持%动态显示，其内容为该action的名称
+### removeAllQueuedItemsWithoutRefund
+#### removeAllQueuedItemsWithoutRefund-代码简介
+?> 代码:removeAllQueuedItemsWithoutRefund 中文释义:显示文本 类型:字符串 隶属于:行为代码组
+> [!TIP] 支持%动态显示，其内容为该action的名称
+### alsoTriggerOrQueueActionWithTarget
+#### alsoTriggerOrQueueActionWithTarget-代码简介
+?> 代码:alsoTriggerOrQueueActionWithTarget 中文释义:显示文本 类型:字符串 隶属于:行为代码组
+> [!TIP] 支持%动态显示，其内容为该action的名称
+### autoTriggerOnEvent
+#### autoTriggerOnEvent-代码简介
+?> 代码:autoTriggerOnEvent 中文释义:显示文本 类型:字符串 隶属于:行为代码组
+> [!TIP] 支持%动态显示，其内容为该action的名称
+### resetCustomTimer
+#### resetCustomTimer-代码简介
+?> 代码:resetCustomTimer 中文释义:显示文本 类型:字符串 隶属于:行为代码组
+> [!TIP] 支持%动态显示，其内容为该action的名称
+### teleportTo
+#### teleportTo-代码简介
+?> 代码:teleportTo 中文释义:显示文本 类型:字符串 隶属于:行为代码组
+> [!TIP] 支持%动态显示，其内容为该action的名称
+### fireTurretXAtGround
+#### fireTurretXAtGround-代码简介
+?> 代码:fireTurretXAtGround 中文释义:显示文本 类型:字符串 隶属于:行为代码组
+> [!TIP] 支持%动态显示，其内容为该action的名称
+### fireTurretXAtGround_withProjectile
+#### fireTurretXAtGround_withProjectile-代码简介
+?> 代码:fireTurretXAtGround_withProjectile 中文释义:显示文本 类型:字符串 隶属于:行为代码组
+> [!TIP] 支持%动态显示，其内容为该action的名称
+### fireTurretXAtGround_withTarget
+#### fireTurretXAtGround_withTarget-代码简介
+?> 代码:fireTurretXAtGround_withTarget 中文释义:显示文本 类型:字符串 隶属于:行为代码组
 > [!TIP] 支持%动态显示，其内容为该action的名称
 
 ### description
@@ -580,15 +634,24 @@ B单位：
 autoTriggerOnEvent:newMessage(withTag="tag1")
 showMessageToAllPlayers:%{eventSource}+eventData("data1",type="string")
 #eventSource为发送该message的单位,即A单位(unit)。
-#使用eventData("name",type="")获取该message附带的数据,name为该数据的名称(如data2，memory1)这里需要""括起来。type类型如下：
-#string number float boolean unit[]  float[]  number[]
-#字符串 整数   浮点数 布尔    单位数组 浮点数组 整数数组
+#使用eventData("name",type="")获取该message附带的数据,name为该数据的名称(如data2，memory1)这里需要""括起来。
 #type类型由A单位发送时决定
 [hiddenAction_接受2]
 #不能够触发，因为A单位发送的message没有附带tag3
 autoTriggerOnEvent:newMessage(withTag="tag3")
 showMessageToAllPlayers:ababab
 ```
+|type类型如下 |存储的值类型 |
+| -------- | ------------  |
+|string      |字符串       |
+|number      |整数         |
+|float       |浮点数       |
+|boolean     |布尔         |
+|unit[]      |单位数组     |
+|float[]     |浮点数组     | 
+|number[]    |整数数组     |
+
+
 # **[spawn unit] 刷兵序列组**
 
 # **[placementRule_Name] 放置规则组**
