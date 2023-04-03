@@ -807,6 +807,13 @@ autoTrigger:if (memory.a + memory.c) < memory.b
 27. `self.teamWipedOut()` 队伍全部死亡
 28. `self.teamVictory()` 队伍获胜
 29. `self.queueSize()` 自身队列大小
+30. `self.transportingCount()` 运输数量
+31. `self.isAttacking()` 在攻击
+32. `self.isOnNeutralTeam()` 是中立队伍
+33. `self.isControlledByAI()` 是AI控制
+34. `self.isInMap()` 在地图内
+35. `game.mapWidth()` 地图宽度
+36. `game.mapHeight()` 地图高度
 
 #### self.hasResources()
 ?> 代码:self.hasResources() 中文释义:有资源 返回类型:boolean<br>
@@ -868,6 +875,137 @@ self.hasResources(hp=10,energy=5)
 ?> 代码:self.customTimer() 中文释义:自定义计时器 返回类型:float/bool<br>
 
 `self.timeAlive()`用于获取自定义计时器的时间。使用`self.customTimer(withInSecounds=多少秒内,laterThanSecounds=多少秒后)`格式时，返回bool类型（是否符合此范围）；使用`self.customTimer()`格式时，返回float类型。
+
+<div class="alert callout tip">
+<p>演示例子:</p>
+</div>
+
+```ini
+[action]
+autoTrigger:if self.customTimer() >= 10
+resetCustomTimer:true
+showMessageToPlayers:10秒过去了
+```
+
+### 杂项
+
+#### thisActionIndex/index()
+?> 代码:thisActionIndex/index() 中文释义:索引 返回类型:float(number)<br>
+
+`thisActionIndex/index()`是`alsoTriggerActionRepeat`中当前的索引。例如`alsoTriggerActionRepeat:10`，那么index在10次循环中分别为1-10。
+
+#### self.hasFlag()
+?> 代码:self.hasFlag() 中文释义:有标志 返回类型:boolean<br>
+
+`self.hasFlag()`用于获取自身是否有<font color=orange>标志</font>，格式为`self.hasFlag(id=数字)`。
+
+> [!NOTE] 不同于<font color=orange>标签（tag）</font>，<font color=orange>标志（flag）</font>是内置的一些<font color=orange>布尔值</font>，无需定义即可直接使用。<br>
+> 标签的添加方法为<font color=orange>[action]addResource:flag=1,3-7,13</font>，且只支持<font color=orange>0-31</font>，标签的移除方法与之相反。
+
+#### self.tags()
+?> 代码:self.tags() 中文释义:有标签 返回类型:boolean<br>
+
+`self.tags()`用于检测自身是否有某个标签，格式为`self.tags(includes="标签")`。
+
+#### self.globalTeamTags/self.hasGlobalTeamTags()
+?> 代码:self.globalTeamTags/self.hasGlobalTeamTags() 中文释义:有全局标签 返回类型:boolean<br>
+
+`self.globalTeamTags/self.hasGlobalTeamTags()`用于检测队伍内是否有某个全局标签，格式为`self.globalTeamTags/self.hasGlobalTeamTags(includes="标签")`
+
+#### self.numberOfConnections()
+?> 代码:self.numberOfConnections() 中文释义:连接数 返回类型:float<br>
+
+隐藏代码，用途不明。
+
+#### self.numberOfAttachedUnits()
+?> 代码:self.numberOfAttachedUnits() 中文释义:有附属物 返回类型:int/bool<br>
+
+`self.numberOfAttachedUnits()`用于获取自身附属物数量，可以通过`self.numberOfAttachedUnits(withTag="标签")`格式来限制附属物标签。
+
+#### self.hasActiveWaypoint()
+?> 代码:self.hasActiveWaypoint() 中文释义:有活动的路径点 返回类型:bool<br>
+
+`self.hasActiveWaypoint()`用于获取自身有无活动的路径点，格式为`self.hasActiveWaypoint(type="路径点类型")`。
+
+> [!NOTE] 路径点类型可以是<font color=orange>move, attackMove, guard, loadInto, loadUp, attack, reclaim, repair, touchTarget, build, follow, setPassiveTarget</font>。
+
+#### self.transportingUnitWithTags()
+?> 代码:self.transportingUnitWithTags() 中文释义:运输单位中有此标签 返回类型:bool<br>
+
+`self.transportingUnitWithTags()`用于检测自身运输的单位中是否有含有特定标签的单位，格式为`self.transportingUnitWithTags(includes="标签")`。
+
+#### self.hasParent()
+?> 代码:self.hasParent() 中文释义:有父单位 返回类型:bool<br>
+
+`self.hasParent()`用于检测自身是否有父单位，且可以通过`self.hasParent(hasTag="标签")`来筛选父单位标签。<br>
+通常情况下，附属和被运输单位会有父单位。
+
+#### self.numberOfUnitsInTeam()
+?> 代码:self.numberOfUnitsInTeam() 中文释义:队伍中此单位数量 返回类型:float<br>
+
+`self.numberOfUnitsInTeam()`(可省略`self.`)用于检测自身队伍符合条件的单位数量，格式为`self.numberOfUnitsInTeam(withTag="标签",withinRange=此距离内,incompleteBuildings=包含不完整建筑,factoryQueue=包含工厂队列)`
+
+<div class="alert callout tip">
+<p>演示例子:</p>
+</div>
+
+```ini
+self.numberOfUnitsInTeam(withTag="air",withInRange=500,factoryQueue=true)
+#有air标签，500范围内，包含工厂队列中的单位
+```
+
+#### self.numberOfUnitsInAllyNotOwnTeam()
+?> 代码:self.numberOfUnitsInAllyNotOwnTeam() 中文释义:盟友队伍中此单位数量 返回类型:float<br>
+
+`self.numberOfUnitsInAllyNotOwnTeam()`与`self.numberOfUnitsInTeam()`用法完全相同，区别仅在于前者的查询范围是盟友中。
+
+#### self.numberOfUnitsInEnemyTeam()
+?> 代码:self.numberOfUnitsInEnemyTeam() 中文释义:敌方队伍中此单位数量 返回类型:float<br>
+
+`self.numberOfUnitsInEnemyTeam()`与`self.numberOfUnitsInTeam()`用法完全相同，区别仅在于前者的查询范围是敌方中。
+
+#### self.numberOfUnitsInNeutralTeam()
+?> 代码:self.numberOfUnitsInNeutralTeam() 中文释义:中立队伍中此单位数量 返回类型:float<br>
+
+`self.numberOfUnitsInNeutralTeam()`与`self.numberOfUnitsInTeam()`用法完全相同，区别仅在于前者的查询范围是中立中。
+
+#### self.numberOfUnitsInAggressiveTeam()
+?> 代码:self.numberOfUnitsInAggressiveTeam() 中文释义:敌对中立队伍中此单位数量 返回类型:float<br>
+
+`self.numberOfUnitsInAggressiveTeam()`与`self.numberOfUnitsInTeam()`用法完全相同，区别仅在于前者的查询范围是敌对中立中。
+
+#### self.numberOfUnitsInAllyTeam()
+?> 代码:self.numberOfUnitsInAllyTeam() 中文释义:所有队伍中此单位数量 返回类型:float<br>
+
+`self.numberOfUnitsInAllyTeam()`与`self.numberOfUnitsInTeam()`用法完全相同，区别仅在于前者的查询范围是所有中。
+
+#### self.hasUnitInTeam()
+?> 代码:self.hasUnitInTeam() 中文释义:队伍中有单位 返回类型:bool<br>
+
+`self.hasUnitInTeam()`与`self.numberOfUnitsInTeam()`格式完全相同，区别在于前者仅查询队伍中有无符合条件的单位，并返回`boolean`类型。
+
+#### self.noUnitInTeam()
+?> 代码:self.noUnitInTeam() 中文释义:队伍中无单位 返回类型:bool<br>
+
+`self.noUnitInTeam()`与`self.numberOfUnitsInTeam()`格式完全相同，区别在于前者仅查询队伍中是否无符合条件的单位，并返回`boolean`类型。
+
+#### self.readUnitMemory()
+?> 代码:self.readUnitMemory() 中文释义:读取单位内存 返回类型:跟随memory类型<br>
+
+`self.readUnitMemory()`用于获取指定单位内存，格式为`self.readUnitMemory("内存名",type="类型",index=下标(仅当类型是数组时可选填写))`。
+
+> [!NOTE] 在<font color=orange>跨单位读取数组</font>时，如果下标使用了逻辑，无论逻辑值都会返回第零项，<font color=orange>为游戏bug</font>，解决方法可以参考<br>https://www.bilibili.com/video/BV17v4y1r7dV (感谢十山月)<br>
+
+<div class="alert callout tip">
+<p>演示例子:</p>
+</div>
+
+```ini
+if parent.readUnitMemory("boostTarget", type="unit") == self
+#如果 父单位内存boostTarget的值等于自己
+```
+
+
 
 
 # **[Prices/Resources] 价格/资源序列组**
