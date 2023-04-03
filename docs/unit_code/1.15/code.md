@@ -431,10 +431,6 @@ dieOnZeroEnergy:true
 
 ## **[canBuild_Name]组**
 
-
-
-## **[canBuild_Name]组**
-
 ## **[graphics]组**
 
 ### image
@@ -536,6 +532,63 @@ imageScale:1.2
 <!-- tabs:start -->
 # **[action_Name]/[hiddenAction_Name]集合组**
 
+### text
+#### text-代码简介
+
+?> 代码:text 中文释义:显示文本 类型:字符串 隶属于:行为代码组
+
+> [!TIP] 支持%动态显示，其内容为该action的名称
+
+### description
+#### description-代码简介
+
+?> 代码:description 中文释义:显示文本介绍 类型:字符串 隶属于:行为代码组
+
+> [!TIP] 支持%动态显示，其内容为点击action后显示的文本
+
+### Message
+#### Message-代码简介
+
+?> 代码:sendMessageTo 中文释义:接收message的对象 类型:unit 隶属于:行为代码组
+
+> [!TIP] 将message发送给该对象
+
+?> 代码:sendMessageWithTags 中文释义:message附带的tag 类型:tagList 隶属于:行为代码组
+
+> [!TIP] 与[core]的tags类似,以逗号分割每个tag,在接受单位中使用autoTriggerOnEvent:newMessage(withTag=xxx)接收
+
+?> 代码:sendMessageWithData 中文释义:message附带的数据 类型:variableList 隶属于:行为代码组
+
+> [!TIP] 发送的数据名不是memory,但数据可以是memory
+
+#### Message-演示例子
+A单位：
+```ini
+[core]
+@memory num:number
+
+[hiddenAction_发送]
+sendMessageTo:self.customTarget1
+sendMessageWithTags:tag1,tag2
+sendMessageWithData:data1="abc",data2=1,hp=self.hp,memory1=memory.num
+```
+> [!TIP] data1 data2这些都不用提前声明。A单位的self.customTarget1为B单位,data1为字符串,data2为数字1,hp为A单位的血量,memory1的值为num这个memory的值
+B单位：
+```ini
+[hiddenAction_接受1]
+#能够触发
+autoTriggerOnEvent:newMessage(withTag="tag1")
+showMessageToAllPlayers:%{eventSource}+eventData("data1",type="string")
+#eventSource为发送该message的单位,即A单位(unit)。
+#使用eventData("name",type="")获取该message附带的数据,name为该数据的名称(如data2，memory1)这里需要""括起来。type类型如下：
+#string number float boolean unit[]  float[]  number[]
+#字符串 整数   浮点数 布尔    单位数组 浮点数组 整数数组
+#type类型由A单位发送时决定
+[hiddenAction_接受2]
+#不能够触发，因为A单位发送的message没有附带tag3
+autoTriggerOnEvent:newMessage(withTag="tag3")
+showMessageToAllPlayers:ababab
+```
 # **[spawn unit] 刷兵序列组**
 
 # **[placementRule_Name] 放置规则组**
