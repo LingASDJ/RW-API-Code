@@ -536,58 +536,77 @@ imageScale:1.2
 #### text-代码简介
 ?> 代码:text 中文释义:显示文本 类型:字符串 隶属于:行为代码组
 > [!TIP] 支持%动态显示，其内容为该action的名称
+
 ### buildSpeed
 #### buildSpeed-代码简介
-?> 代码:buildSpeed 中文释义:建造速度 类型:字符串 隶属于:行为代码组
-> [!TIP] 支持%动态显示，其内容为该action的名称
+?> 代码:buildSpeed 中文释义:建造速度 类型:s/帧 隶属于:行为代码组
+> [!TIP] 执行此动作所需要的时间。使用秒作为单位更好。例子：buildSpeed:0.3s
+
 ### alsoTriggerAction
 #### alsoTriggerAction-代码简介
-?> 代码:requireConditional 中文释义:显示文本 类型:字符串 隶属于:行为代码组
-> [!TIP] 支持%动态显示，其内容为该action的名称
+?> 代码:alsoTriggerAction 中文释义:也执行动作 类型:action refs 隶属于:行为代码组
+> [!TIP] 执行完此动作后执行其他动作，忽略行动的buildSpeed,直接执行。
+
 ### requireConditional
 #### requireConditional-代码简介
-?> 代码:requireConditional 中文释义:显示文本 类型:字符串 隶属于:行为代码组
-> [!TIP] 支持%动态显示，其内容为该action的名称
+?> 代码:requireConditional 中文释义:需要条件 类型:LogicBoolean 隶属于:行为代码组
+> [!TIP] 如果结果为false,则不执行该action。
+
 ### alsoTriggerActionRepeat
 #### alsoTriggerActionRepeat-代码简介
-?> 代码:alsoTriggerActionRepeat 中文释义:显示文本 类型:字符串 隶属于:行为代码组
-> [!TIP] 支持%动态显示，其内容为该action的名称
+?> 代码:alsoTriggerActionRepeat 中文释义:循环次数 类型:number 隶属于:行为代码组
+> [!TIP] 重复alsoTriggerAction调用x次,每次重复时改变索引(+1),索引可在被调用的action使用 用于创建循环或处理数组 动态数字
+#### alsoTriggerActionRepeat-演示例子
+```ini
+[graphics]
+image:main.png
+```
+
 ### setUnitMemory
 #### setUnitMemory-代码简介
 ?> 代码:setUnitMemory 中文释义:显示文本 类型:字符串 隶属于:行为代码组
 > [!TIP] 支持%动态显示，其内容为该action的名称
+
 ### alsoQueueAction
 #### alsoQueueAction-代码简介
 ?> 代码:alsoQueueAction 中文释义:显示文本 类型:字符串 隶属于:行为代码组
 > [!TIP] 支持%动态显示，其内容为该action的名称
+
 ### removeAllQueuedItemsWithoutRefund
 #### removeAllQueuedItemsWithoutRefund-代码简介
 ?> 代码:removeAllQueuedItemsWithoutRefund 中文释义:显示文本 类型:字符串 隶属于:行为代码组
 > [!TIP] 支持%动态显示，其内容为该action的名称
+
 ### alsoTriggerOrQueueActionWithTarget
 #### alsoTriggerOrQueueActionWithTarget-代码简介
 ?> 代码:alsoTriggerOrQueueActionWithTarget 中文释义:显示文本 类型:字符串 隶属于:行为代码组
 > [!TIP] 支持%动态显示，其内容为该action的名称
+
 ### autoTriggerOnEvent
 #### autoTriggerOnEvent-代码简介
 ?> 代码:autoTriggerOnEvent 中文释义:显示文本 类型:字符串 隶属于:行为代码组
 > [!TIP] 支持%动态显示，其内容为该action的名称
+
 ### resetCustomTimer
 #### resetCustomTimer-代码简介
 ?> 代码:resetCustomTimer 中文释义:显示文本 类型:字符串 隶属于:行为代码组
 > [!TIP] 支持%动态显示，其内容为该action的名称
+
 ### teleportTo
 #### teleportTo-代码简介
 ?> 代码:teleportTo 中文释义:显示文本 类型:字符串 隶属于:行为代码组
 > [!TIP] 支持%动态显示，其内容为该action的名称
+
 ### fireTurretXAtGround
 #### fireTurretXAtGround-代码简介
 ?> 代码:fireTurretXAtGround 中文释义:显示文本 类型:字符串 隶属于:行为代码组
 > [!TIP] 支持%动态显示，其内容为该action的名称
+
 ### fireTurretXAtGround_withProjectile
 #### fireTurretXAtGround_withProjectile-代码简介
 ?> 代码:fireTurretXAtGround_withProjectile 中文释义:显示文本 类型:字符串 隶属于:行为代码组
 > [!TIP] 支持%动态显示，其内容为该action的名称
+
 ### fireTurretXAtGround_withTarget
 #### fireTurretXAtGround_withTarget-代码简介
 ?> 代码:fireTurretXAtGround_withTarget 中文释义:显示文本 类型:字符串 隶属于:行为代码组
