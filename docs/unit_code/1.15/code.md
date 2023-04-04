@@ -206,7 +206,7 @@ isBio:true
 ?> 代码:isBug 中文释义:是虫子 类型:布尔型 隶属于:通用代码组
 
 > [!TIP] 若设置成true,则会认定为虫子，用于沙盒中的单独分类。
-#### isBio-演示例子:
+#### isBug-演示例子:
 ```ini
 [core]
 isBug:true
