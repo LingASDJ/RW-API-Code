@@ -6,7 +6,10 @@
 <!-- tabs:start -->
 
 ## **[core]组**
-!> 以下的代码为`通用代码`,多半是必要的代码，如果不包括这些，可能在`绝大多数情况下导致错误`。
+> [!TIP] core组---通用代码组
+
+> [!NOTE] 重要提示文本以下的代码为`通用代码`,多半是必要的代码，如果不包括这些，可能在`绝大多数情况下导致错误`。
+
 ### name
 #### name-代码简介
 ?> 代码:name 中文释义:名字 类型:字符型 隶属于:通用代码组
@@ -427,6 +430,100 @@ dieOnZeroEnergy:true
 ```
 
 <!-- tabs:end -->
+
+### generation_resources
+#### generation_resources-代码简介
+
+?> 代码:generation_resources
+ 中文释义:资源获取 类型:Price型 隶属于:单位统计代码组
+
+> [!TIP] 单位定时获得的资源，可自定义资源。
+#### generation_resources-演示例子:
+```ini
+[core]
+generation_resources:10
+#or
+generation_resources:credit=10
+#常规产出10Credit/1s游戏资金
+-----------我是分界线----------
+#自定义资源写法
+[core]
+generation_resources:金属=5
+```
+
+### generation_active
+#### generation_active-代码简介
+
+?> 代码:generation_active
+ 中文释义:资源获取条件 类型:逻辑布尔型 隶属于:单位统计代码组
+
+> [!TIP] 获取资源条件。可用于受损时无法产出。
+#### generation_active-演示例子:
+```ini
+[core]
+#1.14写法
+generation_resources:金属=5
+generation_active: if not self.hp(lessThan=100)
+#1.15写法
+[core]
+generation_resources:金属=5
+generation_active: if not self.hp<100
+#效果：单位低于1000血量可以产出资源
+```
+
+### generation_credits
+#### generation_credits-代码简介
+
+?> 代码:generation_credits
+ 中文释义:资金获取 类型:整型 隶属于:单位统计代码组
+
+> [!TIP] 生成资源，仅用于默认的资金，也就是铁锈默认的金钱。
+#### generation_credits-演示例子:
+```ini
+[core]
+generation_credits=5
+```
+
+### generation_delay
+
+> [!ATTENTION] 此代码为老旧代码，作者Luke不推荐使用。
+
+> [!ATTENTION] 警告：请勿使用40以外的数值，否则会有视觉Bug。例如使用30，资金生成3，实际就为6，但是一旦这类单位多了，游戏的资金显示会出问题。
+
+#### generation_delay-代码简介
+
+?> 代码:generation_delay
+ 中文释义:资金获取时间 类型:整型 隶属于:单位统计代码组
+
+> [!TIP] 多久帧添加添加一次资源(generation_credits指定数值)。默认值为40，一秒为60帧。
+#### generation_delay-演示例子:
+```ini
+[core]
+generation_delay=40
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## **[canBuild_Name]组**
