@@ -6,7 +6,7 @@
 <!-- tabs:start -->
 
 ## **[core]组**
-> [!TIP] core组---通用代码组
+> [!TIP] core组-第一类-通用代码组
 
 > [!NOTE] 重要提示文本以下的代码为`通用代码`,多半是必要的代码，如果不包括这些，可能在`绝大多数情况下导致错误`。
 
@@ -502,7 +502,185 @@ generation_credits=5
 generation_delay=40
 ```
 
+> [!NOTE] Core组-第二类-UI和图形代码
 
+### showInEditor
+#### showInEditor-代码简介
+
+?> 代码:showInEditor
+ 中文释义:沙盒中可见 类型:布尔型 隶属于:UI和图形代码组
+
+> [!TIP] 设置为false可在沙箱编辑器中隐藏单位。(默认为true)
+
+#### showInEditor-演示例子:
+```ini
+[core]
+showInEditor:false
+```
+
+### displayText_{LANG}
+#### displayText_{LANG}-代码简介
+
+?> 代码:displayText_{LANG}
+ 中文释义:界面显示文本多语言 类型:字符型 隶属于:UI和图形代码组
+
+> [!TIP] 为单位名称添加多语言支持。此方法并不方便，不如设置游戏内部语言文件，建议催Luke改。有关常见语言代码，请参考下表
+
+| 语言代码 | 所属国家/地区| 语言代码 | 所属国家/地区 
+|:--------:|:-----------:|:--------:|:-----------:
+| zh       | (中文通用)      | en(可忽略)  | (英语通用)          
+| zh-cn    | (简体)        | ru       | (俄语)        
+| zh-tw    | (台湾)        | ja       | (日语)        
+| zh-hk    | 中文(香港)      | es-ES    | （西班牙）       
+| de       | （德语）        | fr-FR    | 法语（法国）      
+
+>[!NOTE] 其它自查(此列表并不全)，不过你应该不会闲着支持这么多语言。另外英文的语言代码`en`可以忽略，因为英文在软件里为默认语言,故而无需加`en`,当然加了也没事。
+
+!> 如果你不想进行多语言化，你应该直接`displayText:坦克`，而不是`displayText_zh:坦克`，如果你写了`displayText_zh:坦克`，<br>你必须再声明一个`displayText:Tank`,否则，游戏会找不到`默认语言缺省值`，将会导致`mod报错而无法运行`。所有可以使用多语言的都有这个检查，还请各位Moder留意。（若有特别的代码，将会在它里面特别提示）
+
+#### displayText_{LANG}-演示例子:
+```ini
+[core]
+#English
+displayText:Tank
+#Chinese
+displayText_zh:坦克
+```
+
+### displayDescription_{LANG}
+#### displayDescription-代码简介
+
+?> 代码:displayDescription_{LANG}
+ 中文释义:界面显示描述 类型:字符型 隶属于:UI和图形代码组
+
+> [!TIP] 单位显示给玩家的单位描述,可以使用多语言,具体使用方法参考在`displayText`的演示说明，这里不再过多讨论。
+
+#### displayDescription-演示例子:
+```ini
+[core]
+displayText:坦克
+displayDescription:只能对地，弱输出，只能在地上行走。
+```
+
+### displayLocaleKey
+#### displayLocaleKey-代码简介
+
+?> 代码:displayLocaleKey
+ 中文释义:界面显示内部调用 类型:字符型 隶属于:UI和图形代码组
+
+> [!TIP] 调用内部语言文件的单位名称和说明的翻译文件。用处不大，通常是在`替换原版单位的同时直接调用它的原始描述`。该代码例子需要会拆包，如果你是初学者，该代码了解即可。
+
+#### displayLocaleKey-演示例子:
+```ini
+[core]
+displayLocaleKey: units.mechArtillery
+```
+
+### displayRadius
+#### displayRadius-代码简介
+
+?> 代码:displayRadius 中文释义:单位选择时显示圆圈 类型:整形 隶属于:UI和图形代码组
+
+> [!TIP] 修改选择单位时显示的绿色圆圈，不更改实际碰撞(radius)和可选择范围。
+
+#### displayRadius-演示例子:
+```ini
+[core]
+displayRadius:25
+```
+
+### uiTargetRadius
+#### uiTargetRadius-代码简介
+
+?> 代码:uiTargetRadius 中文释义:为目标时半径 类型:整形 隶属于:UI和图形代码组
+
+> [!TIP] 修改选择单位时显示的绿色圆圈，不更改实际碰撞(radius)和可选择范围。
+
+#### uiTargetRadius-演示例子:
+```ini
+[core]
+uiTargetRadius:25
+```
+
+### shieldRenderRadius
+#### shieldRenderRadius-代码简介
+
+?> 代码:shieldRenderRadius 中文释义:单位护盾显示半径 类型:整形 隶属于:UI和图形代码组
+
+> [!TIP] 护盾绘制半径，默认值比半径大一点。可以设置在单位上显示更大或更小的护盾圈。
+
+#### shieldRenderRadius-演示例子:
+```ini
+[core]
+shieldRenderRadius:20
+```
+
+### shieldDisplayOnlyDeflection
+#### shieldDisplayOnlyDeflection-代码简介
+
+?> 代码:shieldDisplayOnlyDeflection 中文释义:护盾只在受攻击时显示 类型:布尔型 隶属于:UI和图形代码组
+
+> [!TIP] 隐藏护盾，只在受到攻击时显示。
+
+#### shieldDisplayOnlyDeflection-演示例子:
+```ini
+[core]
+shieldDisplayOnlyDeflection:true
+```
+
+### shieldDeflectionDisplayRate
+#### shieldDeflectionDisplayRate-代码简介
+
+?> 代码:shieldDeflectionDisplayRate 中文释义:护盾消失速度 类型:浮点型 隶属于:UI和图形代码组
+
+> [!TIP] 默认值为4。数值越大消失越快。
+
+#### shieldDeflectionDisplayRate-演示例子:
+```ini
+[core]
+shieldDeflectionDisplayRate:3
+```
+
+### showOnMinimap
+#### showOnMinimap-代码简介
+
+?> 代码:shieldDeflectionDisplayRate 中文释义:显示在小地图上 类型:布尔型 隶属于:UI和图形代码组
+
+> [!TIP] 默认为true。如果为false，则在小地图上不显示此单位。
+
+#### showOnMinimap-演示例子:
+```ini
+[core]
+showOnMinimap:true
+```
+
+### showOnMinimapToEnemies
+#### showOnMinimapToEnemies-代码简介
+
+?> 代码:showOnMinimapToEnemies 中文释义:显示于敌人小地图 类型:布尔型 隶属于:UI和图形代码组
+
+> [!TIP] 是否在敌人小地图上显示。
+
+#### showOnMinimapToEnemies-演示例子:
+```ini
+[core]
+showOnMinimapToEnemies:true
+```
+
+### showActionsWithMixedSelectionIfOtherUnitsHaveTag
+#### showActionsWithMixedSelectionIfOtherUnitsHaveTag-代码简介
+
+?> 代码:showActionsWithMixedSelectionIfOtherUnitsHaveTag 中文释义:混合所选单位所显示的行为 类型:标签型 隶属于:UI和图形代码组
+
+> [!TIP] 如果选择的单位都包含此处使用的标签，则合并“行为(action)”。比如你的步兵通过部署转化成另一个单位，在混合时可以当作同一个单位处理，不再是默认的谁都无法执行操作。例子如红警的盟军大兵在混合选中后依旧可执行部署或解除。
+
+#### showActionsWithMixedSelectionIfOtherUnitsHaveTag-演示例子:
+```ini
+[core]
+showActionsWithMixedSelectionIfOtherUnitsHaveTag:tag_联系
+```
+
+> [!NOTE] core组-第三类-构建代码
 
 
 
