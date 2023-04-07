@@ -534,32 +534,212 @@ imageScale:1.2
 
 ### text
 #### text-代码简介
-
 ?> 代码:text 中文释义:显示文本 类型:字符串 隶属于:行为代码组
+!> 支持%动态显示，其内容为该action的名称
 
-> [!TIP] 支持%动态显示，其内容为该action的名称
+### buildSpeed
+#### buildSpeed-代码简介
+?> 代码:buildSpeed 中文释义:建造速度 类型:s/帧 隶属于:行为代码组
+!> 执行此动作所需要的时间。使用秒作为单位更好。例子：buildSpeed:0.3s
 
+### alsoTriggerAction
+#### alsoTriggerAction-代码简介
+?> 代码:alsoTriggerAction 中文释义:也执行动作 类型:action refs 隶属于:行为代码组
+!> 执行完此动作后执行其他动作，忽略行动的buildSpeed,直接执行。
+
+### requireConditional
+#### requireConditional-代码简介
+?> 代码:requireConditional 中文释义:需要条件 类型:LogicBoolean 隶属于:行为代码组
+!> 如果结果为false,则不执行该action。
+
+### alsoTriggerActionRepeat
+#### alsoTriggerActionRepeat-代码简介
+?> 代码:alsoTriggerActionRepeat 中文释义:循环次数 类型:number 隶属于:行为代码组
+!> 重复alsoTriggerAction调用x次,每次重复时改变索引(+1),索引可在被调用的action使用 用于创建循环或处理数组 动态数字
+#### alsoTriggerActionRepeat-演示例子
+```ini
+[hiddenAction_A]
+alsoTriggerAction:B
+alsoTriggerActionRepeat:10
+[hiddenAction_B]
+showMessageToAllPlayers:%{index}
+```
+B会被执行10次，打印结果为0~9
+
+### setUnitMemory
+#### setUnitMemory-代码简介
+?> 代码:setUnitMemory 中文释义:设置单位内存 隶属于:行为代码组
+!> 设置单位的memory的值。
+#### setUnitMemory-演示例子
+```ini
+[core]
+@memory str:string
+[hiddenAction_setMemory]
+setUnitMemory:str="hello shishanyue"
+```
+
+### alsoQueueAction
+#### alsoQueueAction-代码简介
+?> 代码:alsoQueueAction 中文释义:也添加进队列 类型:action refs 隶属于:行为代码组
+!> 将另一个动作添加到序列中。不忽略行动的buildSpeed
+
+### removeAllQueuedItemsWithoutRefund
+#### removeAllQueuedItemsWithoutRefund-代码简介
+?> 代码:removeAllQueuedItemsWithoutRefund 中文释义:取消所有仍在序列中等待执行的行为 类型:Boolean 隶属于:行为代码组
+!> removeAllQueuedItemsWithoutRefund:true
+
+### alsoTriggerOrQueueActionWithTarget
+#### alsoTriggerOrQueueActionWithTarget-代码简介
+?> 代码:alsoTriggerOrQueueActionWithTarget 中文释义:更改其他触发动作的目标 类型:unit ref 隶属于:行为代码组
+!> 具体实例可以看（十山月打广告（）https://www.bilibili.com/video/BV17v4y1r7dV/
+
+### autoTriggerOnEvent
+#### autoTriggerOnEvent-代码简介
+?> 代码:autoTriggerOnEvent 中文释义:自动触发事件 类型:字符串 隶属于:行为代码组
+!> 满足此条件则自动触发。
+
+|参数表 |参数表 |
+| -------- | ------------  |
+|创建      |created       |
+|完成且激活      |completeAndActive         |
+|销毁       |destroyed       |
+|杀死任何单位     |killedAnyUnit         |
+|队列中单位完成      |queuedUnitFinished     |
+|队列添加项目     |queueItemAdded     | 
+|队列项目取消    |queueItemCancelled     |
+|传送     |teleported         |
+|接触目标成功(eventSource=碰到的目标)      |touchTargetSuccess     |
+|玩家指定路径     |newWaypointGivenByPlayer     | 
+|队列项目取消    |queueItemCancelled     |
+|运输新单位(eventSource=被运输的单位)     |transportingNewUnit         |
+|卸载或移除单位     |transportUnloadedOrRemovedUnit         |
+|队伍变更     |teamChanged         |
+|收到伤害(eventSource=造成伤害的单位)     |tookDamage          |
+|杀死任意单位     |killedAnyUnit          |
+|运输卸下或搬走的单位(eventSource=被卸载的单位)     |        transportUnloadedOrRemovedUnit          |
+|有新单位被建造时(eventSource=被建造的新单位)     |queuedUnitFinished         |
+|有单位进入运输槽(eventSource=被运输的单位)     |enteredTransport         |
+|有单位离开运输槽(eventSource=被运输的单位)     |leftTransport         |
+|附属被移除     |attachmentRemoved         |
+
+
+### resetCustomTimer
+#### resetCustomTimer-代码简介
+?> 代码:resetCustomTimer 中文释义:重置自定义计时器 类型:Boolean 隶属于:行为代码组
+!> 重置自定义计时器，与self.customTimer() resetCustomTimer:true
+
+### teleportTo
+#### teleportTo-代码简介
+?> 代码:teleportTo 中文释义:传送到 类型:unit ref 隶属于:行为代码组
+!> 传送到指定单位。teleportTo:self.customTarget1
+
+### fireTurretXAtGround
+#### fireTurretXAtGround-代码简介
+?> 代码:fireTurretXAtGround 中文释义:指定攻击地面炮塔 类型:字符串 隶属于:行为代码组
+!> 使用此炮塔攻击玩家所指定的地面。
+
+### fireTurretXAtGround_withProjectile
+#### fireTurretXAtGround_withProjectile-代码简介
+?> 代码:fireTurretXAtGround_withProjectile 中文释义:指定攻击地面抛射体 类型:字符串 隶属于:行为代码组
+!> 设定使用的抛射体，如果不设置则为炮塔默认的抛射体。
+
+### fireTurretXAtGround_withTarget
+#### fireTurretXAtGround_withTarget-代码简介
+?> 代码:fireTurretXAtGround_withTarget 中文释义:指定攻击目标 类型:unit ref/marker 隶属于:行为代码组
+!> 炮塔瞄准指示的单位或标记的位置发射
+
+### fireTurretXAtGround_withOffset
+#### fireTurretXAtGround_withOffset-代码简介
+?> 代码:fireTurretXAtGround_withTarget 中文释义:指定攻击地面坐标 类型:point 隶属于:行为代码组
+!> 攻击指定坐标所在地面，不需要手动选择
+
+### fireTurretXAtGround_count
+#### fireTurretXAtGround_count-代码简介
+?> 代码:fireTurretXAtGround_withTarget 中文释义:指定攻击地面数量 类型:number 隶属于:行为代码组
+!> 设置发射的抛射体数量，默认为1。fireTurretXAtGround_count:10
+
+### fireTurretXAtGround_onlyOverPassableTileOf
+#### fireTurretXAtGround_onlyOverPassableTileOf-代码简介
+?> 代码:fireTurretXAtGround_withTarget 中文释义:指定攻击地面类型 类型:enum 隶属于:行为代码组
+!> 设置手动选择的地面需要满足这种运动方式。列表：无，陆地，建筑，空军，水。两栖，跨悬崖，跨悬崖和度水。
+NONE LAND BUILDING AIR WATER HOVER OVER_CLIFF OVER_CLIFF_WATER 
+
+
+#### fireTurret-演示例子
+手动选择攻击点:
+```ini
+[hiddenAction_fire]
+fireTurretXAtGround:1
+fireTurretXAtGround_onlyOverPassableTileOf:LAND
+#只能点击地面
+[turret_1]
+projectile:1
+
+[projectile_1]
+```
+指定攻击点:
+```ini
+[hiddenAction_fire]
+fireTurretXAtGround:1
+fireTurretXAtGround_onlyOverPassableTileOf:LAND
+#只能点击地面
+fireTurretXAtGround_withOffset: 0,0
+#填的是相对坐标
+fireTurretXAtGround_withProjectile:2
+#使用抛射体2
+fireTurretXAtGround_withTarget:self.parent
+#攻击parent
+[turret_1]
+projectile:1
+.............
+.............
+[projectile_1]
+.............
+.............
+[projectile_2]
+```
+!> fireTurretXAtGround_withTarget同时只能有一个fireTurretXAtGround_withOffset。如果俩的没有则是手动选择攻击点。
+
+!> 当使用fireTurretXAtGround_withProjectile重新指定抛射体后，使用的不再是fireTurretXAtGround的炮塔的抛射体。
+
+!> fireTurretX中的"X"是可以替换成数字。
+```ini
+[hiddenAction_fire]
+fireTurret1AtGround:1
+fireTurret1AtGround_onlyOverPassableTileOf:LAND
+fireTurret1AtGround_withOffset: 0,0
+
+fireTurret1AtGround:2
+fireTurret1AtGround_onlyOverPassableTileOf:LAND
+fireTurret1AtGround_withOffset: 0,0
+[turret_1]
+projectile:1
+[turret_2]
+projectile:2
+[projectile_1]
+[projectile_2]
+```
 ### description
 #### description-代码简介
 
 ?> 代码:description 中文释义:显示文本介绍 类型:字符串 隶属于:行为代码组
 
-> [!TIP] 支持%动态显示，其内容为点击action后显示的文本
+!> 支持%动态显示，其内容为点击action后显示的文本
 
 ### Message
 #### Message-代码简介
 
 ?> 代码:sendMessageTo 中文释义:接收message的对象 类型:unit 隶属于:行为代码组
 
-> [!TIP] 将message发送给该对象
+!> 将message发送给该对象
 
 ?> 代码:sendMessageWithTags 中文释义:message附带的tag 类型:tagList 隶属于:行为代码组
 
-> [!TIP] 与[core]的tags类似,以逗号分割每个tag,在接受单位中使用autoTriggerOnEvent:newMessage(withTag=xxx)接收
+!> 与[core]的tags类似,以逗号分割每个tag,在接受单位中使用autoTriggerOnEvent:newMessage(withTag=xxx)接收
 
 ?> 代码:sendMessageWithData 中文释义:message附带的数据 类型:variableList 隶属于:行为代码组
 
-> [!TIP] 发送的数据名不是memory,但数据可以是memory
+!> 发送的数据名不是memory,但数据可以是memory
 
 #### Message-演示例子
 A单位：
@@ -580,15 +760,24 @@ B单位：
 autoTriggerOnEvent:newMessage(withTag="tag1")
 showMessageToAllPlayers:%{eventSource}+eventData("data1",type="string")
 #eventSource为发送该message的单位,即A单位(unit)。
-#使用eventData("name",type="")获取该message附带的数据,name为该数据的名称(如data2，memory1)这里需要""括起来。type类型如下：
-#string number float boolean unit[]  float[]  number[]
-#字符串 整数   浮点数 布尔    单位数组 浮点数组 整数数组
+#使用eventData("name",type="")获取该message附带的数据,name为该数据的名称(如data2，memory1)这里需要""括起来。
 #type类型由A单位发送时决定
 [hiddenAction_接受2]
 #不能够触发，因为A单位发送的message没有附带tag3
 autoTriggerOnEvent:newMessage(withTag="tag3")
 showMessageToAllPlayers:ababab
 ```
+|type类型如下 |存储的值类型 |
+| -------- | ------------  |
+|string      |字符串       |
+|number      |整数         |
+|float       |浮点数       |
+|boolean     |布尔         |
+|unit[]      |单位数组     |
+|float[]     |浮点数组     | 
+|number[]    |整数数组     |
+
+
 # **[spawn unit] 刷兵序列组**
 
 # **[placementRule_Name] 放置规则组**
