@@ -2,7 +2,7 @@
 
 <div style="display:flex;align-content: flex-start;flex-wrap: nowrap;flex-direction: row;justify-content: center;">
 
-<img src="http://39.105.229.249/ftp/ling/cdnpng/rts-api/title.png">
+<img src="https://rwapi-code.netlify.app/images/title.png">
     
 </div>
 
