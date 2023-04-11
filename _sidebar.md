@@ -1,0 +1,11 @@
+<!-- docs/_sidebar.md -->
+* [铁锈战争-1.15-Code-API](/README.md)
+    * [单位Mod代码表](unit_code/index.md  "学习铁锈战争的单位代码表")
+        * [Rusted Warfare --- 1.15代码表测试版](unit_code/1.15/code.md?id=铁锈战争-115-单位代码表-beta1  "RTS-1.15的单位代码表")
+    * [地图Mod代码表](map_code/index.md   "学习铁锈战争的地图代码表")
+        * [1.14地图代码表-Beta版](map_code/1.14/code.md  "RTS-1.14的地图代码表")
+    * [调试Mod代码表](debug_code/index.md "学习高级调试代码的代码表")
+        * [1.15调试代码表-Beta版](debug_code/1.15/code.md  "RTS-1.15的调试代码表")
+* [开放型教程中心](/comingsoon.md "敬请期待")
+* [RTS-Code-API文档指南](/DEV.md)
+* [RW-Engine文档指南](rwEngine_code/code.md)        

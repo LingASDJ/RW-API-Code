@@ -1,64 +1,27 @@
-# RW-API-Code-V2
 
-[English Docs](README_en.md)
+<div style="display:flex;align-content: flex-start;flex-wrap: nowrap;flex-direction: row;justify-content: center;">
+    <img src="https://rwapi-code.netlify.app/images/logo.png">
+</div>
 
-简单的代码，简单的学习。  
-基于VitePress框架的铁锈战争API代码。  
-在这里，你可以研究RTS单元代码，以及地图代码，调试代码或更多，  
-你准备好了吗？让我们开始吧
 
-# 项目规则与说明
-* 此代码仅供参考。如果有任何错误或遗漏，请随时提及Github问题
-* RW API Code是一个非官方的第三方RustedWarfare代码网站，提供高效和高度学习的服务态度。
-* 如果您想合作开发，请Fork我们的主要分支机构并申请PullRecust
+## 铁锈战争代码表1.15-API
 
-### 贡献者
+  ## 项目鸣谢人员：
+> * Tobby3600--合作编辑LogicBoolean组代码
+> * JDSALing--提供网站编写  
+> * 华夏有衣--提供Excel超级代码表  
+> * Luke-Hoschke--铁锈战争开发者
+> * Cold_Mint--提供资源高速加载
+> * 王某人--提供MT基础代码高亮文件
+> * 十山月--合作编辑Action组代码
+> * 指挥中心--提供LogicBoolean组代码例子
 
-<!-- readme: collaborators,contributors -start -->
-<!-- readme: collaborators,contributors -end -->
+# 站点简介：
+> * 本站点主要提供铁锈战争的代码API教程与指导，皆在为铁锈带来更好的Mod质量。  
+> * 本站点提供--地图Mapping代码表，单位Unit代码表，调试Debug代码表。
+<div style="display:flex;align-content: flex-start;flex-wrap: nowrap;flex-direction: row;justify-content: center;">
+    <font size="6px" color="#42b983">RTS-Code-API-1.15-CopyRight-2023</font>
+</div>
 
-# 开发说明
-## 1.前提条件：Node.js 18或以上
-```文本
-如果你没有Node.js，你可以从下面的链接下载。
-什么，我不确定Node.js是什么？  
-我建议立即关闭这个页面。
-```
-Node.js链接：[Node.js](https://nodejs.org/zh-cn)
-## 2.安装Vite Press
-```bash
-npm i vitepress -D
-```
-## 3.Package.json框架结构
-```json
-{
-  "scripts": {
-    "docs:dev": "vitepress dev rustedwarfareapicode",    
-    "docs:build": "vitepress build rustedwarfareapicode",
-    "docs:preview": "vitepress preview rustedwarfareapicode"
-  },
-  "devDependencies": {
-    "vitepress": "^1.0.0-alpha.65"
-  }
-}
-```
-## 4.本地部署
-开发测试:
-```bash
-npm run docs:dev
-```
 
-构建测试:
-```bash
-npm run docs:build
-```
-
-预览测试:
-```bash
-npm run docs:preview
-```
-# Netlify部署
-当您提交PR时，它会自动为您处理。
-
-# 项目使用的许可证
-[Apache许可证-2.0](https://github.com/LingASDJ/RW-API-Code/blob/main/LICENSE)
+<!-- 执行命令：docsify serve docs -->

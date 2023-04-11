@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <title>RW-Code-API</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="shortcut icon" href="icon.jpg" type="image/x-icon">
+  <script src="https://rustedwarfareapicode.top/js/EditMd.js"></script>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+</head>
+
+<body>
+  <div data-app id="main" style="margin: 0 auto;">
+    <div class="loading">
+      <h1>正在载入数据中……</h1>
+    </div>
+  </div>
+  <noscript>
+    <div class="nojs">
+      <div class="nojs-content">
+        <h1>⚠️ JavaScript-JS已被禁用</h1>
+        <p>
+          很抱歉，当你看见这个界面，代表你的浏览器可能尚未启用JS,因此我们无法构建<font color="#00cc00">[铁锈战争API-Code]</font>页面。
+        </p>
+        <p>
+          若您确信自己已开启JS技术，那么可能是您的浏览器不支持；请使用我们为你推荐的浏览器进行使用。
+        </p>
+        <hr />
+        <a class="nojs-btn" href="https://viayoo.com/zh-cn/" target="_blank" rel="noopener">Via-大道至简 (手机端)</a>
+        <a class="nojs-btn" href="https://www.google.cn/chrome/" target="_blank" rel="noopener">Google Chrome
+          (PC端)</a>
+        <br /><br />
+        <p>
+        <h1>RTS-API-Code-2023</h1>
+        </p>
+      </div>
+    </div>
+  </noscript>
+  <style>
+    .loading {
+      -webkit-text-size-adjust: 100%;
+      font-size: 16px;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      box-sizing: inherit;
+      padding: 0;
+      margin: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 9999999999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* JS报错页面优化升级 */
+    .nojs {
+      -webkit-text-size-adjust: 100%;
+      font-size: 16px;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      box-sizing: inherit;
+      padding: 0;
+      margin: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 9999999999;
+      background: repeating-linear-gradient(-45deg,
+          #d7ba01,
+          #d7ba01 90px,
+          #1d0d0d 0,
+          #1d0d0d 180px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nojs del {
+      padding: 4px 8px;
+      background: #1d1d1d;
+      background: repeating-linear-gradient(-45deg,
+          #e6c700,
+          #e6c700 45px,
+          rgba(0, 0, 0, 0.5) 0,
+          rgba(0, 0, 0, 0.5) 30px);
+      color: #cbcbcb;
+      border-radius: 4px;
+    }
+
+    /* 布局约束调整 */
+    .sidebar li {
+      margin: 0;
+    }
+
+    .nojs-content {
+      -webkit-text-size-adjust: 100%;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      box-sizing: inherit;
+      margin: 0;
+      vertical-align: middle;
+      width: 70%;
+      font-weight: 700;
+      font-size: 18px;
+      font-family: -apple-system, Noto Sans SC, BlinkMacSystemFont,
+        Segoe UI, Microsoft YaHei UI, Microsoft Yahei, 微软雅黑,
+        Helvetica, Arial, sans-serif;
+      padding: 48px 64px;
+      word-break: break-word;
+      text-align: center;
+      line-height: 2;
+      border-radius: 16px;
+      background: rgba(45, 42, 43, 0.8);
+      backdrop-filter: blur(16px);
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      border: 4px solid #0d0d0d;
+      color: #beb9b9;
+      box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5),
+        inset 0 0 2rem rgba(0, 0, 0, 0.5);
+    }
+
+    .nojs .nojs-btn {
+      -webkit-text-size-adjust: 100%;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      font-weight: 700;
+      word-break: break-word;
+      line-height: 2;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      box-sizing: inherit;
+      outline-width: 0;
+      display: inline-block;
+      border: 2px solid #000;
+      padding: 8px 24px;
+      margin: 0 8px;
+      text-decoration: none;
+      color: #fff;
+      font-family: sans-serif;
+      font-size: 14px;
+      cursor: pointer;
+      text-align: center;
+      transition: background 50ms ease-out, transform 0.15s ease;
+      background: #368dff;
+      border-radius: 24px;
+      transform: scale(1.05);
+    }
+
+    /* 公用样式 */
+    .nojs .nojs-btn:hover {
+      background: #0366e8;
+      transform: scale(1.05);
+    }
+
+    .nojs .nojs-btn:focus {
+      outline: 1px solid #fff;
+      outline-offset: -4px;
+    }
+
+    .nojs .nojs-btn:active {
+      transform: scale(0.99);
+    }
+
+    .nojs del {
+      padding: 4px 8px;
+      background: #1d1d1d;
+      background: repeating-linear-gradient(-45deg,
+          #995d22,
+          #995d22 15px,
+          rgba(0, 0, 0, 0.5) 0,
+          rgba(0, 0, 0, 0.5) 30px);
+      color: #cbcbcb;
+      border-radius: 4px;
+    }
+
+    .markdown-section {
+      margin: 0 auto;
+      max-width: 100%;
+      padding: 30px 15px 40px;
+      position: relative;
+    }
+
+    .nojs .nojs-link {
+      background: #0d47a1;
+      color: #fff;
+      border: 2px solid #093777;
+      padding: 4px 6px;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+
+    .nojs .nojs-btn:focus,
+    .nojs .nojs-link:hover {
+      background: #0f5ad6;
+    }
+
+    .nojs .nojs-link:active {
+      background: #0d4fba;
+    }
+
+    .rtsqs {
+      border-radius: 7px;
+      color: darkblue;
+    }
+  </style>
+
+  <script>
+    window.$docsify = {
+      el: '#main',
+      loadSidebar: true,
+      subMaxLevel: 3,
+      coverpage: true,
+      name: '铁锈战争API-Code',
+      plugins: [
+        EditOnGithubPlugin.create(
+          'https://github.com/LingASDJ/RW-API-Code/tree/main/docs/',
+          null,
+          function (file) {
+            return '在GitHub上合作编辑RTS-Code-API的文档'
+          }
+        )
+      ],
+      tabs: {
+        persist: true,      // default
+        sync: true,      // default
+        theme: 'classic', // default
+        tabComments: true,      // default
+        tabHeadings: true       // default
+      },
+
+      'flexible-alerts': {
+        note: {
+          label: "随录笔记"
+        },
+        tip: {
+          label: "特别注意"
+        },
+        warning: {
+          label: "警告"
+        },
+        attention: {
+          label: "不推荐"
+        }
+      },
+
+      // Valine: {
+      //   appId: 'e3Ipwd8kr6LEeNRLk487mmtB-gzGzoHsz',
+      //   appKey: 'gQYoj8j4KehzLWLGvpr5sKeP',
+      //   placeholder: "可以将你的一些见解发表到这里，说不定能帮助到其他萌新或者让一些陷入迷途的人豁然开朗呢！支持MarkDown语法。",
+      //   avatar: 'hide'
+      // },
+      scrollToTop: {
+        auto: true,
+        text: 'Top↑',
+        right: 15,
+        bottom: 15,
+        offset: 500
+      },
+      timeUpdater: {
+        text: "> 最后编写更新时间: {docsify-updated}",
+        formatUpdated: "{YYYY}/{MM}/{DD}",
+        whereToPlace: "top",  // "top" or "bottom", default to "bottom"
+      },
+      chat: {
+        // chat panel title
+        title: '',
+        // set avatar url
+        users: [
+          { nickname: 'tobby3600', avatar: 'https://rwapi-code.netlify.app/images/avaters/tobby3600.jpg' },
+          { nickname: 'JDSALing', avatar: 'https://rwapi-code.netlify.app/images/avaters/ling.jpg' },
+          { nickname: 'shishanyue', avatar: 'https://rwapi-code.netlify.app/images/avaters/shishanyue.jpg' },
+        ],
+        // myself: 'JDSALing',
+        animation: 50,
+        // Panel navigation bar style, supporting "mac" and "windows"
+        os: 'none',
+      },
+      repo: 'https://github.com/LingASDJ/RW-API-Code',
+
+      // 完整配置参数
+      search: {
+        maxAge: 86400000, // 过期时间，单位毫秒，1.9分钟
+        paths: 'auto', // or 'auto'
+
+        search: [
+          'auto',         // => /zh-cn/README.md
+        ],
+
+        // 支持本地化
+        placeholder: {
+          '/': '搜索你需要的！探索你所想的！'
+        },
+
+        // 支持本地化
+        noData: {
+          '/': '尚未找到匹配结果……'
+        },
+
+        // 搜索标题的最大层级, 1 - 6
+        depth: 3,
+
+        hideOtherSidebarContent: true, // 是否隐藏其他侧边栏内容
+
+        // 避免搜索索引冲突
+        // 同一域下的多个网站之间
+        //namespace: 'website-1',
+
+        // 使用不同的索引作为路径前缀（namespaces）
+        // 注意：仅适用于 paths: 'auto' 模式
+        //
+        // 初始化索引时，我们从侧边栏查找第一个路径
+        // 如果它与列表中的前缀匹配，我们将切换到相应的索引
+        pathNamespaces: ['/zh-cn', '/ru-ru', '/ru-ru/v1'],
+
+        // 您可以提供一个正则表达式来匹配前缀。在这种情况下，
+        // 匹配到的字符串将被用来识别索引
+        pathNamespaces: /^(\/(zh-cn|ru-ru))?(\/(v1|v2))?/
+      }
+    }
+  </script>
+  <!-- Docsify v4 -->
+  </script>
+
+
+
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <!-- 插件引入 -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-updated/src/time-updater.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="//unpkg.com/docsify-scroll-to-top/dist/docsify-scroll-to-top.min.js"></script>
+  <script src="https://rustedwarfareapicode.top/js/RW-ini-1.15.js"></script>
+  <script src="https://rustedwarfareapicode.top/js/docsify-copy-code.min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script src="//unpkg.com/docsify-valine/dist/docsify-valine.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-chat/lib/docsify-chat.min.js"></script>
+  <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
+  <style>
+    /* 主页样式 */
+    #mainx {
+      color: #0080ff;
+    }
+
+    #main {
+      font-size: large;
+    }
+
+    #anchors {
+      color: #ffffff;
+    }
+
+    section.cover .cover-main>p:last-child a {
+      border-radius: 2rem;
+      background: #42b983;
+      border: 1px solid #42b983;
+      border-color: var(--theme-color, #42b983);
+      box-sizing: border-box;
+      color: fff;
+      color: #ffffff;
+      display: inline-block;
+      font-size: 1.05rem;
+      letter-spacing: .1rem;
+      margin: 0.5rem 1rem;
+      padding: 0.75em 2rem;
+      text-decoration: none;
+      transition: all .15s ease;
+    }
+
+    section.cover a,
+    section.cover a:hover {
+      text-decoration: none;
+    }
+
+    section.cover a {
+      color: inherit;
+    }
+
+    * {
+      -webkit-font-smoothing: antialiased;
+      -webkit-overflow-scrolling: touch;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      -webkit-text-size-adjust: none;
+      -webkit-touch-callout: none;
+      box-sizing: border-box;
+    }
+
+    /* 公用样式 */
+    .token.selector {
+      color: #42b983;
+    }
+
+    .token.punctuation {
+      color: #42b983;
+    }
+
+    .search .matching-post:hover {
+      border-bottom: 1px solid #eee;
+      background: rgba(163, 230, 40, 0.5);
+      border-radius: 12px;
+    }
+
+    .markdown-section code,
+    .markdown-section pre {
+      border-radius: 21px
+    }
+
+    .sidebar ul li.active>a {
+      border-right: 2px solid;
+      color: #42b983;
+      color: #42b983;
+      font-weight: 600;
+      background: azure;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    section.cover.has-mask .mask {
+      background-color: #070707;
+      opacity: .75;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .sidebar ul li a:hover {
+      text-decoration: #42b983;
+    }
+
+    .markdown-section a {
+      color: #42b983;
+      color: var(--theme-color, #42b983);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .markdown-section a:hover {
+      color: #075632;
+      color: var(--theme-color, #075632);
+      font-weight: 600;
+    }
+
+    .markdown-section output:after,
+    .markdown-section pre:after {
+      color: #42b983;
+      font-size: .6rem;
+      font-weight: 600;
+      height: 15px;
+      line-height: 15px;
+      padding: 5px 10px 0;
+      position: absolute;
+      right: 0;
+      text-align: right;
+      top: 0;
+      content: attr(data-lang);
+    }
+  </style>
+</body>
+
+</html>
