@@ -205,7 +205,7 @@ buildSpeed:0.0006
 
 代码:isBio 中文释义:是生物 类型:布尔型 隶属于:通用代码组
 
-:::tip {2}
+::: tip {2}
 若设置成true,则会在单位死亡时产生血迹,  
 图像在<font color=orange>drawable/blood_mark.png---hideScorchMark:true</font>时可以隐藏非生物则为黑色爆炸效果。
 :::
@@ -220,7 +220,7 @@ isBio:true
 
 代码:isBug 中文释义:是虫子 类型:布尔型 隶属于:通用代码组
 
-:::tip
+::: tip
 若设置成true,则会认定为虫子，用于沙盒中的单独分类。
 :::
 #### isBug-演示例子
@@ -234,7 +234,7 @@ isBug:true
 
 代码:isBuilder 中文释义:是建造者 类型:布尔型 隶属于:通用代码组
 
-:::tip
+::: tip
 若设置成true,则会需要此单位建造建筑物，则通常需要此代码。
 并且默认设为[ai] useAsBuilder。
 :::
@@ -427,7 +427,7 @@ armour:40
 代码:armourMinDamageToKeep
 中文释义:装甲最低伤害 类型:整型 隶属于:单位统计代码组
 
-:::tip
+::: tip
 至少造成多少点伤害，默认为1.防止护甲太高完全打不动。
 :::
 #### armourMinDamageToKeep-演示例子
@@ -444,7 +444,7 @@ armourMinDamageToKeep:2
 代码:armour
  中文释义:资源活着时借用 类型:Price型 隶属于:单位统计代码组
 
-:::tip
+::: tip
 创建时获取这些资源，删除或销毁时将其返回。
 例如用于电力逻辑，负数供电和正数耗电。
 :::
