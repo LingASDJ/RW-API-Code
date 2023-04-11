@@ -1,0 +1,20 @@
+import{_ as a,o as s,c as n,N as e}from"./chunks/framework.0e180df0.js";const m=JSON.parse('{"title":"[core]组","description":"","frontmatter":{"outline":"deep"},"headers":[],"relativePath":"src/Unit/core.md"}'),l={name:"src/Unit/core.md"},p=e(`<h1 id="core-组" tabindex="-1"><strong>[core]组</strong> <a class="header-anchor" href="#core-组" aria-label="Permalink to &quot;**[core]组**&quot;">​</a></h1><h2 id="第一类-通用代码组" tabindex="-1">第一类-通用代码组 <a class="header-anchor" href="#第一类-通用代码组" aria-label="Permalink to &quot;第一类-通用代码组&quot;">​</a></h2><div class="tip custom-block"><p class="custom-block-title">TIP</p><p>以下的代码为<code>通用代码</code>,多半是必要的代码，如果不包括这些，可能在<code>绝大多数情况下导致错误</code>。</p></div><h2 id="name" tabindex="-1">name <a class="header-anchor" href="#name" aria-label="Permalink to &quot;name&quot;">​</a></h2><h4 id="name-代码简介" tabindex="-1">name-代码简介: <a class="header-anchor" href="#name-代码简介" aria-label="Permalink to &quot;name-代码简介:&quot;">​</a></h4><p>代码:name 中文释义:名字 类型:字符型 隶属于:通用代码组</p><h4 id="name-要点指示" tabindex="-1">name-要点指示: <a class="header-anchor" href="#name-要点指示" aria-label="Permalink to &quot;name-要点指示:&quot;">​</a></h4><div class="vp-code-group"><div class="tabs"><input type="radio" name="group-VvB7f" id="tab-1Ujf2Fh" checked="checked"><label for="tab-1Ujf2Fh">JDSALing</label><input type="radio" name="group-VvB7f" id="tab-sX64hET"><label for="tab-sX64hET">Tobby3600</label></div><div class="blocks"><div class="language-user active"><button title="Copy Code" class="copy"></button><span class="lang">user</span><pre class="shiki material-theme-palenight"><code><span class="line"><span style="color:#A6ACCD;">定义单位原始名称，可以是中文。</span></span>
+<span class="line"><span style="color:#A6ACCD;">游戏使用它区分其它单位。</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">如果没有在[displayText或者语言文件设置显示名称]，</span></span>
+<span class="line"><span style="color:#A6ACCD;">那么它也将作为单位的显示名称。 </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">具体描述文件位置(内部):</span></span>
+<span class="line"><span style="color:#A6ACCD;">1.assets/translationsStrings_zh.properties</span></span>
+<span class="line"><span style="color:#A6ACCD;">格式:units.单位名称.name=写单位显示的名称</span></span>
+<span class="line"><span style="color:#A6ACCD;">units.单位名称.description= [[填单位显示的描述]]</span></span></code></pre></div><div class="language-user"><button title="Copy Code" class="copy"></button><span class="lang">user</span><pre class="shiki material-theme-palenight"><code><span class="line"><span style="color:#A6ACCD;">ini文件的单独定义(外部-推荐):</span></span>
+<span class="line"><span style="color:#A6ACCD;"> </span></span>
+<span class="line"><span style="color:#A6ACCD;">2.displayText: -单位的标题</span></span>
+<span class="line"><span style="color:#A6ACCD;">displayDescription: -单位的描述</span></span></code></pre></div></div></div><p>特别提醒:<code>displayText支持本地化</code>，例如如果要写一个<code>多语言的单位描述</code>，可以通过以下例子：</p><h4 id="name-演示例子" tabindex="-1">name-演示例子 <a class="header-anchor" href="#name-演示例子" aria-label="Permalink to &quot;name-演示例子&quot;">​</a></h4><div class="language-ini"><button title="Copy Code" class="copy"></button><span class="lang">ini</span><pre class="shiki material-theme-palenight"><code><span class="line"><span style="color:#A6ACCD;">演示例子</span></span>
+<span class="line"><span style="color:#89DDFF;">[core]</span></span>
+<span class="line"><span style="color:#A6ACCD;">name: Ling</span></span>
+<span class="line"><span style="color:#A6ACCD;">displayText: English Title Text</span></span>
+<span class="line"><span style="color:#A6ACCD;">displayText_zh:中文标题</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#A6ACCD;">displayDescription: -English Description</span></span>
+<span class="line"><span style="color:#A6ACCD;">displayDescription_zh:-中文描述</span></span></code></pre></div>`,11),o=[p];function t(c,i,r,d,h,C){return s(),n("div",null,o)}const u=a(l,[["render",t]]);export{m as __pageData,u as default};
