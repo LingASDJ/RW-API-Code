@@ -13,11 +13,6 @@ jobs:
         uses: actions/setup-node@v3 # 安装 Node.js 运行环境和依赖包
         with:
           node-version: '12.x'
-      - name: Install dependencies
-        run: 
-              npm install
-              npm i vitepress -D
-              npm run docs:build
       - name: Setup code review
         uses: reviewdog/action-eslint@v1 # 使用 reviewdog 工具进行代码审查
         with:
