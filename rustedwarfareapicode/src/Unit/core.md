@@ -370,9 +370,9 @@ energyMax:5
 energyRegen:0.4
 ```
 
-### energyRegenWhenRecharging(E.R.W.C)
+### energyRegenWhenRecharging
 
-#### E.R.W.C-代码简介
+#### energyRegenWhenRecharging-代码简介
 
 代码:energyRegenWhenRecharging
  中文释义:充能时能量恢复速度 类型:浮点型 隶属于:单位统计代码组
@@ -381,15 +381,15 @@ energyRegen:0.4
 能量恢复是持续的，如果你设置了<font color="orange">energyNeedsToRechargeToFull</font>，
 那么攻击时按energyRegen恢复，耗尽时的灰条按此处设定值恢复。
 :::
-#### E.R.W.C-演示例子
+#### energyRegenWhenRecharging-演示例子
 ```ini
 [core]
 energyMax:1
 energyRegenWhenRecharging:0.4
 ```
 
-### energyNeedsToRechargeToFull(E.N.T.R)
-#### E.N.T.R-代码简介
+### energyNeedsToRechargeToFull
+#### energyNeedsToRechargeToFull-代码简介
 
 代码:energyNeedsToRechargeToFull
  中文释义:能量需要充满 类型:布尔型 隶属于:单位统计代码组
@@ -397,7 +397,7 @@ energyRegenWhenRecharging:0.4
 ::: tip
 如果能量耗尽，则需要完全充能才能进行攻击。
 :::
-#### E.N.T.R-演示例子
+#### energyNeedsToRechargeToFull-演示例子
 ```ini
 [core]
 energyMax:4
@@ -421,16 +421,16 @@ armour:40
 #例如45伤害，40护甲，那么将获得5点伤害。
 ```
 
-### armourMinDamageToKeep(A.M.D.T)
-#### A.M.D.T-代码简介
+### armourMinDamageToKeep
+#### armourMinDamageToKeep-代码简介
 
-代码:armour
- 中文释义:装甲最低伤害 类型:整型 隶属于:单位统计代码组
+代码:armourMinDamageToKeep
+中文释义:装甲最低伤害 类型:整型 隶属于:单位统计代码组
 
 :::tip
 至少造成多少点伤害，默认为1.防止护甲太高完全打不动。
 :::
-#### A.M.D.T-演示例子:
+#### armourMinDamageToKeep-演示例子
 ```ini
 [core]
 armour:40
@@ -438,8 +438,8 @@ armourMinDamageToKeep:2
 #如果受到40以下的常规攻击，则进行最低伤害判定
 ```
 
-### borrowResourcesWhileAlive(B.R.W.A)
-#### B.R.W.A-代码简介
+### borrowResourcesWhileAlive
+#### borrowResourcesWhileAlive-代码简介
 
 代码:armour
  中文释义:资源活着时借用 类型:Price型 隶属于:单位统计代码组
@@ -449,7 +449,7 @@ armourMinDamageToKeep:2
 例如用于电力逻辑，负数供电和正数耗电。
 :::
 
-#### B.R.W.A-演示例子:
+#### borrowResourcesWhileAlive-演示例子
 ```ini
 [core]
 borrowResourcesWhileAlive:5000
@@ -478,7 +478,7 @@ dieOnZeroEnergy:true
 ```
 :::
 
-### generation_resources(G.R_R.S)
+### generation_resources
 #### G.R_R.S-代码简介
 
 代码:generation_resources
@@ -487,12 +487,12 @@ dieOnZeroEnergy:true
 ::: tip
 单位定时获得的资源，可自定义资源。
 :::
-#### G.R_R.S-演示例子
+#### generation_resources-演示例子
 ```ini
 [core]
 generation_resources:10
 #or
-generation_resources:credit=10
+generation_resources:credits=10
 #常规产出10Credit/1s游戏资金
 -----------我是分界线----------
 #自定义资源写法
@@ -570,7 +570,7 @@ generation_delay=40
  中文释义:沙盒中可见 类型:布尔型 隶属于:UI和图形代码组
 
 ::: tip
-设置为false可在沙箱编辑器中隐藏单位。(默认为true)
+设置为false可在沙盒编辑器中隐藏单位。(默认为true)
 :::
 
 #### showInEditor-演示例子
@@ -669,7 +669,7 @@ displayRadius:25
 默认为显示半径值。攻击/回收/等单位时使用的半径
 :::
 
-#### uiTargetRadius-演示例子:
+#### uiTargetRadius-演示例子
 ```ini
 [core]
 uiTargetRadius:25
@@ -685,7 +685,7 @@ uiTargetRadius:25
 可以设置在单位上显示更大或更小的护盾圈。
 :::
 
-#### shieldRenderRadius-演示例子:
+#### shieldRenderRadius-演示例子
 ```ini
 [core]
 shieldRenderRadius:20
@@ -700,7 +700,7 @@ shieldRenderRadius:20
 隐藏护盾，只在受到攻击时显示。
 :::
 
-#### shieldDisplayOnlyDeflection-演示例子:
+#### shieldDisplayOnlyDeflection-演示例子
 ```ini
 [core]
 shieldDisplayOnlyDeflection:true
@@ -715,7 +715,7 @@ shieldDisplayOnlyDeflection:true
 默认值为4。数值越大消失越快。
 :::
 
-#### shieldDeflectionDisplayRate-演示例子:
+#### shieldDeflectionDisplayRate-演示例子
 ```ini
 [core]
 shieldDeflectionDisplayRate:3
@@ -730,7 +730,7 @@ shieldDeflectionDisplayRate:3
 默认为true。如果为false，则在小地图上不显示此单位。
 :::
 
-#### showOnMinimap-演示例子:
+#### showOnMinimap-演示例子
 ```ini
 [core]
 showOnMinimap:true
@@ -745,7 +745,7 @@ showOnMinimap:true
 是否在敌人小地图上显示。
 :::
 
-#### showOnMinimapToEnemies-演示例子:
+#### showOnMinimapToEnemies-演示例子
 ```ini
 [core]
 showOnMinimapToEnemies:true
