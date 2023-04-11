@@ -1,1 +1,0 @@
-import{_ as a,o as s,c as n,N as e}from"./chunks/framework.0e180df0.js";const m=JSON.parse('{"title":"[core]组","description":"","frontmatter":{"outline":"deep"},"headers":[],"relativePath":"src/Unit/core.md"}'),l={name:"src/Unit/core.md"},p=e("",11),o=[p];function t(c,i,r,d,h,C){return s(),n("div",null,o)}const u=a(l,[["render",t]]);export{m as __pageData,u as default};
