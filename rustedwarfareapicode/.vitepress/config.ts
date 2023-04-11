@@ -13,10 +13,11 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: 'Examples',
+        text: 'RW-API-Code',
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          { text: '主页-Home', link: '/markdown-examples' },
+          { text: '核心-CORE', link: '/src/Unit/core' },
+          { text: '可建造-CORE', link: '/src/Unit/canbuild' }
         ]
       }
     ],
