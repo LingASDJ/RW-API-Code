@@ -601,7 +601,7 @@ showInEditor:false
 其它自查(此列表并不全)，不过你应该不会闲着支持这么多语言。另外英文的语言代码`en`可以忽略，因为英文在软件里为默认语言,故而无需加`en`,当然加了也没事。
 :::
 
-如果你不想进行多语言化，你应该直接`displayText:坦克`，而不是`displayText_zh:坦克`，如果你写了`displayText_zh:坦克`，<br>你必须再声明一个`displayText:Tank`,否则，游戏会找不到`默认语言缺省值`，将会导致`mod报错而无法运行`。所有可以使用多语言的都有这个检查，还请各位Moder留意。（若有特别的代码，将会在它里面特别提示）
+如果你不想进行多语言化，你应该直接`displayText:坦克`，而不是`displayText_zh:坦克`，如果你写了`displayText_zh:坦克`，<br>你必须再声明一个`displayText:Tank`,否则，游戏会找不到`默认语言缺省值`，将会导致`mod报错而无法运行`。所有可以使用多语言的都有这个检查，还请各位Modder留意。（若有特别的代码，将会在它里面特别提示）
 
 #### displayText_{LANG}-演示例子
 ```ini
@@ -724,7 +724,7 @@ shieldDeflectionDisplayRate:3
 ### showOnMinimap
 #### showOnMinimap-代码简介
 
-代码:shieldDeflectionDisplayRate 中文释义:显示在小地图上 类型:布尔型 隶属于:UI和图形代码组
+代码:showOnMinimap 中文释义:显示在小地图上 类型:布尔型 隶属于:UI和图形代码组
 
 ::: tip
 默认为true。如果为false，则在小地图上不显示此单位。
