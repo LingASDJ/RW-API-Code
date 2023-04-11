@@ -12,6 +12,11 @@
 * RW API Code是一个非官方的第三方RustedWarfare代码网站，提供高效和高度学习的服务态度。
 * 如果您想合作开发，请Fork我们的主要分支机构并申请PullRecust
 
+### 贡献者
+
+<!-- readme: collaborators,contributors -start -->
+<!-- readme: collaborators,contributors -end -->
+
 # 开发说明
 ## 1.前提条件：Node.js 18或以上
 ```文本

@@ -1,0 +1,29 @@
+name: Code Review
+on:
+  pull_request:
+    branches: [ main ] # 只有针对主分支的 PR 会触发此工作流程
+
+jobs:
+  code-review:
+    name: Code Review
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3 # 检查代码库，将其检出到 runner 中
+      - name: Setup Node.js
+        uses: actions/setup-node@v3 # 安装 Node.js 运行环境和依赖包
+        with:
+          node-version: '12.x'
+      - name: Install dependencies
+        run: 
+              npm install
+              npm i vitepress -D
+              npm run docs:build
+      - name: Setup code review
+        uses: reviewdog/action-eslint@v1 # 使用 reviewdog 工具进行代码审查
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }} # 授权访问 GitHub API
+          eslint_level: error # 设置 Eslint 输出级别为 error
+
+#  这个 workflow 文件使用 `pull_request` 事件来监听新的 PR 提交，并且只有针对主分支的操作才会触发它。code-review job 使用 `actions/checkout` action 将代码库检出到 runner 中，使用 `actions/setup-node` action 安装 Node.js 运行环境和依赖包，接着通过运行 `npm run lint` 进行代码风格检查和运行 `npm test` 命令来运行测试。最后，在 Setup code review 步骤中，我们使用 `reviewdog/action-eslint` action 来进行代码审查，并将输出级别设置为 `error`。
+#
+#  需要注意的是，在此示例中，我们使用了 Eslint 工具来进行代码风格检查。如果您的项目使用其他工具或规则，请相应地更改该命令或引用其他 action。

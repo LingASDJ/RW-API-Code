@@ -1,0 +1,20 @@
+name: First interaction
+
+on:
+  issues:
+    types: [opened]
+  pull_request_target:
+    types: [opened]
+
+jobs:
+  welcome:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Welcome new contributor
+        uses: actions/first-interaction@v1.1.1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          issue-message: |
+            你好呀！感谢您打开我们项目的第一期。感谢您的反馈，并期待尽快解决此问题。
+          pr-message: |
+            恭喜你打开了你的第一个拉取请求！我们的团队将很快对其进行审核并提供任何必要的反馈。感谢您为我们的项目做出贡献！
