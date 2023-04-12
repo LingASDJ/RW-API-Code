@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.2-DEV1.0](https://github.com/LingASDJ/RW-API-Code/compare/v1.0.0...v0.0.2-DEV1.0) (2023-04-12)
+
+
+### 更新
+
+* 0.0.2-DEV1 ([947a19f](https://github.com/LingASDJ/RW-API-Code/commit/947a19f286764f32dd6922abad4f95449ef1f7d0))
+
 ## 1.0.0 (2023-04-11)
 
 
