@@ -119,14 +119,14 @@ autoTrigger:if memory.a < memory.b and memory.a > memory.c
 autoTrigger:if (memory.a < memory.b or memory.a > memory.c) and not memory.a < memory.d
 ```
 
-<!-- tabs:start -->
-<!-- 换行两个空格 或者 <br> -->
-#### **动动脑考考你**
-#### 考考你，在上述这个例子中，满足什么条件才会触发？
-#### **显示答案-#2**
-#### 答案：a必须满足小于b和大于c中的一个，且a必须小于c，自动触发才会被触发。
-<!-- tabs:end -->
-
+:::code-group
+```bash [考考你]
+考考你，在上述这个例子中，满足什么条件才会触发？
+```
+```bash [显示答案]
+答案：a必须满足小于b和大于c中的一个，且a必须小于c，自动触发才会被触发。
+```
+:::
 
 
 ### 算数运算符
@@ -399,12 +399,16 @@ self.numberOfUnitsInTeam(withTag="air",withInRange=500,factoryQueue=true)
 
 `self.readUnitMemory()`用于获取指定单位内存，格式为`self.readUnitMemory("内存名",type="类型",index=下标(仅当类型是数组时可选填写))`。
 
-> [!NOTE] 在<font color=orange>跨单位读取数组</font>时，如果下标使用了逻辑，无论逻辑值都会返回第零项，<font color=orange>为游戏bug</font>，解决方法可以参考<br>https://www.bilibili.com/video/BV17v4y1r7dV (感谢十山月)<br>
+::: danger
+在<font color=orange>跨单位读取数组</font>时，如果下标使用了逻辑，无论逻辑值都会返回第零项，
+<font color=orange>为游戏bug</font>，解决方法可以参考：
+https://www.bilibili.com/video/BV17v4y1r7dV (感谢十山月)
 
-<iframe src="//player.bilibili.com/player.html?aid=566144438&bvid=BV17v4y1r7dV&cid=988997369&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="600" height="400"> </iframe>
+<iframe src="//player.bilibili.com/player.html?aid=566144438&bvid=BV17v4y1r7dV&cid=988997369&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="400">
+</iframe>
 
 ::: code-group
-```ini{7} [如果下标使用了逻辑，无论逻辑值都会返回第零项的解决策略--Thanks 十山月]
+```ini{7} [演示例子]
 [action_copyArry]
 text:copyFromUnit
 alsoTriggerAction:copyOne
@@ -419,7 +423,7 @@ setUnitMemory:Afloat[index] = thisActionTarget.readUnitMemory("Afloat",type="flo
 :::
 
 <div class="alert callout tip">
-<p>演示例子:</p>
+<p>self.readUnitMemory()基础演示例子:</p>
 </div>
 
 ```ini
