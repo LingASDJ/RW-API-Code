@@ -25,7 +25,18 @@ async function init() {
 				const textToCopy = [
 					...new Set(spans.map((span) => span.textContent)),
 				].join("");
-				navigator.clipboard.writeText(textToCopy);
+
+				if (navigator.clipboard) {
+					navigator.clipboard.writeText(textToCopy);
+				} else {
+					const textarea = document.createElement("textarea");
+					textarea.value = textToCopy;
+					document.body.appendChild(textarea);
+					textarea.select();
+					document.execCommand("copy");
+					document.body.removeChild(textarea);
+				}
+
 				console.log(textToCopy);
 			});
 		}
