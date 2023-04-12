@@ -15,6 +15,8 @@ outline: deep
 代码:name 中文释义:名字 类型:字符型 隶属于:通用代码组
 #### name-要点指示
 
+<hr>
+
 <!-- 代码盒子例子 -->
 ::: code-group
 ```bash [JDSALing]
@@ -53,6 +55,8 @@ displayDescription_zh:-中文描述
 
 ```
 
+<hr>
+
 ### price
 #### price-代码简介
 代码:price 中文释义:价格 类型:整数 隶属于:通用代码组
@@ -66,13 +70,12 @@ displayDescription_zh:-中文描述
 （前提是此资源要在使用的单位进行定义）。
 ```
 :::
-
-
 #### price-演示例子
 ```ini
 [core]
 price:120,石油=80,铁=60
 ```
+<hr>
 
 ### radius
 #### radius-代码简介
@@ -86,6 +89,8 @@ price:120,石油=80,铁=60
 radius:20
 ```
 
+<hr>
+
 ### mass
 #### mass-代码简介
 代码:mass 中文释义:质量 类型:整数 隶属于:通用代码组
@@ -96,6 +101,8 @@ radius:20
 [core]
 mass:2000
 ```
+
+<hr>
 
 ### maxHp
 #### maxHp-代码简介
@@ -135,6 +142,8 @@ altNames代码要点指示:
 altNames:ling,tobby3600,coldmint
 ```
 
+<hr>
+
 ### class
 #### class-代码简介
 
@@ -149,6 +158,8 @@ Luke：保留供将来使用，默认情况下必须为`CustomUnitMetadata`。�
 [core]
 class:CustomUnitMetadata
 ```
+
+<hr>
 
 ### strictLevel
 #### strictLevel-代码简介
@@ -166,6 +177,8 @@ class:CustomUnitMetadata
 strictLevel:1
 ```
 
+<hr>
+
 ### techLevel
 #### techLevel-代码简介
 代码:techLevel 中文释义:科技等级 类型:数字固定型 隶属于:通用代码组
@@ -180,6 +193,8 @@ strictLevel:1
 [core]
 techLevel:2
 ```
+
+<hr>
 
 ### buildSpeed
 #### buildSpeed-代码简介
@@ -200,6 +215,8 @@ buildSpeed:30s
 buildSpeed:0.0006
 ```
 
+<hr>
+
 ### isBio
 #### isBio-代码简介
 
@@ -215,6 +232,8 @@ buildSpeed:0.0006
 isBio:true
 ```
 
+<hr>
+
 ### isBug
 #### isBug-代码简介
 
@@ -228,6 +247,8 @@ isBio:true
 [core]
 isBug:true
 ```
+
+<hr>
 
 ### isBuilder
 #### isBuilder-代码简介
@@ -244,24 +265,29 @@ isBug:true
 isBuilder:true
 ```
 
+<hr>
+
 ### streamingCost
 #### streamingCost-代码简介
 
 代码:streamingCost 中文释义:流式资金 类型:整数型 隶属于:通用代码组
 
-::: tip和价格一样，但在建造时逐渐消耗资金，如果在构建过程中资源耗尽，  
+::: tip
+和价格一样，但在建造时逐渐消耗资金，如果在构建过程中资源耗尽，  
 建造或生产队列将暂停。就像是红警中那样。铁锈默认是预先扣除资金。  
 若使用该代码，则玩家的每秒资金将会根据流式资金的算法进行扣减。
+:::
 #### streamingCost-演示例子
 ```ini
 [core]
 streamingCost:1145
 ```
 
+<hr>
 
 ### switchPriceWithStreamingCost
 
-#### S.P.S.C.-代码简介
+#### switchPriceWithStreamingCost-代码简介
 
 代码:switchPriceWithStreamingCost(S.P.S.C.)   
 中文释义:流式资金模式全局切换 类型:布尔型 隶属于:通用代码组
@@ -271,7 +297,7 @@ streamingCost:1145
 建议使用模板快速将一个模组为所有单位切换流资源。
 例如all-units.template.
 :::
-####  S.P.S.C.-演示例子
+#### switchPriceWithStreamingCost-演示例子
 ```ini,all-units.template
 [core]
 switchPriceWithStreamingCost:true
@@ -298,6 +324,8 @@ maxHp:500
 selfRegenRate:0.5
 ```
 
+<hr>
+
 ### maxShield
 #### maxShield-代码简介
 
@@ -311,6 +339,8 @@ selfRegenRate:0.5
 [core]
 maxShield:3000
 ```
+
+<hr>
 
 ### startShieldAtZero
 #### startShieldAtZero-代码简介
@@ -327,6 +357,8 @@ maxShield:3000
 startShieldAtZero:true
 ```
 
+<hr>
+
 ### shieldRegen
 #### shieldRegen-代码简介
 
@@ -342,6 +374,8 @@ maxShield:3000
 shieldRegen:0.5
 ```
 
+<hr>
+
 ### energyMax
 #### energyMax-代码简介
 
@@ -356,6 +390,8 @@ shieldRegen:0.5
 energyMax:5
 ```
 
+<hr>
+
 ### energyRegen
 #### energyRegen-代码简介
 
@@ -369,6 +405,8 @@ energyMax:5
 [core]
 energyRegen:0.4
 ```
+
+<hr>
 
 ### energyRegenWhenRecharging
 
@@ -388,6 +426,8 @@ energyMax:1
 energyRegenWhenRecharging:0.4
 ```
 
+<hr>
+
 ### energyNeedsToRechargeToFull
 #### energyNeedsToRechargeToFull-代码简介
 
@@ -403,6 +443,8 @@ energyRegenWhenRecharging:0.4
 energyMax:4
 energyNeedsToRechargeToFull:true
 ```
+
+<hr>
 
 ### armour
 #### armour-代码简介
@@ -421,6 +463,8 @@ armour:40
 #例如45伤害，40护甲，那么将获得5点伤害。
 ```
 
+<hr>
+
 ### armourMinDamageToKeep
 #### armourMinDamageToKeep-代码简介
 
@@ -437,6 +481,8 @@ armour:40
 armourMinDamageToKeep:2
 #如果受到40以下的常规攻击，则进行最低伤害判定
 ```
+
+<hr>
 
 ### borrowResourcesWhileAlive
 #### borrowResourcesWhileAlive-代码简介
@@ -478,8 +524,10 @@ dieOnZeroEnergy:true
 ```
 :::
 
+<hr>
+
 ### generation_resources
-#### G.R_R.S-代码简介
+#### generation_resources-代码简介
 
 代码:generation_resources
  中文释义:资源获取 类型:Price型 隶属于:单位统计代码组
@@ -493,12 +541,14 @@ dieOnZeroEnergy:true
 generation_resources:10
 #or
 generation_resources:credits=10
-#常规产出10Credit/1s游戏资金
+#常规产出10credits/1s游戏资金
 -----------我是分界线----------
 #自定义资源写法
 [core]
 generation_resources:金属=5
 ```
+
+<hr>
 
 ### generation_active
 #### generation_active-代码简介
@@ -522,6 +572,8 @@ generation_active: if not self.hp<100
 #效果：单位低于1000血量可以产出资源
 ```
 
+<hr>
+
 ### generation_credits
 #### generation_credits-代码简介
 
@@ -544,8 +596,11 @@ generation_credits=5
 :::
 
 ::: warning
-警告：请勿使用40以外的数值，否则会有视觉Bug。例如使用30，资金生成3，实际就为6，但是一旦这类单位多了，游戏的资金显示会出问题。
+警告：请勿使用40以外的数值，否则会有视觉Bug。
+例如使用30，资金生成3，实际就为6，但是一旦这类单位多了，游戏的资金显示会出问题。
 :::
+
+<hr>
 
 #### generation_delay-代码简介
 
@@ -612,6 +667,8 @@ displayText:Tank
 displayText_zh:坦克
 ```
 
+<hr>
+
 ### displayDescription_LANG
 #### displayDescription-代码简介
 
@@ -629,6 +686,8 @@ displayText:坦克
 displayDescription:只能对地，弱输出，只能在地上行走。
 ```
 
+<hr>
+
 ### displayLocaleKey
 #### displayLocaleKey-代码简介
 
@@ -645,6 +704,8 @@ displayDescription:只能对地，弱输出，只能在地上行走。
 displayLocaleKey: units.mechArtillery
 ```
 
+<hr>
+
 ### displayRadius
 #### displayRadius-代码简介
 
@@ -660,6 +721,8 @@ displayLocaleKey: units.mechArtillery
 displayRadius:25
 ```
 
+<hr>
+
 ### uiTargetRadius
 #### uiTargetRadius-代码简介
 
@@ -674,6 +737,8 @@ displayRadius:25
 [core]
 uiTargetRadius:25
 ```
+
+<hr>
 
 ### shieldRenderRadius
 #### shieldRenderRadius-代码简介
@@ -691,6 +756,8 @@ uiTargetRadius:25
 shieldRenderRadius:20
 ```
 
+<hr>
+
 ### shieldDisplayOnlyDeflection
 #### shieldDisplayOnlyDeflection-代码简介
 
@@ -705,6 +772,8 @@ shieldRenderRadius:20
 [core]
 shieldDisplayOnlyDeflection:true
 ```
+
+<hr>
 
 ### shieldDeflectionDisplayRate
 #### shieldDeflectionDisplayRate-代码简介
@@ -721,6 +790,8 @@ shieldDisplayOnlyDeflection:true
 shieldDeflectionDisplayRate:3
 ```
 
+<hr>
+
 ### showOnMinimap
 #### showOnMinimap-代码简介
 
@@ -735,6 +806,8 @@ shieldDeflectionDisplayRate:3
 [core]
 showOnMinimap:true
 ```
+
+<hr>
 
 ### showOnMinimapToEnemies
 #### showOnMinimapToEnemies-代码简介
@@ -751,6 +824,8 @@ showOnMinimap:true
 showOnMinimapToEnemies:true
 ```
 
+<hr>
+
 ### showActionsWithMixedSelectionIfOtherUnitsHaveTag
 #### showActionsWithMixedSelectionIfOtherUnitsHaveTag-代码简介
 
@@ -766,5 +841,5 @@ showOnMinimapToEnemies:true
 showActionsWithMixedSelectionIfOtherUnitsHaveTag:tag_联系
 ```
 
-## 第四组-构建代码
+## 第四类-构建代码
 
