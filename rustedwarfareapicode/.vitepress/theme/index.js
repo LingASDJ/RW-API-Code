@@ -18,30 +18,28 @@ async function init() {
 	try {
 		await wait(1000);
 
-		console.log("timeout");
+		// console.log("timeout");
 
 		const copyBtnList = document.getElementsByClassName("copy");
-		console.log(copyBtnList);
-		console.log(copyBtnList.length);
+		// console.log(copyBtnList);
+		// console.log(copyBtnList.length);
 
 		for (let i = 0; i < copyBtnList.length; i++) {
 			const btn = copyBtnList[i];
 			btn.addEventListener("touchend", async () => {
 				// 请求剪贴板权限
 				await requestClipboardPermission();
-
-				alert("touchend");
 				const parentDiv = btn.parentNode;
 				const codeElem = parentDiv.querySelector("code");
 				const spans = [...codeElem.querySelectorAll("span")];
 				const textToCopy = [
 					...new Set(spans.map((span) => span.textContent)),
 				].join("");
-				console.log(textToCopy);
+				// console.log(textToCopy);
 
 				try {
 					await navigator.clipboard.writeText(textToCopy);
-					console.log("Text copied to clipboard");
+					// console.log("Text copied to clipboard");
 				} catch (error) {
 					const textarea = document.createElement("textarea");
 					textarea.value = textToCopy;
@@ -49,7 +47,7 @@ async function init() {
 					textarea.select();
 					document.execCommand("copy");
 					document.body.removeChild(textarea);
-					console.log("Text copied to clipboard");
+					// console.log("Text copied to clipboard");
 				}
 			});
 		}
