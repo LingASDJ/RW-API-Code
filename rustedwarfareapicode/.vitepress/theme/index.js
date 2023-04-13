@@ -18,7 +18,8 @@ async function init() {
 
 		for (let i = 0; i < copyBtnList.length; i++) {
 			const btn = copyBtnList[i];
-			btn.addEventListener("click", () => {
+			btn.addEventListener("touchend", () => {
+				alert("touchend");
 				const parentDiv = btn.parentNode;
 				const codeElem = parentDiv.querySelector("code");
 				const spans = [...codeElem.querySelectorAll("span")];
@@ -27,7 +28,9 @@ async function init() {
 				].join("");
 
 				if (navigator.clipboard) {
-					navigator.clipboard.writeText(textToCopy);
+					navigator.clipboard.writeText(textToCopy).then(() => {
+						console.log("Text copied to clipboard");
+					});
 				} else {
 					const textarea = document.createElement("textarea");
 					textarea.value = textToCopy;
