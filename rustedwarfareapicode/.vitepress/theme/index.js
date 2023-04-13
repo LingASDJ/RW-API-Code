@@ -6,6 +6,14 @@ function wait(timeout) {
 	return new Promise((resolve) => setTimeout(resolve, timeout));
 }
 
+async function requestClipboardPermission() {
+	try {
+		await navigator.permissions.query({ name: "clipboard-write" });
+	} catch (error) {
+		console.error(error);
+	}
+}
+
 async function init() {
 	try {
 		await wait(1000);
@@ -19,6 +27,9 @@ async function init() {
 		for (let i = 0; i < copyBtnList.length; i++) {
 			const btn = copyBtnList[i];
 			btn.addEventListener("touchend", async () => {
+				// 请求剪贴板权限
+				await requestClipboardPermission();
+
 				alert("touchend");
 				const parentDiv = btn.parentNode;
 				const codeElem = parentDiv.querySelector("code");
@@ -26,6 +37,7 @@ async function init() {
 				const textToCopy = [
 					...new Set(spans.map((span) => span.textContent)),
 				].join("");
+				console.log(textToCopy);
 
 				try {
 					await navigator.clipboard.writeText(textToCopy);
