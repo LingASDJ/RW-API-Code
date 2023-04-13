@@ -18,7 +18,7 @@ async function init() {
 
 		for (let i = 0; i < copyBtnList.length; i++) {
 			const btn = copyBtnList[i];
-			btn.addEventListener("touchend", () => {
+			btn.addEventListener("touchend", async () => {
 				alert("touchend");
 				const parentDiv = btn.parentNode;
 				const codeElem = parentDiv.querySelector("code");
@@ -27,20 +27,18 @@ async function init() {
 					...new Set(spans.map((span) => span.textContent)),
 				].join("");
 
-				if (navigator.clipboard) {
-					navigator.clipboard.writeText(textToCopy).then(() => {
-						console.log("Text copied to clipboard");
-					});
-				} else {
+				try {
+					await navigator.clipboard.writeText(textToCopy);
+					console.log("Text copied to clipboard");
+				} catch (error) {
 					const textarea = document.createElement("textarea");
 					textarea.value = textToCopy;
 					document.body.appendChild(textarea);
 					textarea.select();
 					document.execCommand("copy");
 					document.body.removeChild(textarea);
+					console.log("Text copied to clipboard");
 				}
-
-				console.log(textToCopy);
 			});
 		}
 	} catch (error) {
