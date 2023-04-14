@@ -1,11 +1,28 @@
 // .vitepress/theme/index.js
 import DefaultTheme from "vitepress/theme";
 import "./style/custom.css";
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+import { getPerformance } from "firebase/performance";
+
+const firebaseConfig = {
+	apiKey: "AIzaSyANVvapu0ihi1cM8ZzuXTkwjx9lM_J1RyQ",
+	authDomain: "rw-api-code-d0779.firebaseapp.com",
+	projectId: "rw-api-code-d0779",
+	storageBucket: "rw-api-code-d0779.appspot.com",
+	messagingSenderId: "363611843335",
+	appId: "1:363611843335:web:f15aef7ab427f52b4033a2",
+	measurementId: "G-XJH5TKP5VL"
+};
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+const perf = getPerformance(app);
 
 function wait(timeout) {
 	return new Promise((resolve) => setTimeout(resolve, timeout));
 }
-
 async function requestClipboardPermission() {
 	try {
 		await navigator.permissions.query({ name: "clipboard-write" });
@@ -13,7 +30,6 @@ async function requestClipboardPermission() {
 		console.error(error);
 	}
 }
-
 async function init() {
 	try {
 		await wait(1000);
