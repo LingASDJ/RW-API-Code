@@ -72,6 +72,25 @@ async function init() {
 	}
 }
 
-init();
+setTimeout(() => {
+	const notFoundDiv = document.querySelector('.NotFound')
+// 添加404图片
+	const img = document.createElement('img')
+	img.src = 'https://img.quankexia.com/kelongwo/wp-content/uploads/2021/07/2021072708045950.png'
+	img.alt = '404 Error'
+	notFoundDiv.insertBefore(img, notFoundDiv.firstChild)
 
+// 将PAGE NOT FOUND改为无法找到该页面
+	notFoundDiv.querySelector('.title').textContent = '无法找到该页面'
+
+// 将But if you don't change your direction, and if you keep looking, you may end up where you are heading.改为无法找到该页面
+	notFoundDiv.querySelector('.quote').textContent = '无法找到该页面'
+
+// 将 Take me home 按钮文字替换为返回首页
+	notFoundDiv.querySelector('.link').textContent = '返回首页'
+
+}, 200);
+
+
+init();
 export default DefaultTheme;

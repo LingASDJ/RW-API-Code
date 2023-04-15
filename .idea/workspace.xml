@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="095f8482-7199-413b-83e3-876b2fdc1c5d" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rustedwarfareapicode/.vitepress/theme/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/rustedwarfareapicode/.vitepress/theme/index.js" afterDir="false" />
     </list>
@@ -52,6 +52,45 @@
       <recent name="D:\RW-API-Code\rustedwarfareapicode\.vitepress\theme" />
     </key>
   </component>
+  <component name="RunManager" selected="npm.docs:preview">
+    <configuration name="docs:build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="docs:build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="docs:dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="docs:dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="docs:preview" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="docs:preview" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.docs:preview" />
+        <item itemvalue="npm.docs:dev" />
+        <item itemvalue="npm.docs:build" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="默认任务">
@@ -64,6 +103,10 @@
       <workItem from="1681457010083" duration="1000" />
       <workItem from="1681457192270" duration="722000" />
       <workItem from="1681457929740" duration="336000" />
+      <workItem from="1681463573643" duration="628000" />
+      <workItem from="1681464227973" duration="709000" />
+      <workItem from="1681573027219" duration="321000" />
+      <workItem from="1681573363358" duration="331000" />
     </task>
     <servers />
   </component>

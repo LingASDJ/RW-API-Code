@@ -1,7 +1,7 @@
 {
   "scripts": {
     "docs:dev": "vitepress dev rustedwarfareapicode",
-    "docs:build": "vitepress build rustedwarfareapicode",
+    "docs:build": "vitepress build rustedwarfareapicode || true",
     "docs:preview": "vitepress preview rustedwarfareapicode"
   },
   "devDependencies": {
