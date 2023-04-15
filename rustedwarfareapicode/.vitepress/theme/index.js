@@ -6,23 +6,38 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getPerformance } from "firebase/performance";
 
-const firebaseConfig = {
-	apiKey: "AIzaSyANVvapu0ihi1cM8ZzuXTkwjx9lM_J1RyQ",
-	authDomain: "rw-api-code-d0779.firebaseapp.com",
-	projectId: "rw-api-code-d0779",
-	storageBucket: "rw-api-code-d0779.appspot.com",
-	messagingSenderId: "363611843335",
-	appId: "1:363611843335:web:f15aef7ab427f52b4033a2",
-	measurementId: "G-XJH5TKP5VL"
+const initializeFirebase = () => {
+	const firebaseConfig = {
+		apiKey: "AIzaSyANVvapu0ihi1cM8ZzuXTkwjx9lM_J1RyQ",
+		authDomain: "rw-api-code-d0779.firebaseapp.com",
+		projectId: "rw-api-code-d0779",
+		storageBucket: "rw-api-code-d0779.appspot.com",
+		messagingSenderId: "363611843335",
+		appId: "1:363611843335:web:f15aef7ab427f52b4033a2",
+		measurementId: "G-XJH5TKP5VL",
+	};
+
+	// Initialize Firebase
+	const app = initializeApp(firebaseConfig);
+	const analytics = getAnalytics(app);
+	const perf = getPerformance(app);
+
+	return "Firebase initialized successfully";
 };
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-const perf = getPerformance(app);
+
+(async function () {
+	try {
+		const result = await initializeFirebase();
+		console.log(result);
+	} catch (error) {
+		console.error(error);
+	}
+})();
 
 function wait(timeout) {
 	return new Promise((resolve) => setTimeout(resolve, timeout));
 }
+
 async function requestClipboardPermission() {
 	try {
 		await navigator.permissions.query({ name: "clipboard-write" });
@@ -30,6 +45,7 @@ async function requestClipboardPermission() {
 		console.error(error);
 	}
 }
+
 async function init() {
 	try {
 		await wait(1000);
@@ -73,24 +89,23 @@ async function init() {
 }
 
 setTimeout(() => {
-	const notFoundDiv = document.querySelector('.NotFound')
-// 添加404图片
-	const img = document.createElement('img')
-	img.src = 'https://img.quankexia.com/kelongwo/wp-content/uploads/2021/07/2021072708045950.png'
-	img.alt = '404 Error'
-	notFoundDiv.insertBefore(img, notFoundDiv.firstChild)
+	const notFoundDiv = document.querySelector(".NotFound");
+	// 添加404图片
+	const img = document.createElement("img");
+	img.src =
+		"https://img.quankexia.com/kelongwo/wp-content/uploads/2021/07/2021072708045950.png";
+	img.alt = "404 Error";
+	notFoundDiv.insertBefore(img, notFoundDiv.firstChild);
 
-// 将PAGE NOT FOUND改为无法找到该页面
-	notFoundDiv.querySelector('.title').textContent = '无法找到该页面'
+	// 将PAGE NOT FOUND改为无法找到该页面
+	notFoundDiv.querySelector(".title").textContent = "无法找到该页面";
 
-// 将But if you don't change your direction, and if you keep looking, you may end up where you are heading.改为无法找到该页面
-	notFoundDiv.querySelector('.quote').textContent = '无法找到该页面'
+	// 将But if you don't change your direction, and if you keep looking, you may end up where you are heading.改为无法找到该页面
+	notFoundDiv.querySelector(".quote").textContent = "无法找到该页面";
 
-// 将 Take me home 按钮文字替换为返回首页
-	notFoundDiv.querySelector('.link').textContent = '返回首页'
-
+	// 将 Take me home 按钮文字替换为返回首页
+	notFoundDiv.querySelector(".link").textContent = "返回首页";
 }, 200);
-
 
 init();
 export default DefaultTheme;
