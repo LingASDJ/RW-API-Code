@@ -15,11 +15,14 @@ hero:
       text: 开发指南
       link: /api-examples  
     - theme: brand
-      text: 让我们快速开始
+      text: 快速开始
       link: /src/Unit/core
     - theme: alt
       text: Github
       link: https://github.com/LingASDJ/RW-API-Code
+    - theme: brand
+      text: 常见问题
+      link: /src/question/
   
 
 features:

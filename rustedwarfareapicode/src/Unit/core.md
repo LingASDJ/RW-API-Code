@@ -224,7 +224,7 @@ buildSpeed:0.0006
 
 ::: tip {2}
 若设置成true,则会在单位死亡时产生血迹,  
-图像在<font color=orange>drawable/blood_mark.png---hideScorchMark:true</font>时可以隐藏非生物则为黑色爆炸效果。
+图像在<font color=orange>drawable/blood_mark.png<br>当hideScorchMark:true</font>时可以隐藏非生物则为黑色爆炸效果。
 :::
 #### isBio-演示例子
 ```ini
@@ -843,3 +843,95 @@ showActionsWithMixedSelectionIfOtherUnitsHaveTag:tag_联系
 
 ## 第四类-构建代码
 
+### isBuilding
+#### isBuilding-代码简介
+
+代码:isBuilding 中文释义:是建筑 类型:布尔型 隶属于:构建代码组
+
+::: tip
+定义单位是否为建筑物。为true时无论移动方式是什么都会强制为建筑。
+:::
+
+#### isBuilding-演示例子
+```ini
+[core]
+isBuilding:true
+```
+
+<hr>
+
+### footprint
+#### footprint-代码简介
+
+代码:footprint 中文释义:建筑碰撞范围 类型:多整型 隶属于:构建代码组
+
+::: tip
+填四个数值(左，上，右，下)，单位是格子，建筑默认占一格，向左和向上需要填负数，填整数在选择时有偏移。
+四个数值可以完全颠倒，这样不会阻碍单位移动。决定建筑单位碰撞体积，此区域内单位不能通过，如果在单位运动途中单位则会绕过。单位实际可选择面积使用的是radius。
+:::
+
+#### footprint-演示例子
+```ini
+[core]
+##（1x1）
+footprint: 0,0,0,0
+##（2X2）
+footprint: 0,0,1,1
+##（3X3）
+footprint: -1,-1,1,1
+```
+
+<hr>
+
+### constructionFootprint
+#### constructionFootprint-代码简介
+
+代码:constructionFootprint 中文释义:建筑覆盖范围 类型:多整型 隶属于:构建代码组
+
+::: tip
+基础规则同上，这个区域内不能建造建筑，但是单位可以通过。   
+一般需要设定比上一个面积大。   
+好处是即使建造的密密麻麻，单位也有路可走。
+:::
+
+#### constructionFootprint-演示例子
+```ini
+[core]
+constructionFootprint: -1,-1,1,3
+```
+
+<hr>
+
+### displayFootprint
+#### displayFootprint-代码简介
+
+代码:displayFootprint 中文释义:建筑选择UI 类型:多整型 隶属于:构建代码组
+
+::: tip
+基础规则同上，用于选择单位时UI显示。不设定则默认为建筑覆盖区域。
+:::
+
+#### displayFootprint-演示例子
+```ini
+[core]
+displayFootprint: 0,0,1,1
+```
+
+<hr>
+
+### buildingSelectionOffset
+#### buildingSelectionOffset-代码简介
+
+代码:buildingSelectionOffset 中文释义:建筑UI调整 类型:整型 隶属于:构建代码组
+
+::: tip
+基础规则同上，用于选择单位时UI显示。不设定则默认为建筑覆盖区域。
+:::
+
+#### buildingSelectionOffset-演示例子
+```ini
+[core]
+buildingSelectionOffset: 4
+```
+
+<hr>
