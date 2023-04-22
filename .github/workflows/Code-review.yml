@@ -8,7 +8,7 @@ jobs:
     name: Code Review
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2 # 将代码库检出到 Runner 中
+      - uses: actions/checkout@v3 # 将代码库检出到 Runner 中
       - name: Setup Node.js
         uses: actions/setup-node@v2 # 安装 Node.js 运行环境和依赖项
         with:
