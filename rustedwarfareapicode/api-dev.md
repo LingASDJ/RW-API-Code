@@ -73,6 +73,39 @@ Netlify会在你的PR请求下面显示你的预览页面地址。<br>
 由于某些原因，TX会拦截Netlify的站点，请使用浏览器预览。
 :::
 
+#### 1.MD扩展格式：
+
+```
+
+::: info
+信息文本
+:::
+
+::: tip
+小提示文本
+:::
+
+::: warning
+警告文本
+:::
+
+::: danger
+危险文本
+:::
+
+::: details
+这是一个折叠框
+:::
+
+#### 代码突出显示
+::: code-group
+```ini{2} [演示例子]
+[action_copyArry]
+RTS-APICODE
+
+可以通过1-4来让1到4行突出显示，
+也可以通过1,4,5来指定行数突出显示
+```
 
 #### 实际格式演示：
 ::: tip
@@ -100,46 +133,27 @@ Netlify会在你的PR请求下面显示你的预览页面地址。<br>
 :::
 
 
-#### MD扩展格式：
+```ini{2} [演示例子]
+[action_copyArry]
+RTS-APICODE
+//代码突出演示
+可以通过1-4来让1到4行突出显示，
+也可以通过1,4,5来指定行数突出显示
 
 ```
 
-::: info
-信息文本
-:::
+### 2.媒体插入
 
-::: tip
-小提示文本
-:::
+#### 1.视频演示---(可选)
+<iframe src="https://vdse.bdstatic.com//192d9a98d782d9c74c96f09db9378d93.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="400">
+</iframe>
 
-::: warning
-警告文本
-:::
-
-::: danger
-危险文本
-:::
-
-::: details
-这是一个折叠框
-:::
-
-#### 单位代码文档推荐格式：
-```markdown
-### xxxx
-#### xxxx-代码简介
-
-#### 视频/GIF演示---(可选)
-
-#### xxxx代码-演示例子
-
-***ini
-xxxx
-***
-
+```html
+<iframe src="视频地址" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="400">
+</iframe>
 ```
 
-#### 表格推荐格式
+#### 3.插入表格
 
 ### 代码演示：
 |A|B|C|  
@@ -157,7 +171,7 @@ xxxx
 如果你仍然不会Markdown表格写法，这里给你一个链接：
 <h3><a href="https://tableconvert.com/zh-cn/markdown-to-markdown" target="_blank">TableConvert-MD-点击进入</a></h3>
 
-### 扩展写法(高级)
+### 4.扩展写法(高级)
 
 有一些时候，我们可能需要在已经标记的后面再添加东西，
 但Markdown解析方式在标签后面再有一个标签就不会识别了。  
@@ -171,6 +185,6 @@ xxxx
 该文档可能还有很多缺陷，如果你有更好的建议，请发送Issues或者PR给我。
 :::
 
-::: tip
-编写于2023-5-9 RTS-Code-API[第3版-第2次修订]
+::: info
+编写于2023-5-9 RTS-Code-API[第3版-第3次修订]
 :::

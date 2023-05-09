@@ -269,7 +269,9 @@ self.hasResources(hp=10,energy=5)
 #### self.isResourceLargerThan()
 代码:self.isResourceLargerThan() 中文释义:资源是否大于 返回类型:boolean<br>
 
-> [!ATTENTION] 此代码为老旧解决方案，不推荐使用。
+::: warning
+此代码为老旧解决方案，不推荐使用。
+:::
 
 `self.isResourceLargerThan()`用于比较两种资源的大小。格式为`self.isResourceLargerThan(source=资源A,compareTarget=资源B,byMoreThan=大于资源B数量,multiplyTargetBy=资源B倍数)`
 
@@ -327,8 +329,10 @@ showMessageToPlayers:10秒过去了
 
 `self.hasFlag()`用于获取自身是否有<font color=orange>标志</font>，格式为`self.hasFlag(id=数字)`。
 
-> [!NOTE] 不同于<font color=orange>标签（tag）</font>，<font color=orange>标志（flag）</font>是内置的一些<font color=orange>布尔值</font>，无需定义即可直接使用。<br>
+::: info
+不同于<font color=orange>标签（tag）</font>，<font color=orange>标志（flag）</font>是内置的一些<font color=orange>布尔值</font>，无需定义即可直接使用。<br>
 > 标签的添加方法为<font color=orange>[action]addResource:flag=1,3-7,13</font>，且只支持<font color=orange>0-31</font>，标签的移除方法与之相反。
+:::
 
 #### self.tags()
 代码:self.tags() 中文释义:有标签 返回类型:boolean<br>
