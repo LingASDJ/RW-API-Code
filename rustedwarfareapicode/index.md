@@ -13,7 +13,7 @@ hero:
   actions:
     - theme: alt
       text: 开发指南
-      link: /api-examples  
+      link: /api-dev
     - theme: brand
       text: 快速开始
       link: /src/Unit/core
