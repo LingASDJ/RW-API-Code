@@ -3,7 +3,10 @@ outline: deep
 ---
 
 # **[LogicBoolean] 逻辑序列组**
-> [!ATTENTION] 由于这个组的特殊性，格式不标准，请勿参考这个组的写法。
+
+::: danger
+由于这个组的特殊性，格式不标准，请勿参考这个组的写法。
+:::
 
 ### 前置知识
 
@@ -71,8 +74,12 @@ autoTrigger:if memory.a < memory.b
 
 #### 等于
 代码:== 中文释义:等于<br>
-> [!TIP] 请注意，铁锈中等于的符号为<font color=orange>==</font>，<font color=orange>=</font>在铁锈中用于赋值或参数。
-> 
+
+::: tip
+请注意，铁锈中等于的符号为<font color=orange>==</font>，<font color=orange>=</font>在铁锈中用于赋值或参数。
+:::
+
+
 同上，若`a=b`则整个式子的值为`true`，否则为`false`。
 
 #### 不等于
@@ -83,8 +90,10 @@ autoTrigger:if memory.a < memory.b
 
 #### 且
 代码:and 中文释义:且<br>
-> [!TIP] <font color=orange>and</font>用于连接两个逻辑判断，只有在这两个逻辑判断的值都为<font color=orange>true</font>时，<font color=orange>and</font>的值才为true。
+::: tip
+<font color=orange>and</font>用于连接两个逻辑判断，只有在这两个逻辑判断的值都为<font color=orange>true</font>时，<font color=orange>and</font>的值才为true。
 <br>
+:::
 
 <!-- 自定义的提示框请使用原生Html进行套入 -->
 <div class="alert callout note">
@@ -101,14 +110,20 @@ autoTrigger:if memory.a < memory.b and memory.a > memory.c
 
 #### 或
 代码:or 中文释义:或<br>
-> [!TIP] <font color=orange>or</font>用于连接两个逻辑判断，只要这两个逻辑判断的值有一个为<font color=orange>true</font>时，<font color=orange>or</font>的值就为true。
+::: tip
+<font color=orange>or</font>用于连接两个逻辑判断，只要这两个逻辑判断的值有一个为<font color=orange>true</font>时，<font color=orange>or</font>的值就为true。
+:::
 
 #### 非
 代码:not 中文释义:非<br>
-> [!TIP] <font color=orange>not</font>用于将某个逻辑判断的值取反，即`true`变`false`，`false`变`true`。
+::: tip
+<font color=orange>not</font>用于将某个逻辑判断的值取反，即`true`变`false`，`false`变`true`。
+:::
 
-> [!NOTE] 多个逻辑运算符同时使用时，优先级为`not>and>or`，同时<font color=orange>支持使用括号改变运算优先级</font>。
+::: info
+多个逻辑运算符同时使用时，优先级为`not>and>or`，同时<font color=orange>支持使用括号改变运算优先级</font>。
 <br>推荐<font color=orange>在不确定优先级时打括号</font>。
+:::
 
 <div class="alert callout tip">
 <p>演示例子:</p>
@@ -136,7 +151,9 @@ autoTrigger:if (memory.a < memory.b or memory.a > memory.c) and not memory.a < m
 
 加用于将两个逻辑值相加，得到结果，格式为`数据a + 数据b`。
 
-> [!NOTE] 不同数据类型通常<font color=orange>不能直接进行算数运算</font>，但在部分情况下，<font color=orange>number</font>和<font color=orange>float</font>类型可以混用（建议<font color=orange>所有数值全部使用float</font>来避免混淆）。
+::: info
+不同数据类型通常<font color=orange>不能直接进行算数运算</font>，但在部分情况下，<font color=orange>number</font>和<font color=orange>float</font>类型可以混用（建议<font color=orange>所有数值全部使用float</font>来避免混淆）。
+:::
 
 <div class="alert callout tip">
 <p>演示例子:</p>
@@ -152,8 +169,10 @@ autoTrigger:if (memory.a + memory.c) < memory.b
 
 减用于将两个逻辑值相减，得到结果，格式为`数据a - 数据b`。
 
-> [!NOTE] 对于<font color=orange>不满足交换律的运算符</font>，需要注意<font color=orange>运算优先级</font>是否正确。由于铁锈本身bug，<font color=orange>在数学上正确的优先级不一定在铁锈中正确</font>，因此可能出现减法顺序混乱等问题。
+::: info
+对于<font color=orange>不满足交换律的运算符</font>，需要注意<font color=orange>运算优先级</font>是否正确。由于铁锈本身bug，<font color=orange>在数学上正确的优先级不一定在铁锈中正确</font>，因此可能出现减法顺序混乱等问题。
 <br>为了避免可能的问题，请尽量在任何<font color=orange>不满足交换律的运算符</font>两边打上括号。
+:::
 
 #### 乘
 代码:* 中文释义:乘<br>
@@ -238,7 +257,9 @@ self.hasResources(hp=10,energy=5)
 
 与`self.hasResources()`不同，`self.resource()`直接返回某个资源的数值。格式为`self.resource(type="资源名")`。
 
-> [!NOTE] 引用资源时，请确保<font color=orange>这个资源在这个单位定义过</font>，否则会报错。
+::: info
+引用资源时，请确保<font color=orange>这个资源在这个单位定义过</font>，否则会报错。
+:::
 
 #### self.resource.RESOURCE_TYPE
 代码:self.resource.RESOURCE_TYPE 中文释义:资源 返回类型:float<br>
@@ -262,7 +283,9 @@ self.hasResources(hp=10,energy=5)
 #### self.hasTakenDemage()
 代码:self.hasTakenDemage() 中文释义:受到伤害 返回类型:bool<br>
 
-> [!NOTE] 单位计时部分能返回到最小时间精度为<font color=orange>0.1秒</font>。
+::: info
+单位计时部分能返回到最小时间精度为<font color=orange>0.1秒</font>。
+:::
 
 `self.hasTakenDemage()`用于获取指定时间内是否收到伤害。使用`self.hasTakenDemage(withInSecounds=多少秒内,laterThanSecounds=多少秒后)`格式时，返回bool类型。
 
@@ -332,7 +355,9 @@ showMessageToPlayers:10秒过去了
 
 `self.hasActiveWaypoint()`用于获取自身有无活动的路径点，格式为`self.hasActiveWaypoint(type="路径点类型")`。
 
-> [!NOTE] 路径点类型可以是<font color=orange>move, attackMove, guard, loadInto, loadUp, attack, reclaim, repair, touchTarget, build, follow, setPassiveTarget</font>。
+::: info
+路径点类型可以是<font color=orange>move, attackMove, guard, loadInto, loadUp, attack, reclaim, repair, touchTarget, build, follow, setPassiveTarget</font>。
+:::
 
 #### self.transportingUnitWithTags()
 代码:self.transportingUnitWithTags() 中文释义:运输单位中有此标签 返回类型:bool<br>

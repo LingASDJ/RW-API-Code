@@ -12,17 +12,15 @@ hero:
 
   actions:
     - theme: alt
-      text: 开发指南
+      text: 编写指南
       link: /api-dev
+    # - theme: brand
+    #   text: 常见问题
+    #   link: /src/question/      
     - theme: brand
-      text: 快速开始
-      link: /src/Unit/core
-    - theme: alt
       text: Github
       link: https://github.com/LingASDJ/RW-API-Code
-    - theme: brand
-      text: 常见问题
-      link: /src/question/
+
   
 
 features:

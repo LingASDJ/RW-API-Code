@@ -12,7 +12,7 @@ export default defineConfig({
       { text: '单位API', link: '/src/Unit/core' },
       { text: '地图API', link: '/src/Map/teada' },
       { text: '调试API', link: '/src/Debug/test' },
-      { text: '开发指南', link: '/DEV' },
+      { text: '开发指南', link: '/api-dev' },
     ],
 
     docFooter: {
@@ -24,7 +24,7 @@ export default defineConfig({
       {
         text: 'RW-API-Code',
         items: [
-          { text: '主页-Home', link: '/markdown-examples' },
+          { text: '主页-Home', link: '/' },
           { text: '核心-CORE', link: '/src/Unit/core' },
           { text: '可建造-CORE', link: '/src/Unit/canbuild' },
           { text: '逻辑组-LogicBoolean', link: '/src/Unit/loginboolean' }
