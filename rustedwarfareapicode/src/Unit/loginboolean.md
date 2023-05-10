@@ -239,7 +239,7 @@ autoTrigger:if (memory.a + memory.c) < memory.b
 35. `game.mapWidth()` 地图宽度
 36. `game.mapHeight()` 地图高度
 
-#### self.hasResources()
+self.hasResources()
 代码:self.hasResources() 中文释义:有资源 返回类型:boolean<br>
 
 `self.hasResources()` 用于检测自身某资源是否大于等于某数值，格式为`self.hasResources(资源名=数值)`
@@ -252,7 +252,7 @@ autoTrigger:if (memory.a + memory.c) < memory.b
 self.hasResources(hp=10,energy=5) 
 ```
 
-#### self.resource()
+self.resource()
 代码:self.resource() 中文释义:资源 返回类型:float<br>
 
 与`self.hasResources()`不同，`self.resource()`直接返回某个资源的数值。格式为`self.resource(type="资源名")`。
@@ -261,12 +261,12 @@ self.hasResources(hp=10,energy=5)
 引用资源时，请确保<font color=orange>这个资源在这个单位定义过</font>，否则会报错。
 :::
 
-#### self.resource.RESOURCE_TYPE
+self.resource.RESOURCE_TYPE
 代码:self.resource.RESOURCE_TYPE 中文释义:资源 返回类型:float<br>
 
 `self.resource.RESOURCE_TYPE`是`self.resource()`的快捷方式。格式为`self.resource.资源名称`，引用更加方便。
 
-#### self.isResourceLargerThan()
+self.isResourceLargerThan()
 代码:self.isResourceLargerThan() 中文释义:资源是否大于 返回类型:boolean<br>
 
 ::: warning
@@ -275,14 +275,14 @@ self.hasResources(hp=10,energy=5)
 
 `self.isResourceLargerThan()`用于比较两种资源的大小。格式为`self.isResourceLargerThan(source=资源A,compareTarget=资源B,byMoreThan=大于资源B数量,multiplyTargetBy=资源B倍数)`
 
-#### self.numberOfQueuedWaypoints()
+self.numberOfQueuedWaypoints()
 代码:self.numberOfQueuedWaypoints() 中文释义:队列中路径点数量 返回类型:float<br>
 
 `self.numberOfQueuedWaypoints()`用于返回队列中路径点的数量。格式为`self.numberOfQueuedWaypoints(type="路径点类型")`。
 
 ### 单位计时
 
-#### self.hasTakenDemage()
+self.hasTakenDemage()
 代码:self.hasTakenDemage() 中文释义:受到伤害 返回类型:bool<br>
 
 ::: info
@@ -291,17 +291,17 @@ self.hasResources(hp=10,energy=5)
 
 `self.hasTakenDemage()`用于获取指定时间内是否收到伤害。使用`self.hasTakenDemage(withInSecounds=多少秒内,laterThanSecounds=多少秒后)`格式时，返回bool类型。
 
-#### self.timeAlive()
+self.timeAlive()
 代码:self.timeAlive() 中文释义:存活时间 返回类型:float/bool<br>
 
 `self.timeAlive()`用于获取单位存活时间。使用`self.timeAlive(withInSecounds=多少秒内,laterThanSecounds=多少秒后)`格式时，返回bool类型（是否符合此范围）；使用`self.timeAlive()`格式时，返回float类型。（更推荐使用后者）
 
-#### self.lastConverted()
+self.lastConverted()
 代码:self.lastConverted() 中文释义:最后转换时间 返回类型:float/bool<br>
 
 `self.timeAlive()`用于获取单位上次转换后的时间。使用`self.lastConverted(withInSecounds=多少秒内,laterThanSecounds=多少秒后)`格式时，返回bool类型（是否符合此范围）；使用`self.lastConverted()`格式时，返回float类型。
 
-#### self.customTimer()
+self.customTimer()
 代码:self.customTimer() 中文释义:自定义计时器 返回类型:float/bool<br>
 
 `self.timeAlive()`用于获取自定义计时器的时间。使用`self.customTimer(withInSecounds=多少秒内,laterThanSecounds=多少秒后)`格式时，返回bool类型（是否符合此范围）；使用`self.customTimer()`格式时，返回float类型。
@@ -319,12 +319,12 @@ showMessageToPlayers:10秒过去了
 
 ### 杂项
 
-#### thisActionIndex/index()
+thisActionIndex/index()
 代码:thisActionIndex/index() 中文释义:索引 返回类型:float(number)<br>
 
 `thisActionIndex/index()`是`alsoTriggerActionRepeat`中当前的索引。例如`alsoTriggerActionRepeat:10`，那么index在10次循环中分别为1-10。
 
-#### self.hasFlag()
+self.hasFlag()
 代码:self.hasFlag() 中文释义:有标志 返回类型:boolean<br>
 
 `self.hasFlag()`用于获取自身是否有<font color=orange>标志</font>，格式为`self.hasFlag(id=数字)`。
@@ -334,27 +334,27 @@ showMessageToPlayers:10秒过去了
 > 标签的添加方法为<font color=orange>[action]addResource:flag=1,3-7,13</font>，且只支持<font color=orange>0-31</font>，标签的移除方法与之相反。
 :::
 
-#### self.tags()
+self.tags()
 代码:self.tags() 中文释义:有标签 返回类型:boolean<br>
 
 `self.tags()`用于检测自身是否有某个标签，格式为`self.tags(includes="标签")`。
 
-#### self.globalTeamTags/self.hasGlobalTeamTags()
+self.globalTeamTags/self.hasGlobalTeamTags()
 代码:self.globalTeamTags/self.hasGlobalTeamTags() 中文释义:有全局标签 返回类型:boolean<br>
 
 `self.globalTeamTags/self.hasGlobalTeamTags()`用于检测队伍内是否有某个全局标签，格式为`self.globalTeamTags/self.hasGlobalTeamTags(includes="标签")`
 
-#### self.numberOfConnections()
+self.numberOfConnections()
 代码:self.numberOfConnections() 中文释义:连接数 返回类型:float<br>
 
 隐藏代码，用途不明。
 
-#### self.numberOfAttachedUnits()
+self.numberOfAttachedUnits()
 代码:self.numberOfAttachedUnits() 中文释义:有附属物 返回类型:int/bool<br>
 
 `self.numberOfAttachedUnits()`用于获取自身附属物数量，可以通过`self.numberOfAttachedUnits(withTag="标签")`格式来限制附属物标签。
 
-#### self.hasActiveWaypoint()
+self.hasActiveWaypoint()
 代码:self.hasActiveWaypoint() 中文释义:有活动的路径点 返回类型:bool<br>
 
 `self.hasActiveWaypoint()`用于获取自身有无活动的路径点，格式为`self.hasActiveWaypoint(type="路径点类型")`。
@@ -363,18 +363,18 @@ showMessageToPlayers:10秒过去了
 路径点类型可以是<font color=orange>move, attackMove, guard, loadInto, loadUp, attack, reclaim, repair, touchTarget, build, follow, setPassiveTarget</font>。
 :::
 
-#### self.transportingUnitWithTags()
+self.transportingUnitWithTags()
 代码:self.transportingUnitWithTags() 中文释义:运输单位中有此标签 返回类型:bool<br>
 
 `self.transportingUnitWithTags()`用于检测自身运输的单位中是否有含有特定标签的单位，格式为`self.transportingUnitWithTags(includes="标签")`。
 
-#### self.hasParent()
+self.hasParent()
 代码:self.hasParent() 中文释义:有父单位 返回类型:bool<br>
 
 `self.hasParent()`用于检测自身是否有父单位，且可以通过`self.hasParent(hasTag="标签")`来筛选父单位标签。<br>
 通常情况下，附属和被运输单位会有父单位。
 
-#### self.numberOfUnitsInTeam()
+self.numberOfUnitsInTeam()
 代码:self.numberOfUnitsInTeam() 中文释义:队伍中此单位数量 返回类型:float<br>
 
 `self.numberOfUnitsInTeam()`(可省略`self.`)用于检测自身队伍符合条件的单位数量，格式为`self.numberOfUnitsInTeam(withTag="标签",withinRange=此距离内,incompleteBuildings=包含不完整建筑,factoryQueue=包含工厂队列)`
@@ -388,42 +388,42 @@ self.numberOfUnitsInTeam(withTag="air",withInRange=500,factoryQueue=true)
 #有air标签，500范围内，包含工厂队列中的单位
 ```
 
-#### self.numberOfUnitsInAllyNotOwnTeam()
+self.numberOfUnitsInAllyNotOwnTeam()
 代码:self.numberOfUnitsInAllyNotOwnTeam() 中文释义:盟友队伍中此单位数量 返回类型:float<br>
 
 `self.numberOfUnitsInAllyNotOwnTeam()`与`self.numberOfUnitsInTeam()`用法完全相同，区别仅在于前者的查询范围是盟友中。
 
-#### self.numberOfUnitsInEnemyTeam()
+self.numberOfUnitsInEnemyTeam()
 代码:self.numberOfUnitsInEnemyTeam() 中文释义:敌方队伍中此单位数量 返回类型:float<br>
 
 `self.numberOfUnitsInEnemyTeam()`与`self.numberOfUnitsInTeam()`用法完全相同，区别仅在于前者的查询范围是敌方中。
 
-#### self.numberOfUnitsInNeutralTeam()
+self.numberOfUnitsInNeutralTeam()
 代码:self.numberOfUnitsInNeutralTeam() 中文释义:中立队伍中此单位数量 返回类型:float<br>
 
 `self.numberOfUnitsInNeutralTeam()`与`self.numberOfUnitsInTeam()`用法完全相同，区别仅在于前者的查询范围是中立中。
 
-#### self.numberOfUnitsInAggressiveTeam()
+self.numberOfUnitsInAggressiveTeam()
 代码:self.numberOfUnitsInAggressiveTeam() 中文释义:敌对中立队伍中此单位数量 返回类型:float<br>
 
 `self.numberOfUnitsInAggressiveTeam()`与`self.numberOfUnitsInTeam()`用法完全相同，区别仅在于前者的查询范围是敌对中立中。
 
-#### self.numberOfUnitsInAllyTeam()
+self.numberOfUnitsInAllyTeam()
 代码:self.numberOfUnitsInAllyTeam() 中文释义:所有队伍中此单位数量 返回类型:float<br>
 
 `self.numberOfUnitsInAllyTeam()`与`self.numberOfUnitsInTeam()`用法完全相同，区别仅在于前者的查询范围是所有中。
 
-#### self.hasUnitInTeam()
+self.hasUnitInTeam()
 代码:self.hasUnitInTeam() 中文释义:队伍中有单位 返回类型:bool<br>
 
 `self.hasUnitInTeam()`与`self.numberOfUnitsInTeam()`格式完全相同，区别在于前者仅查询队伍中有无符合条件的单位，并返回`boolean`类型。
 
-#### self.noUnitInTeam()
+self.noUnitInTeam()
 代码:self.noUnitInTeam() 中文释义:队伍中无单位 返回类型:bool<br>
 
 `self.noUnitInTeam()`与`self.numberOfUnitsInTeam()`格式完全相同，区别在于前者仅查询队伍中是否无符合条件的单位，并返回`boolean`类型。
 
-#### self.readUnitMemory()
+self.readUnitMemory()
 代码:self.readUnitMemory() 中文释义:读取单位内存 返回类型:跟随memory类型<br>
 
 `self.readUnitMemory()`用于获取指定单位内存，格式为`self.readUnitMemory("内存名",type="类型",index=下标(仅当类型是数组时可选填写))`。
