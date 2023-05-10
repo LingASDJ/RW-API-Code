@@ -39,6 +39,13 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/allureluoli">
+            <img src="https://avatars.githubusercontent.com/u/106828088?v=4" width="100;" alt="allureluoli"/>
+            <br />
+            <sub><b>二月</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/shishanyue">
             <img src="https://avatars.githubusercontent.com/u/62888460?v=4" width="100;" alt="shishanyue"/>
             <br />
