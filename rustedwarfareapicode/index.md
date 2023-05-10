@@ -4,7 +4,7 @@ layout: home
 action:
 hero:
   name: 铁锈战争-API-Code
-  text: 轻松编码，轻松学习
+  text: 轻松编码，轻松学习，APICODE站点欢迎您。
   tagline: 学习Mod,制作Mod,创新Mod
   image:
     src: https://rwapi-code.netlify.app/images/logo.png
