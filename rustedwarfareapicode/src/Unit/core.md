@@ -44,7 +44,6 @@ displayDescription: -单位的描述
 #### name-演示例子
 
 ```ini
-演示例子
 [core]
 name: Ling
 displayText: English Title Text

@@ -1,0 +1,90 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="DuplicatedCode" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <Languages>
+        <language minSize="55" name="Python" />
+      </Languages>
+    </inspection_tool>
+    <inspection_tool class="Eslint" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="PyCompatibilityInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ourVersions">
+        <value>
+          <list size="1">
+            <item index="0" class="java.lang.String" itemvalue="3.11" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="53">
+            <item index="0" class="java.lang.String" itemvalue="httpx" />
+            <item index="1" class="java.lang.String" itemvalue="bs4" />
+            <item index="2" class="java.lang.String" itemvalue="tzlocal" />
+            <item index="3" class="java.lang.String" itemvalue="nonebot2" />
+            <item index="4" class="java.lang.String" itemvalue="arrow" />
+            <item index="5" class="java.lang.String" itemvalue="PyYAML" />
+            <item index="6" class="java.lang.String" itemvalue="python-dateutil" />
+            <item index="7" class="java.lang.String" itemvalue="python-dotenv" />
+            <item index="8" class="java.lang.String" itemvalue="MarkupSafe" />
+            <item index="9" class="java.lang.String" itemvalue="python-slugify" />
+            <item index="10" class="java.lang.String" itemvalue="PyInquirer" />
+            <item index="11" class="java.lang.String" itemvalue="rfc3986" />
+            <item index="12" class="java.lang.String" itemvalue="pygtrie" />
+            <item index="13" class="java.lang.String" itemvalue="cookiecutter" />
+            <item index="14" class="java.lang.String" itemvalue="Pygments" />
+            <item index="15" class="java.lang.String" itemvalue="starlette" />
+            <item index="16" class="java.lang.String" itemvalue="certifi" />
+            <item index="17" class="java.lang.String" itemvalue="soupsieve" />
+            <item index="18" class="java.lang.String" itemvalue="nonebot-adapter-cqhttp" />
+            <item index="19" class="java.lang.String" itemvalue="uvicorn" />
+            <item index="20" class="java.lang.String" itemvalue="beautifulsoup4" />
+            <item index="21" class="java.lang.String" itemvalue="pydantic" />
+            <item index="22" class="java.lang.String" itemvalue="caio" />
+            <item index="23" class="java.lang.String" itemvalue="typing-extensions" />
+            <item index="24" class="java.lang.String" itemvalue="loguru" />
+            <item index="25" class="java.lang.String" itemvalue="click" />
+            <item index="26" class="java.lang.String" itemvalue="APScheduler" />
+            <item index="27" class="java.lang.String" itemvalue="nonebot-plugin-apscheduler" />
+            <item index="28" class="java.lang.String" itemvalue="attrs" />
+            <item index="29" class="java.lang.String" itemvalue="regex" />
+            <item index="30" class="java.lang.String" itemvalue="watchgod" />
+            <item index="31" class="java.lang.String" itemvalue="nb-cli" />
+            <item index="32" class="java.lang.String" itemvalue="PyMySQL" />
+            <item index="33" class="java.lang.String" itemvalue="httpcore" />
+            <item index="34" class="java.lang.String" itemvalue="idna" />
+            <item index="35" class="java.lang.String" itemvalue="async-timeout" />
+            <item index="36" class="java.lang.String" itemvalue="requests" />
+            <item index="37" class="java.lang.String" itemvalue="Jinja2" />
+            <item index="38" class="java.lang.String" itemvalue="sniffio" />
+            <item index="39" class="java.lang.String" itemvalue="win32-setctime" />
+            <item index="40" class="java.lang.String" itemvalue="tomlkit" />
+            <item index="41" class="java.lang.String" itemvalue="aiomysql" />
+            <item index="42" class="java.lang.String" itemvalue="prompt-toolkit" />
+            <item index="43" class="java.lang.String" itemvalue="urllib3" />
+            <item index="44" class="java.lang.String" itemvalue="websockets" />
+            <item index="45" class="java.lang.String" itemvalue="six" />
+            <item index="46" class="java.lang.String" itemvalue="fastapi" />
+            <item index="47" class="java.lang.String" itemvalue="aiofile" />
+            <item index="48" class="java.lang.String" itemvalue="colorama" />
+            <item index="49" class="java.lang.String" itemvalue="aiohttp" />
+            <item index="50" class="java.lang.String" itemvalue="multidict" />
+            <item index="51" class="java.lang.String" itemvalue="yarl" />
+            <item index="52" class="java.lang.String" itemvalue="pytz" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N806" />
+          <option value="N802" />
+          <option value="N803" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

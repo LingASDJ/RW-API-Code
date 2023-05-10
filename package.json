@@ -9,6 +9,7 @@
   },
   "version": "0.0.2-DEV1.0",
   "dependencies": {
+    "-": "^0.0.1",
     "firebase": "^9.19.1"
   }
 }
