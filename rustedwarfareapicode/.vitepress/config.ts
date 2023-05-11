@@ -53,17 +53,49 @@ export default defineConfig({
             translations: {
               button: {
                 buttonText: '搜索文档',
-                buttonAriaLabel: '搜索文档'
+                buttonAriaLabel: '搜索文档',
+            
               },
               modal: {
-                noResultsText: '无法找到相关结果',
+                noResultsText: '你干嘛~哎呦~无法找到相关结果',
                 resetButtonTitle: '清除查询条件',
                 footer: {
                   selectText: '选择',
-                  navigateText: '切换'
-                }
+                  navigateText: '切换',
+                  closeText: '关闭',
+                  closeKeyAriaLabel: '关闭',
+                  selectKeyAriaLabel: '选择',
+                  navigateUpKeyAriaLabel: '上一个',
+                  navigateDownKeyAriaLabel: '下一个'
+                },
+                backButtonTitle: '返回上一级',
+                displayDetails: '显示详情'
+    
               }
             }
+          }
+        },
+        translations: {
+          button: {
+            buttonText: '搜索文档',
+            buttonAriaLabel: '搜索文档',
+        
+          },
+          modal: {
+            noResultsText: '无法找到相关结果',
+            resetButtonTitle: '清除查询条件',
+            footer: {
+              selectText: '选择',
+              navigateText: '切换',
+              closeText: '关闭',
+              closeKeyAriaLabel: '关闭',
+              selectKeyAriaLabel: '选择',
+              navigateUpKeyAriaLabel: '上一个',
+              navigateDownKeyAriaLabel: '下一个'
+            },
+            backButtonTitle: '返回上一级',
+            displayDetails: '显示详情'
+
           }
         }
       }
