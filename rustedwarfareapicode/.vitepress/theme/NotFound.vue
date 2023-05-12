@@ -23,11 +23,11 @@ const { Layout } = DefaultTheme;
                     />
                     <p data-v-6c4a3ffe="" class="code">404</p>
                     <h1 data-v-6c4a3ffe="" class="title">
-                        你干嘛~，这里什么都没有
+                        你干嘛~，这里什么都没有!
                     </h1>
                     <div data-v-6c4a3ffe="" class="divider"></div>
                     <blockquote data-v-6c4a3ffe="" class="quote">
-                        干嘛啊
+                        你寻找的页面可能不存在或被迁移……
                     </blockquote>
                     <div data-v-6c4a3ffe="" class="action">
                         <a
@@ -39,6 +39,7 @@ const { Layout } = DefaultTheme;
                             返回主页
                         </a>
                     </div>
+                    
                 </div>
             </div>
         </template>
