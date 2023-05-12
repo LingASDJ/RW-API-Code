@@ -7,6 +7,10 @@ import { getAnalytics } from "firebase/analytics";
 import { getPerformance } from "firebase/performance";
 import NoteFound from "../theme/NotFound.vue";
 
+/**
+ * 初始化 Firebase
+ * @returns {Promise<string>} 初始化结果
+ */
 const initializeFirebase = () => {
     const firebaseConfig = {
         apiKey: "AIzaSyANVvapu0ihi1cM8ZzuXTkwjx9lM_J1RyQ",
@@ -35,10 +39,22 @@ const initializeFirebase = () => {
     }
 })();
 
+/**
+ * 等待指定时间
+ * @param {number} timeout 等待时间，单位：毫秒
+ * @returns {Promise<void>} 等待结果
+ * @example await wait(1000);
+ * @example wait(1000).then(() => console.log("timeout"));
+ */
 function wait(timeout) {
     return new Promise((resolve) => setTimeout(resolve, timeout));
 }
 
+/**
+ * 请求剪贴板权限
+ * @returns {Promise<void>} 请求结果
+ * @example await requestClipboardPermission();
+ */
 async function requestClipboardPermission() {
     try {
         await navigator.permissions.query({ name: "clipboard-write" });
@@ -46,7 +62,11 @@ async function requestClipboardPermission() {
         console.error(error);
     }
 }
-
+/**
+ * 初始化
+ * @returns {Promise<void>} 初始化结果
+ * @example await init();
+ */
 async function init() {
     try {
         await wait(1000);
