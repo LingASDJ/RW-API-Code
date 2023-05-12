@@ -5,7 +5,7 @@ import "./style/custom.css";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getPerformance } from "firebase/performance";
-import NoteFound from "../theme/NotFound.vue";
+import NotFound from "../theme/NotFound.vue";
 
 /**
  * 初始化 Firebase
@@ -111,5 +111,5 @@ async function init() {
 init();
 export default {
     ...DefaultTheme,
-    Layout: NoteFound,
+    Layout: NotFound,
 };
