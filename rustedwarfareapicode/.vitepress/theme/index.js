@@ -5,6 +5,7 @@ import "./style/custom.css";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getPerformance } from "firebase/performance";
+import NoteFound from "../theme/NotFound.vue";
 
 const initializeFirebase = () => {
     const firebaseConfig = {
@@ -88,4 +89,7 @@ async function init() {
     }
 }
 init();
-export default DefaultTheme;
+export default {
+    ...DefaultTheme,
+    Layout: NoteFound,
+};
