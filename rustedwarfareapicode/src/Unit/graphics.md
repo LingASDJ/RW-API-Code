@@ -257,5 +257,143 @@ teamColoringMode:pureGreen # 纯绿 默认就是这个
 [graphics]
 scaleImagesTo:12.5
 
+```
+
+### imageScale
+#### imageScale-代码简介
+代码:imageScale 中文释义:图像缩放比例 类型:浮点数
+
+#### imageScale-用法
+填写需要缩放的百分比，缩放单位主体图像的大小。
+
+::: tip
+效果基本与scaleImagesTo相同，但百分比更为直观。<br>
+默认值为1，也就是100%。
+:::
+
+#### imageScale-示例
+```ini
+[graphics]
+imageScale:12.5
+
+```
+
+### drawLayer
+#### drawLayer-代码简介
+代码:drawLayer 中文释义:绘制图层 类型:字符串
+
+#### drawLayer-用法
+填写希望图像所在的图层，以影响单位图像的绘制。
+
+::: tip
+官方给出了8种可填写的图层样式，具体可见示例。<br>
+陆上单位默认图层便是ground或ground2，运输船这类便是ground2。
+:::
+
+#### drawLayer-示例
+```ini
+[graphics]
+drawLayer:ground
+
+[graphics]
+drawLayer:ground2
+
+[graphics]
+drawLayer:wreaks
+
+[graphics]
+drawLayer:underwater
+
+[graphics]
+drawLayer:bottom
+
+[graphics]
+drawLayer:experimentals
+
+[graphics]
+drawLayer:air
+
+[graphics]
+drawLayer:top
+
+```
+
+### whenBeingBuiltMakeTransparentTill
+#### whenBeingBuiltMakeTransparentTill-代码简介
+代码:whenBeingBuiltMakeTransparentTill 中文释义:建造时透明度 类型:浮点数
+
+#### whenBeingBuiltMakeTransparentTill-用法
+填写0-1之间的小数，以影响建造时的透明度情况。
+
+::: tip
+若设为0则表示透明度为0，建造一开始就不透明。<br>
+设为1则将完全建造时才会不透明。<br>
+所谓透明到不透明，也就是从虚影到实体的转变。
+:::
+
+::: info
+0-1可以理解为0%和100%，取超过100%的数字不会报错但也并没有什么意义。
+::: 
+
+#### whenBeingBuiltMakeTransparentTill-示例
+```ini
+[graphics]
+whenBeingBuiltMakeTransparentTill:0
+
+[graphics]
+whenBeingBuiltMakeTransparentTill:0.5
+
+[graphics]
+whenBeingBuiltMakeTransparentTill:1
+
+```
+
+### icon_zoomed_out
+#### icon_zoomed_out-代码简介
+代码:icon_zoomed_out 中文释义:缩放图标 类型:字符串
+
+#### icon_zoomed_out-用法
+填写缩放图标的文件路径，改变单位缩放时显示的图标。
+
+::: tip
+路径引用规则和文件格式与image相同。<br>
+默认图标将根据运动类型或单位类型使用内置的图标。
+:::
+
+::: info
+绘制图标时请注意图标的大小。<br>
+具体可以参考默认图标。<br>
+资源文件在游戏根目录\res\drawable\中，安卓安装包同理。
+:::
+
+#### icon_zoomed_out-示例
+```ini
+[graphics]
+icon_zoomed_out:mytubiao.png
+
+[graphics]
+icon_zoomed_out:tank_icon.png
+
+```
+
+
+### icon_zoomed_out_neverShow
+#### icon_zoomed_out_neverShow-代码简介
+代码:icon_zoomed_out_neverShow 中文释义:缩放图标不显示 类型:布尔值
+
+#### icon_zoomed_out_neverShow-用法
+填写布尔值决定缩放图标是否显示。
+
+::: info
+默认为false。
+:::
+
+#### icon_zoomed_out_neverShow-示例
+```ini
+[graphics]
+icon_zoomed_out_neverShow:false
+
+[graphics]
+icon_zoomed_out_neverShow:true
 
 ```
