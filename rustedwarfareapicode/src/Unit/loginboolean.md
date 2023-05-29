@@ -139,7 +139,7 @@ autoTrigger:if (memory.a < memory.b or memory.a > memory.c) and not memory.a < m
 考考你，在上述这个例子中，满足什么条件才会触发？
 ```
 ```bash [显示答案]
-答案：a必须满足小于b和大于c中的一个，且a必须小于c，自动触发才会被触发。
+答案：a必须满足小于b和大于c中的一个，且a必须小于d，自动触发才会被触发。
 ```
 :::
 
@@ -279,6 +279,37 @@ self.numberOfQueuedWaypoints()
 代码:self.numberOfQueuedWaypoints() 中文释义:队列中路径点数量 返回类型:float<br>
 
 `self.numberOfQueuedWaypoints()`用于返回队列中路径点的数量。格式为`self.numberOfQueuedWaypoints(type="路径点类型")`。
+
+#### 单位运动与定位
+这部分代码的返回值全部为`boolean`类型，用于检测单位的运动和位置情况
+1. `self.underwater/self.isUnderwater()` 单位在水下
+2. `self.gound/self.ground/self.isAtGroundHeight()` 单位位于地面高度
+3. `self.flying/self.isFlying()` 单位在飞行
+4. `self.isMoving()` 单位正在移动
+5. `self.isAtTopSpeed()` 单位处于最高速度
+6. `self.inwater/self.isInWater()` 单位在水中
+7. `self.isReversing()` 单位在倒车
+8. `self.isOverwater()` 单位在水上(在水上方或接触水)
+9. `self.isOverLiquid()` 单位在液体上(岩浆等)
+10. `self.isOverClift/self.isOverCliff()` 单位在悬崖上
+11. `self.isOverOpenLand()` 单位在开阔的陆地上
+12. `self.isTransportUnloading()` 单位正在卸载单位
+13. `self.isOverPassableTile()` 单位在可通过的地块上(可通过加参数`type=地块类型`来指定特定类型的地块)
+
+
+附移动类型:
+| 英文               | 移动类型  |
+|------------------|-------|
+| NONE             | 无     |
+| LAND             | 陆地    |
+| BUILDING         | 建筑    |
+| AIR              | 空中    |
+| WATER            | 水中    |
+| HOVER            | 两栖    |
+| OVER_CLIFF       | 跨悬崖   |
+| OVER_CLIFF_WATER | 跨水和悬崖 |
+
+
 
 ### 单位计时
 
@@ -459,3 +490,146 @@ setUnitMemory:Afloat[index] = thisActionTarget.readUnitMemory("Afloat",type="flo
 if parent.readUnitMemory("boostTarget", type="unit") == self
 #如果 父单位内存boostTarget的值等于自己
 ```
+
+### 单位参照
+
+#### 当前动作目标
+::: info
+`thisActionTarget`是一条用于获取当前行动目标的代码，不同的行动中，`thisActionTarget`也不同(或没有)。
+以下是不同情况下的`thisActionTarget`。
+:::
+
+fireTurretXAtGround: mainTurret <br>
+此时`thisActionTarget`是目标地面位置的标记
+
+alsoTriggerAction: x <br>
+此时`thisActionTarget`是原动作的`thisActionTarget`
+
+[turret]onShoot_triggerActions: x  <br>
+此时`thisActionTarget`是被击中的目标
+
+takeResources_triggerActionIfAnyCollected: x <br>
+此时`thisActionTarget`是该资源
+
+addWaypoint_triggerActionIfMatched: x <br>
+此时`thisActionTarget`是搜索到的标记/目标
+
+autoTriggerOnEvent: tookDamage <br>
+此时`thisActionTarget`是造成伤害的单位
+
+autoTriggerOnEvent: killedAnyUnit <br>
+此时`thisActionTarget`是被杀死的单位
+
+autoTriggerOnEvent: transportingNewUnit <br>
+此时`thisActionTarget`是被运输的单位
+
+autoTriggerOnEvent: transportUnloadedOrRemovedUnit <br>
+此时`thisActionTarget`是被卸载打单位
+
+autoTriggerOnEvent: queuedUnitFinished <br>
+此时`thisActionTarget`是创建的新单位
+
+autoTriggerOnEvent: touchTargetSuccess <br>
+此时`thisActionTarget`是接触的目标
+
+<!-- 这一段内容是这样的，不知道怎么优化格式好一点，ling帮帮 :D -->
+
+#### 杂项
+
+attachment
+代码:self.attachment() 中文释义:附属物 返回类型:unit/marker<br>
+
+`attachment`用于获取单位特定附属物的单位参考，参数有`slot`和`withFlag`。<br>
+`slot`参数即代码中`[attachment_abc]`的`abc`，`withFlag`参数用于获取拥有指定标签的附属物。
+
+::: code-group
+```ini{2} [演示例子]
+self.attachment(withTag="x").lastDamagedBy.getAsMarker()
+#这里获取有x标签的附属物,然后获取此附属物上一个攻击者,并创建标记
+```
+:::
+
+transporting
+代码:self.transporting() 中文释义:运载的单位 返回类型:unit/marker<br>
+
+`transporting`用于获取单位运输队列中特定单位的单位参考，参数有`slot`。<br>
+与`attachment`不同，`transporting`的`slot`参数为数字，即运输队列的第几个。
+
+attacking
+代码:self.attacking() 中文释义:攻击目标 返回类型:unit/marker<br>
+
+`attacking`用于获取单位的攻击目标。
+
+::: warning
+attacking不一定是正在攻击的目标，<font color=orange>只要是设定了攻击目标都会存在</font>。
+:::
+
+lastDamagedBy
+代码:self.lastDamagedBy() 中文释义:最后伤害源 返回类型:unit/marker<br>
+`attacking`用于获取最后攻击该单位的单位。
+
+parent
+代码:self.parent() 中文释义:父单位 返回类型:unit/marker<br>
+`parent`用于获取单位的附属主单位或运输单位。<br>
+当单位离开附属/运输时，父单位会为`null`，因此可以用于检测单位是否被运输/在附属中。
+
+activeWaypointTarget
+代码:self.activeWaypointTarget() 中文释义:自身活动的路径点 返回类型:unit/marker<br>
+`activeWaypointTarget`用于获取自身正在进行的路径点，参数有`type`。<br>
+`type`参数用于指定路径点类型。
+
+customTarget1
+代码:self.customTarget1() 中文释义:自定义目标1 返回类型:unit/marker<br>
+`customTarget1`是铁锈内置的unit类型内存，<font color=orange>默认值为创建该单位的单位</font>。
+
+customTarget2
+代码:self.customTarget2() 中文释义:自定义目标1 返回类型:unit/marker<br>
+`customTarget2`是铁锈内置的unit类型内存。
+
+nearestUnit
+代码:self.nearestUnit() 中文释义:指定最近单位 返回类型:unit/marker<br>
+`nearestUnit`用于获取满足条件的最近单位，参数有`withinRange`、`withTag`、`relation`。
+`withinRange`:指定最大搜索范围(最高为1000)
+`withTag`:指定需要含有的标签
+`relation`:目标单位与自己的关系(与路径点靠近类型相同)
+
+| 英文         | 关系类型 |
+|------------|------|
+| any        | 所有   |
+| enemy      | 敌对   |
+| own        | 己方   |
+| ally       | 盟友   |
+| allyNotOwn | 仅盟友  |
+| notOwn     | 除己方  |
+| neutral    | 中立   |
+
+globalSearchForFirstUnit
+代码:self.globalSearchForFirstUnit() 中文释义:指定最近单位 返回类型:unit/marker<br>
+`globalSearchForFirstUnit`用于在全局范围内搜索第一个满足条件的最近单位，参数有`withTag`、`relation`，用法与`nearestUnit`基本相同。
+
+nullUnit
+代码:nullUnit 中文释义:空单位 返回类型:unit/marker<br>
+`nullUnit`是铁锈的空单位，用于比较/判断。
+
+#### 标记
+
+getAsMarker
+代码:self.getAsMarker() 中文释义:获取标记 返回类型:unit/marker<br>
+`getAsMarker`用于在指定单位创建标记。标记的创建速度非常快，不再需要时会自动删除。<br>
+标记不链接到任何单位并且在单位死亡时仍然存在，在源头移动时保持不变。
+
+getOffsetAbsolute
+代码:self.getOffsetAbsolute() 中文释义:获取绝对偏移标记 返回类型:unit/marker<br>
+`getOffsetAbsolute`用于在指定单位创建一个绝对偏移后的标记。可用的参数有`x`、`y`、`height`(-y为北,+x为东)。
+
+getOffsetRelative
+代码:self.getOffsetRelative() 中文释义:获取相对偏移标记 返回类型:unit/marker<br>
+`getOffsetRelative`用于在指定单位创建一个相对偏移后的标记。可用的参数有`x`、`y`、`height`(+y为前,-为左)、`dirOffset`(角度偏移)。
+
+::: tip
+相对偏移可以理解为<font color=orange>在单位自己位置以自己的方向建立一个平面直角坐标系</font>，然后计算在这个坐标系内的便宜，并返回地图中大坐标系的单位参考。
+:::
+
+eventSource
+代码:eventSource 中文释义:事件源 返回类型:event<br>
+`eventSource`用于获取`autoTriggerOnEvent`当前触发器,没有则返回`null`，可以看作对于事件的`autoTriggerOnEvent`。

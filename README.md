@@ -56,7 +56,7 @@
         <a href="https://github.com/tobby3600">
             <img src="https://avatars.githubusercontent.com/u/79432329?v=4" width="100;" alt="tobby3600"/>
             <br />
-            <sub><b>Null</b></sub>
+            <sub><b>Tobby</b></sub>
         </a>
     </td></tr>
 </table>
