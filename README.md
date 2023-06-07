@@ -105,6 +105,7 @@ npm run docs:preview
 
 ## 5.线上测试
 先申请贡献者名单来，之后直接修改主分支并提交。
+警告：严禁恶意使用权限，主分支有备份，若乱改结构，一经查出，直接取消贡献者权限和剔除名单。
 
 # 项目使用的许可证
 [Apache许可证-2.0](https://github.com/LingASDJ/RW-API-Code/blob/main/LICENSE)
