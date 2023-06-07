@@ -102,8 +102,9 @@ npm run docs:build
 ```bash
 npm run docs:preview
 ```
-# Netlify部署
-当您提交PR时，它会自动为您处理。
+
+## 5.线上测试
+先申请贡献者名单来，之后直接修改主分支并提交。
 
 # 项目使用的许可证
 [Apache许可证-2.0](https://github.com/LingASDJ/RW-API-Code/blob/main/LICENSE)
