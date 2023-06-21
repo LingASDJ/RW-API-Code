@@ -397,3 +397,433 @@ icon_zoomed_out_neverShow:false
 icon_zoomed_out_neverShow:true
 
 ```
+
+### icon_zoomed_out_neverShow
+#### icon_zoomed_out_neverShow-代码简介
+代码:icon_zoomed_out_neverShow 中文释义:缩放图标不显示 类型:布尔值
+
+#### icon_zoomed_out_neverShow-用法
+填写布尔值决定缩放图标是否显示。
+
+::: info
+默认为false。
+:::
+
+#### icon_zoomed_out_neverShow-示例
+```ini
+[graphics]
+icon_zoomed_out_neverShow:false
+
+[graphics]
+icon_zoomed_out_neverShow:true
+
+```
+
+### showSelectionIndicator
+#### showSelectionIndicator-代码简介
+代码:showSelectionIndicator 中文释义:显示选择指示 类型:布尔值
+
+#### showSelectionIndicator-用法
+填写布尔值决定选择框是否显示。
+
+::: info
+默认为true。
+:::
+
+#### showSelectionIndicator-示例
+```ini
+[graphics]
+showSelectionIndicator:false
+
+[graphics]
+showSelectionIndicator:true
+
+```
+
+### image_offsetH
+#### image_offsetH-代码简介
+代码:image_offsetH 中文释义:高度绘制偏移 类型:浮点数
+
+#### image_offsetH-用法
+填写浮点数决定高度的偏移大小。
+
+::: info
+默认为true。
+:::
+
+#### image_offsetH-示例
+```ini
+[graphics]
+image_offsetH:1
+
+[graphics]
+image_offsetH:1.2
+```
+
+
+### image_turret
+#### image_turret-代码简介
+代码:image_turret 中文释义:炮塔图像 类型:字符串
+
+#### image_turret-用法
+填写图像路径，用于给炮塔设置图像文件，也可以在每个炮塔上单独设置。
+
+::: info
+设置的炮塔图像会默认应用于所有未设置图像的炮塔上。
+:::
+
+#### image_turret-示例
+```ini
+[graphics]
+image_turret:ROOT:\124\255\image_shield.png # 绝对路径
+
+[graphics]
+image_turret:\124\255\image_shield.png # 相对路径
+
+```
+
+### turretImageScale
+#### turretImageScale-代码简介
+代码:turretImageScale 中文释义:炮塔图像比例 类型:浮点数
+
+#### turretImageScale-用法
+填写百分比以缩放图像，仅影响炮塔。
+
+::: info
+和imageScale用法一致。
+:::
+
+#### turretImageScale-示例
+```ini
+[graphics]
+turretImageScale:0.1
+
+[graphics]
+turretImageScale:2
+
+```
+
+### scaleTurretImagesTo
+#### scaleTurretImagesTo-代码简介
+代码:scaleTurretImagesTo 中文释义:将炮塔图像缩放到  类型:浮点数
+
+#### scaleTurretImagesTo-用法
+填写像素将炮塔图像大小缩放到指定像素。
+
+::: info
+仅用填写宽度。
+:::
+
+#### scaleTurretImagesTo-示例
+```ini
+[graphics]
+scaleTurretImagesTo:11.2
+
+[graphics]
+scaleTurretImagesTo:33
+
+```
+
+### teamColorsOnTurret
+#### teamColorsOnTurret-代码简介
+代码:teamColorsOnTurret 中文释义:炮塔图像使用阵营色 类型:布尔值
+
+#### teamColorsOnTurret-用法
+填写布尔值决定炮塔图像是否使用阵营色。
+
+::: info
+默认为false。
+:::
+
+#### teamColorsOnTurret-示例
+```ini
+[graphics]
+teamColorsOnTurret:true #使用
+
+[graphics]
+teamColorsOnTurret:false #默认就是不用，可省略
+
+```
+
+### lock_body_rotation_with_main_turret
+#### lock_body_rotation_with_main_turret-代码简介
+代码:lock_body_rotation_with_main_turret 中文释义:锁定主体旋转随主炮塔 类型:布尔值
+
+#### lock_body_rotation_with_main_turret-用法
+填写布尔值决定锁定主体图像是否旋转追随主炮塔图像。
+
+#### lock_body_rotation_with_main_turret-示例
+```ini
+[graphics]
+lock_body_rotation_with_main_turret:true #使用
+
+[graphics]
+lock_body_rotation_with_main_turret:false #默认就是不用，可省略
+
+```
+
+### lock_leg_rotation_with_main_turret
+#### lock_leg_rotation_with_main_turret-代码简介
+代码:lock_leg_rotation_with_main_turret 中文释义:锁定腿脚旋转随主炮塔 类型:布尔值
+
+#### lock_leg_rotation_with_main_turret-用法
+填写布尔值决定锁定腿脚图像是否旋转追随主炮塔图像。
+
+#### lock_leg_rotation_with_main_turret-示例
+```ini
+[graphics]
+lock_leg_rotation_with_main_turret:true #使用
+
+[graphics]
+lock_leg_rotation_with_main_turret:false #默认就是不用，可省略
+
+```
+
+### image_shadow
+#### image_shadow-代码简介
+代码:image_shadow 中文释义:阴影图像 类型:字符串
+
+#### image_shadow-用法
+填写填NONE或AUTO,或图像文件的路径，决定该单位使用哪种阴影图像。
+
+#### image_shadow-示例
+```ini
+[graphics]
+image_shadow:NONE #不使用阴影图像
+
+[graphics]
+image_shadow:AUTO #使用自动生成的阴影图像
+
+[graphics]
+image_shadow:./shadow/shadowA.png #使用自定义的阴影图像
+
+```
+
+### shadowOffsetX
+#### shadowOffsetX-代码简介
+代码:shadowOffsetX 中文释义:阴影图像偏移X轴 类型:浮点数
+
+#### shadowOffsetX-用法
+作用于阴影图像，填写的数值会作为偏移的像素大小，可以为负。
+
+::: tip
+偏移的方向依据X的数值而定。<br>
+X轴以阴影图像中心点为坐标，X增大则图像向右偏移。
+:::
+
+#### shadowOffsetX-示例
+```ini
+[graphics]
+shadowOffsetX:14
+
+[graphics]
+shadowOffsetX:-14.5
+
+```
+
+### shadowOffsetY
+#### shadowOffsetY-代码简介
+代码:shadowOffsetY 中文释义:阴影图像偏移Y轴 类型:浮点数
+
+#### shadowOffsetY-用法
+作用于阴影图像，填写的数值会作为偏移的像素大小，可以为负。
+
+::: tip
+偏移的方向依据Y的数值而定。<br>
+Y轴以阴影图像中心点为坐标，Y增大则图像向右偏移。
+:::
+
+#### shadowOffsetY-示例
+```ini
+[graphics]
+shadowOffsetY:14
+
+[graphics]
+shadowOffsetY:-14.5
+
+```
+
+### image_shadow_frames
+#### image_shadow_frames-代码简介
+代码:image_shadow_frames 中文释义:阴影图像指定 类型:布尔值
+
+#### image_shadow_frames-用法
+填写布尔值，决定阴影是否随单位移动而改变方向。
+
+::: info
+填写为true则不改变。
+:::
+
+#### image_shadow_frames-示例
+```ini
+[graphics]
+image_shadow_frames:true
+
+[graphics]
+image_shadow_frames:false
+
+```
+
+### lock_shadow_rotation_with_main_turret
+#### lock_shadow_rotation_with_main_turret-代码简介
+代码:lock_shadow_rotation_with_main_turret 中文释义:阴影锁定为主炮塔方向 类型:布尔值
+
+#### lock_shadow_rotation_with_main_turret-用法
+填写布尔值，决定是否将身体图像阴影锁定到主炮塔的方向。
+
+::: info
+填写为true则锁定。
+:::
+
+#### lock_shadow_rotation_with_main_turret-示例
+```ini
+[graphics]
+lock_shadow_rotation_with_main_turret:true
+
+[graphics]
+lock_shadow_rotation_with_main_turret:false
+
+```
+
+### total_frames
+#### total_frames-代码简介
+代码:total_frames 中文释义:图像帧数 类型:正整数
+
+#### total_frames-用法
+填写数字，将图像分割为指定份数，用于动画。
+
+::: info
+默认值为1，第一帧编号为0。
+:::
+
+#### total_frames-示例
+```ini
+[graphics]
+total_frames:5
+
+[graphics]
+total_frames:3
+
+```
+
+### frame_width
+#### frame_width-代码简介
+代码:frame_width 中文释义:图像宽度 类型:正整数
+
+#### frame_width-用法
+填写像素大小，作为图像的帧宽度。将自动根据图像的帧宽度将图像分割为不同的帧，并覆盖总帧数。
+
+#### frame_width-示例
+```ini
+[graphics]
+frame_width:23
+
+[graphics]
+frame_width:23
+
+```
+
+### frame_height
+#### frame_height-代码简介
+代码:frame_height 中文释义:图像高度 类型:正整数
+
+#### frame_height-用法
+填写像素大小，作为图像帧的高度。
+
+::: info
+默认为图像的高度。
+:::
+
+#### frame_height-示例
+```ini
+[graphics]
+frame_height:23
+
+[graphics]
+frame_height:23
+
+```
+
+### splastEffect
+#### splastEffect-代码简介
+代码:splastEffect 中文释义:水波效果 类型:布尔值
+
+#### splastEffect-用法
+填写布尔值，决定在水上时是否创建水波效果。
+
+::: info
+效果为内置的，默认为false。
+:::
+
+#### splastEffect-示例
+```ini
+[graphics]
+splastEffect:true
+
+[graphics]
+splastEffect:false
+
+```
+
+### dustEffect
+#### dustEffect-代码简介
+代码:dustEffect 中文释义:灰尘效果 类型:布尔值
+
+#### dustEffect-用法
+填写布尔值，决定在水上时是否创建灰尘效果。
+
+::: info
+效果为内置的，默认为false。
+:::
+
+#### dustEffect-示例
+```ini
+[graphics]
+dustEffect:true
+
+[graphics]
+dustEffect:false
+
+```
+
+### splastEffectReverse
+#### splastEffectReverse-代码简介
+代码:splastEffectReverse 中文释义:逆向水波效果 类型:布尔值
+
+#### splastEffectReverse-用法
+填写布尔值，决定在水上时倒车时是否产生水波效果。
+
+::: info
+效果为内置的，默认为false。
+:::
+
+#### splastEffectReverse-示例
+```ini
+[graphics]
+splastEffectReverse:true
+
+[graphics]
+splastEffectReverse:false
+
+```
+
+### dustEffectReverse
+#### dustEffectReverse-代码简介
+代码:dustEffectReverse 中文释义:逆向灰尘效果 类型:布尔值
+
+#### dustEffectReverse-用法
+填写布尔值，决定在水上时倒车时是否产生水波效果。
+
+::: info
+效果为内置的，默认为false。
+:::
+
+#### dustEffectReverse-示例
+```ini
+[graphics]
+dustEffectReverse:true
+
+[graphics]
+dustEffectReverse:false
+
+```
