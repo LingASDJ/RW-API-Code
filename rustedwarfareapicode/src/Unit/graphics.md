@@ -812,7 +812,7 @@ splastEffectReverse:false
 代码:dustEffectReverse 中文释义:逆向灰尘效果 类型:布尔值
 
 #### dustEffectReverse-用法
-填写布尔值，决定在水上时倒车时是否产生水波效果。
+填写布尔值，决定在水上时倒车时是否产生灰尘效果。
 
 ::: info
 效果为内置的，默认为false。
