@@ -538,10 +538,10 @@ scaleTurretImagesTo:33
 #### teamColorsOnTurret-示例
 ```ini
 [graphics]
-teamColorsOnTurret:true #使用
+teamColorsOnTurret:true 
 
 [graphics]
-teamColorsOnTurret:false #默认就是不用，可省略
+teamColorsOnTurret:false 
 
 ```
 
@@ -555,10 +555,10 @@ teamColorsOnTurret:false #默认就是不用，可省略
 #### lock_body_rotation_with_main_turret-示例
 ```ini
 [graphics]
-lock_body_rotation_with_main_turret:true #使用
+lock_body_rotation_with_main_turret:true 
 
 [graphics]
-lock_body_rotation_with_main_turret:false #默认就是不用，可省略
+lock_body_rotation_with_main_turret:false 
 
 ```
 
@@ -572,10 +572,10 @@ lock_body_rotation_with_main_turret:false #默认就是不用，可省略
 #### lock_leg_rotation_with_main_turret-示例
 ```ini
 [graphics]
-lock_leg_rotation_with_main_turret:true #使用
+lock_leg_rotation_with_main_turret:true 
 
 [graphics]
-lock_leg_rotation_with_main_turret:false #默认就是不用，可省略
+lock_leg_rotation_with_main_turret:false 
 
 ```
 
