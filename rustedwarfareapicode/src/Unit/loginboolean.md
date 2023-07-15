@@ -25,6 +25,8 @@ outline: deep
 | unit     | 单位         |
 <!-- MarkDown表格必须有上方的分割线以告诉浏览器是表格 -->
 
+数据类型之间的转换函数包括:`int`、`str`。
+
 #### 算数优先级
 与数学中计算符一样，铁锈中算数运算符有优先级区别。`%`和`*`和`/`的优先级大于`+`和`-`。
 
@@ -238,6 +240,7 @@ autoTrigger:if (memory.a + memory.c) < memory.b
 34. `self.isInMap()` 在地图内
 35. `game.mapWidth()` 地图宽度
 36. `game.mapHeight()` 地图高度
+37. `game.nukesEnabled()` 是否启用核武器
 
 self.hasResources()
 代码:self.hasResources() 中文释义:有资源 返回类型:boolean<br>
@@ -633,3 +636,134 @@ getOffsetRelative
 eventSource
 代码:eventSource 中文释义:事件源 返回类型:event<br>
 `eventSource`用于获取`autoTriggerOnEvent`当前触发器,没有则返回`null`，可以看作对于事件的`autoTriggerOnEvent`。
+
+#### 全局函数
+
+readUnitMemory
+代码:self.readUnitMemory() 中文释义:读取单位内存 返回类型:跟随内存类型<br>
+`readUnitMemory`用于读取指定单位上的自定义内存，与读取其他单位的资源不同，内存可以直接读取而不需要在本单位进行定义。<br>
+`readUnitMemory`的格式为`单位参考.readUnitMemory("内存名称",type="内存类型")`，简写格式为`memory.内存名称`，但简写格式只能用于读取自己的内存。<br>
+
+<div class="alert callout tip">
+<p>self.readUnitMemory()基础演示例子:</p>
+</div>
+
+```ini
+if parent.readUnitMemory("a", type="float") == 1
+#如果 父单位内存a的值为1
+```
+
+::: warning
+`readUnitMemory`还可以用于读取内存数组,格式为`单位参考.readUnitMemory("数组名称",type="数组类型",index=数组下标)`<br>
+在<font color=orange>跨单位读取数组</font>时，如果下标使用了逻辑，无论逻辑值都会返回第零项，
+<font color=orange>为游戏bug</font>，解决方法可以参考：
+https://www.bilibili.com/video/BV17v4y1r7dV (感谢十山月)
+:::
+
+<!-- 写完才发现readUnitMemory写过了:( -->
+
+distance
+代码:distance() 中文释义:两点距离 返回类型:float<br>
+`distance`用于获取两个坐标之间的距离，格式为`distance(x1,y1,x2,y2)`。<br>
+
+distanceSquared
+代码:distanceSquared() 中文释义:两点距离平方 返回类型:float<br>
+`distanceSquared`返回两个点的距离的平方，速度更快，格式与`distance`一样。<br>
+
+distanceBetween
+代码:distanceBetween() 中文释义:单位间的距离 返回类型:float<br>
+`distanceBetween`返回两个单位(标记)之间的距离，格式为`distanceBetween(单位1,单位2)`。<br>
+
+distanceBetweenSquared
+代码:distanceBetweenSquared() 中文释义:单位间的距离平方 返回类型:float<br>
+`distanceBetweenSquared`返回两个单位(标记)之间的距离的平方，速度更快，格式与`distanceBetween`一致。<br>
+
+select
+代码:select() 中文释义:三目运算符 返回类型:随结果类型(有说为string)<br>
+`select`用于简化部分需要使用如果进行分别判断的场景，格式为`select(bool a,str b,str c)`，当`a`成立时，整个`select`返回`b`，否则返回`c`。<br>
+
+::: tip
+`select`支持套娃。在适当的地方使用，可以<font color=orange>极大的简化代码</font>。
+:::
+
+debug
+代码:debug() 中文释义:返回调试值 返回类型:string<br>
+`debug`可以针对逻辑布尔值输出一个字符串，解释这个值产生的原因，可以查看嵌套逻辑、比较和运算符。<br>
+
+::: code-group
+```ini{3} [演示例子]
+showMessageToAllPlayers:%{debug(memory.a)}
+#假设a为unit类型memory
+#这里就会输出a单位的id等信息
+```
+:::
+
+substring
+代码:substring() 中文释义:取子字符串 返回类型:string<br>
+`substring`用于截取一个字符串的一部分，格式为`substring(开始处,结束处)`，字符串的“下标”从0开始。<br>
+
+length
+代码:length() 中文释义:取字符串长度 返回类型:number/float<br>
+`length`用于获取一个字符串的长度，格式为`length(string)`，返回长度数字。<br>
+
+squareRoot
+代码:squareRoot() 中文释义:平方根 返回类型:number/float<br>
+`squareRoot`用于获取一个数的平方根，格式为`squareRoot(number/float)`。<br>
+
+min
+代码:min() 中文释义:最小值 返回类型:number/float<br>
+`min`用于获取两个数中更小的那个，格式为`min(number1,number2)`。<br>
+
+max
+代码:max() 中文释义:最大值 返回类型:number/float<br>
+`max`用于获取两个数中更大的那个，格式为`max(number1,number2)`。<br>
+
+createMarker
+代码:createMarker() 中文释义:创建标记 返回类型:marker<br>
+`createMarker`用于创建一个临时的标记，格式为`createMarker(x, y, [height], [teamId], [dir])`。其中`x`、`y`为必须的参数<br>
+标记的创建速度很快，创建后可以用于填入路径点等`unit/marker`类型处。<br>
+
+::: tip
+其实marker也是一个单位，可以通过路径点`thisActionTarget`和`debug`发现它。
+:::
+
+eventData
+代码:eventData() 中文释义:事件数据 返回类型:跟随事件<br>
+`eventData`用于获取自身接收的`[action]sendMessageTo`中发送的信息，格式为`eventData("数据名称",type="数据类型")`。<br>
+`eventData`只在`autoTriggerOnEvent:newMessage`事件中使用。<br>
+
+sin
+代码:sin() 中文释义:正弦 返回类型:float<br>
+`sin`用于正弦值，格式为`sin(角度)`。<br>
+
+cos
+代码:cos() 中文释义:余弦 返回类型:float<br>
+`cos`用于余弦值，格式为`cos(角度)`。<br>
+
+::: tip
+铁锈三角函数没有tan，但是可以通过`tan(a)=sin(a)/cos(a)`来求。
+:::
+
+rnd
+代码:rnd() 中文释义:随机数 返回类型:float<br>
+`rnd`用于生成一个自定义区间内的随机数，格式为`rnd(最小,最大)`。<br>
+
+::: warning
+沙盒地图中随机数种子是一样的，且<font color=orange>卢克的随机数并不“随机”</font>，实际使用可能需要自己增加参数后求余。
+:::
+
+lowercase
+代码:lowercase() 中文释义:转小写 返回类型:float<br>
+`lowercase`用于将一个字符串中的大写字符全部转换成小写，格式为`lowercase(string)`。<br>
+
+uppercase
+代码:uppercase() 中文释义:转大写 返回类型:float<br>
+`uppercase`用于将一个字符串中的小写字符全部转换成大写，格式为`uppercase(string)`。<br>
+
+direction
+代码:direction() 中文释义:相对角度 返回类型:float<br>
+`direction`用于获取两个点之间的相对角度，格式为`direction(x1,y1,x2,y2)`。<br>
+
+directionBetween
+代码:direction() 中文释义:单位相对角度 返回类型:float<br>
+`direction`用于获取两个单位之间的相对角度，格式为`direction(unit1,unit2)`。<br>directionBetween
