@@ -36,6 +36,7 @@ features:
     linkText: 让我们立刻开始吧！[开发中]
   - title: RW-Engine指南
     details: 学习铁锈Mod RW-Engine的使用(仅Android)
+    link: /src/RW-Engine/quick-start
     linkText: 让我们立刻开始吧！[开发中]
 ---
 
