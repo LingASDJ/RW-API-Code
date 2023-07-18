@@ -13,6 +13,7 @@ export default defineConfig({
       { text: '地图API', link: '/src/Map/teada' },
       { text: '调试API', link: '/src/Debug/test' },
       { text: '编写指南', link: '/api-dev' },
+      { text: 'RW-Engine指南', link: '/quick-start' }
     ],
 
     docFooter: {

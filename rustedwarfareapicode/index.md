@@ -34,5 +34,8 @@ features:
   - title: 调试代码表
     details: 学习铁锈的高级调试代码表(仅Android)
     linkText: 让我们立刻开始吧！[开发中]
+  - title: RW-Engine指南
+    details: 学习铁锈Mod RW-Engine的使用(仅Android)
+    linkText: 让我们立刻开始吧！[开发中]
 ---
 
