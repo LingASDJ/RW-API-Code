@@ -297,7 +297,7 @@ moveIgnoringBody:true
 #### moveSlidingMode-要点指示
 定义单位移动后是否进行滑动
 
-####moveSlidingMode-演示例子
+#### moveSlidingMode-演示例子
 ```ini
 [movement]
 moveSlidingMode:true
