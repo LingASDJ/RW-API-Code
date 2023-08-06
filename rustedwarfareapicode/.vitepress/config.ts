@@ -31,8 +31,10 @@ export default defineConfig({
           { text: '核心-CORE', link: '/src/Unit/core' },
           { text: '可建造-CANBUILD', link: '/src/Unit/canbuild' },
           { text: '图像-GRAPHICS', link: '/src/Unit/graphics' },
+          { text: '攻击-ATTACK', link: '/src/Unit/attack' },
           { text: '运动-MOVEMENT', link: '/src/Unit/movement' },
           { text: '逻辑-LOGIC', link: '/src/Unit/loginboolean' },
+          { text: '刷兵/刷单位-SPAWN', link: '/src/Unit/spawnunit_spawnprojectile' },
           { text: '-------------------------', link: '' },
         ]
       }
