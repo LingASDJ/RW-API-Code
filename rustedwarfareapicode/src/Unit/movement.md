@@ -297,12 +297,13 @@ moveIgnoringBody:true
 #### moveSlidingMode-要点指示
 定义单位移动后是否进行滑动
 
-####moveSlidingMode-演示例子
+#### moveSlidingMode-演示例子
 ```ini
 [movement]
 moveSlidingMode:true
 ```
 <hr>
+
 ### moveSlidingDir
 #### moveSlidingDir-代码简介
 代码:moveSlidingDir 中文释义:移动滑动角度 类型:浮点数 隶属于:杂项
@@ -333,6 +334,7 @@ moveSlidingDir:-1
 joinsGroupFormations:true
 ```
 <hr>
+
 ### ignoreMoveOrders
 #### ignoreMoveOrders-代码简介
 代码:ignoreMoveOrders 中文释义:忽略移动指令:布尔值 隶属于:杂项
