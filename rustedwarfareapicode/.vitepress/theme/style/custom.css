@@ -12,3 +12,14 @@
     font-weight: 700;
     white-space: pre-wrap;
 }
+
+.link[data-v-980a75a4] {
+    display: inline-block;
+    border: 1px solid #10b981;
+    border-radius: 16px;
+    padding: 3px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    color:#10b981;
+    transition: border-color .25s,color .25s;
+}
