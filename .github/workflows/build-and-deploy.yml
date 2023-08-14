@@ -25,7 +25,7 @@ jobs:
         with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: gh-pages
-          FOLDER: ../rustedwarfareapicode/.vitepress/dist
+          FOLDER: ../../../../rustedwarfareapicode/.vitepress/dist
 
       # 判断工作流是否全部成功，如果有任意一个步骤失败，则发送失败邮件；否则发送成功邮件。
       # - name: Send Mail 发送邮件
