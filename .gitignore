@@ -1,3 +1,4 @@
 node_modules
 rustedwarfareapicode/.vitepress/dist/
 rustedwarfareapicode/.vitepress/cache
+.idea/workspace.xml
