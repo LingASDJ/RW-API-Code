@@ -268,7 +268,7 @@ spawnProjectilesOnEndOfLife:a(recursionLimit=5)
 `offsetRandomXY=10`就相当于`offsetRandomX=10,offsetRandomY=10`
 :::
 
-#### recursionLimit-演示例子
+#### offsetRandomXY-演示例子
 ```ini
 spawnProjectilesOnEndOfLife:a(offsetRandomXY=10)
 ```
@@ -284,7 +284,7 @@ spawnProjectilesOnEndOfLife:a(offsetRandomXY=10)
 不同于`offsetX/offsetY`绝对偏移的Y轴竖直X轴水平，`xOffsetRelative/yOffsetRelative`将会旋转坐标系使得Y轴正方向与产生源的角度对齐
 :::
 
-#### recursionLimit-演示例子
+#### xOffsetRelative/yOffsetRelative-演示例子
 ```ini
 spawnProjectilesOnEndOfLife:a(xOffsetRelative=10,yOffsetRelative=10)
 ```
