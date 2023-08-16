@@ -17,7 +17,7 @@ const { Layout } = DefaultTheme;
             >
                 <div data-v-6c4a3ffe="" data-v-98ddab3d="" class="NotFound">
                     <img
-                        src="https://rwapi-code.netlify.app/images/logo.png"
+                        src="https://rust.coldmint.top/ftp/ling/cdnpng/logo.png"
                         alt=""
                         class="notfound-img"
                     />

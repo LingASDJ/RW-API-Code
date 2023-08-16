@@ -6,7 +6,7 @@ outline: deep
 <h1>RTS-Code-API---开发规范</h1>
 </div>
 <div style="display:flex;align-content: flex-start;flex-wrap: nowrap;flex-direction: row;justify-content: center;">
- <img src="https://rwapi-code.netlify.app/images/title.png">
+ <img src="https://rust.coldmint.top/ftp/ling/cdnpng/logo.png">
  </div>
 
 ::: tip

@@ -7,7 +7,7 @@ hero:
   text: 轻松编码，轻松学习
   tagline: 学习Mod,制作Mod,创新Mod
   image:
-    src: https://rwapi-code.netlify.app/images/logo.png
+    src: https://rust.coldmint.top/ftp/ling/cdnpng/logo.png
     alt: RW-API-Code
 
   actions:
