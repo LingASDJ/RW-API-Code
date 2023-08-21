@@ -8,12 +8,15 @@ outline: deep
 由于这个组的特殊性，格式不标准，请勿参考这个组的写法。
 :::
 
-### 前置知识
+## 前置知识
+::: tip
+以下的内容为`逻辑组前置知识`，是学习逻辑必备的前置内容。
+:::
 
-#### 布尔值
+### 布尔值
 <font color=orange>布尔值</font>表达“真(true)”或“假(false)”的一个状态。在铁锈中，布尔值(`boolean`)被运用于逻辑判断。
 
-#### 数据类型
+### 数据类型
 数据类型指数据的种类，在铁锈中，不同的数据有不同的类型，不同的数据类型之间通常不能直接进行运算。
 
 |常见数据类型英文 |存储的值类型 |
@@ -27,97 +30,153 @@ outline: deep
 
 数据类型之间的转换函数包括:`int`、`str`。
 
-#### 算数优先级
+### 算数优先级
 与数学中计算符一样，铁锈中算数运算符有优先级区别。`%`和`*`和`/`的优先级大于`+`和`-`。
 
-### 比较运算符
+## 比较运算符
+::: tip
+以下的内容为逻辑中用于`比较`的运算符。
+:::
 
-#### 如果
-代码:if 中文释义:如果
+### if
+#### if-代码简介
+代码:if 中文释义:如果 类型:逻辑函数
+#### if-要点指示
 `if`是大部分逻辑运算的开头(select等不需要if)，用于在支持逻辑的键引入逻辑判断。
-
-<!-- 若要连续嵌套，请直接使用Html原生代码 -->
-<div class="alert callout tip">
-<p>演示例子:</p>
-</div>
-
+#### if-演示例子
 ```ini
 [action]
 autoTrigger:if self.maxHp() > memory.emx_hp
 ```
 
-#### 小于
-代码:< 中文释义:小于<br>
+<hr>
+
+### <
+#### <-代码简介
+代码:< 中文释义:小于 类型:比较运算符
+#### <-要点指示
 小于用于在逻辑布尔值中比较两个数的大小，格式为`数据a < 数据b`，若`a<b`则整个式子的值为`true`，否则为`false`。
-
-<!-- 自定义的提示框请使用原生Html进行套入 -->
-<div class="alert callout note">
-  <p class="title">
-  <span class="icon icon-note"></span>要点指示:</p>
-</div>
-
-
+#### <-演示例子
 ```ini
 [action]
 autoTrigger:if memory.a < memory.b
 ```
 
-#### 大于
-代码:> 中文释义:大于<br>
-同上，格式为`数据a > 数据b`，若`a>b`则整个式子的值为`true`，否则为`false`。
+<hr>
 
-#### 小于等于
-代码:<= 中文释义:小于等于<br>
-同上，若`a<=b`则整个式子的值为`true`，否则为`false`。
+### >
+#### >-代码简介
+代码:> 中文释义:大于 类型:比较运算符
+#### >-要点指示
+大于用于在逻辑布尔值中比较两个数的大小，格式为`数据a > 数据b`，若`a>b`则整个式子的值为`true`，否则为`false`。
+#### >-演示例子
+```ini
+[action]
+autoTrigger:if memory.a > memory.b
+```
 
-#### 大于等于
-代码:>= 中文释义:大于等于<br>
-同上，若`a>=b`则整个式子的值为`true`，否则为`false`。
+<hr>
 
-#### 等于
-代码:== 中文释义:等于<br>
+### <=
+#### <=-代码简介
+代码:<= 中文释义:小于等于 类型:比较运算符
+#### <=-要点指示
+小于等于用于在逻辑布尔值中比较两个数的大小，格式为`数据a <= 数据b`，若`a<=b`则整个式子的值为`true`，否则为`false`。
+#### <=-演示例子
+```ini
+[action]
+autoTrigger:if memory.a <= memory.b
+```
 
+<hr>
+
+### >=
+#### >=-代码简介
+代码:>= 中文释义:大于等于 类型:比较运算符
+#### >=-要点指示
+大于等于用于在逻辑布尔值中比较两个数的大小，格式为`数据a >= 数据b`，若`a>=b`则整个式子的值为`true`，否则为`false`。
+#### >=-演示例子
+```ini
+[action]
+autoTrigger:if memory.a >= memory.b
+```
+
+<hr>
+
+### ==
+#### ==-代码简介
+代码:== 中文释义:等于 类型:比较运算符
+#### ==-要点指示
+等于用于在逻辑布尔值中比较值是否相同，格式为`数据a = 数据b`，若`a=b`则整个式子的值为`true`，否则为`false`。
 ::: tip
 请注意，铁锈中等于的符号为<font color=orange>==</font>，<font color=orange>=</font>在铁锈中用于赋值或参数。
 :::
+#### ==-演示例子
+```ini
+[action]
+autoTrigger:if memory.a == memory.b
+```
 
+<hr>
 
-同上，若`a=b`则整个式子的值为`true`，否则为`false`。
+### !=
+#### !=-代码简介
+代码:!= 中文释义:不等于 类型:比较运算符
+#### !=-要点指示
+不等于用于在逻辑布尔值中比较值是否相同，格式为`数据a = 数据b`，若`a!=b`则整个式子的值为`true`，否则为`false`。
+#### !=-演示例子
+```ini
+[action]
+autoTrigger:if memory.a != memory.b
+```
 
-#### 不等于
-代码:!= 中文释义:不等于<br>
-同上，若`a!=b`则整个式子的值为`true`，否则为`false`。
+<hr>
 
-### 逻辑运算符
+## 逻辑运算符
+::: tip
+以下的内容为逻辑中用于`进行逻辑运算`的运算符，它们的结果都是`boolean`类型。
+:::
 
-#### 且
-代码:and 中文释义:且<br>
+### and
+#### and-代码简介
+代码:and 中文释义:且 类型:逻辑运算符
+#### and-要点指示
 ::: tip
 <font color=orange>and</font>用于连接两个逻辑判断，只有在这两个逻辑判断的值都为<font color=orange>true</font>时，<font color=orange>and</font>的值才为true。
 <br>
 :::
 
-<!-- 自定义的提示框请使用原生Html进行套入 -->
-<div class="alert callout note">
-  <p class="title">
-  <span class="icon icon-note"></span>要点指示:</p>
-</div>
-<!-- 并保证首尾留有一行换行以便Markdown正确解析 -->
-
+#### and-演示例子
 ```ini
 [action]
 autoTrigger:if memory.a < memory.b and memory.a > memory.c
 # 在这个例子中，只有a小于b且a大于c时，自动触发才会被触发
 ```
 
-#### 或
-代码:or 中文释义:或<br>
+<hr>
+
+### or
+#### or-代码简介
+代码:or 中文释义:或 类型:逻辑运算符
+#### or-要点指示
 ::: tip
 <font color=orange>or</font>用于连接两个逻辑判断，只要这两个逻辑判断的值有一个为<font color=orange>true</font>时，<font color=orange>or</font>的值就为true。
+<br>
 :::
 
-#### 非
-代码:not 中文释义:非<br>
+#### or-演示例子
+```ini
+[action]
+autoTrigger:if memory.a < memory.b or memory.a > memory.c
+# 在这个例子中，只要a小于b或a大于c，自动触发就会被触发
+```
+
+<hr>
+
+### not
+#### not-代码简介
+代码:not 中文释义:非 类型:逻辑运算符
+#### not-要点指示
 ::: tip
 <font color=orange>not</font>用于将某个逻辑判断的值取反，即`true`变`false`，`false`变`true`。
 :::
@@ -125,6 +184,9 @@ autoTrigger:if memory.a < memory.b and memory.a > memory.c
 ::: info
 多个逻辑运算符同时使用时，优先级为`not>and>or`，同时<font color=orange>支持使用括号改变运算优先级</font>。
 <br>推荐<font color=orange>在不确定优先级时打括号</font>。
+:::
+
+#### not-演示例子
 :::
 
 <div class="alert callout tip">
@@ -141,60 +203,102 @@ autoTrigger:if (memory.a < memory.b or memory.a > memory.c) and not memory.a < m
 考考你，在上述这个例子中，满足什么条件才会触发？
 ```
 ```bash [显示答案]
-答案：a必须满足小于b和大于c中的一个，且a必须小于d，自动触发才会被触发。
+答案：a必须满足小于b和大于c中的一个，且a必须不小于d，自动触发才会被触发。
 ```
 :::
 
+<hr>
 
-### 算数运算符
 
-#### 加
-代码:+ 中文释义:加<br>
-
-加用于将两个逻辑值相加，得到结果，格式为`数据a + 数据b`。
-
+## 算数运算符
+::: tip
+以下的内容为逻辑中用于`进行算数运算`的运算符，它们的结果类型为`参与运算的值的`类型。
+:::
 ::: info
 不同数据类型通常<font color=orange>不能直接进行算数运算</font>，但在部分情况下，<font color=orange>number</font>和<font color=orange>float</font>类型可以混用（建议<font color=orange>所有数值全部使用float</font>来避免混淆）。
 :::
 
-<div class="alert callout tip">
-<p>演示例子:</p>
-</div>
-
+### +
+#### +-代码简介
+代码:+ 中文释义:加 类型:算数运算符
+#### +-要点指示
+加用于将两个逻辑值相加，得到结果，格式为`数据a + 数据b`。
+#### +-演示例子
 ```ini
 [action]
 autoTrigger:if (memory.a + memory.c) < memory.b
+#内存a和c的值之和需要小于b
 ```
 
-#### 减
-代码:- 中文释义:减<br>
+<hr>
 
+### -
+#### --代码简介
+代码:- 中文释义:减 类型:算数运算符
+#### --要点指示
 减用于将两个逻辑值相减，得到结果，格式为`数据a - 数据b`。
-
 ::: info
 对于<font color=orange>不满足交换律的运算符</font>，需要注意<font color=orange>运算优先级</font>是否正确。由于铁锈本身bug，<font color=orange>在数学上正确的优先级不一定在铁锈中正确</font>，因此可能出现减法顺序混乱等问题。
 <br>为了避免可能的问题，请尽量在任何<font color=orange>不满足交换律的运算符</font>两边打上括号。
 :::
 
-#### 乘
-代码:* 中文释义:乘<br>
+#### --演示例子
+```ini
+[action]
+autoTrigger:if (memory.a - memory.c) < memory.b
+#内存a与c的值之差需要小于b
+```
 
+<hr>
+
+### *
+#### *-代码简介
+代码:* 中文释义:乘 类型:算数运算符
+#### *-要点指示
 乘用于将两个逻辑值相乘，得到结果，格式为`数据a * 数据b`。
+#### *-演示例子
+```ini
+[action]
+autoTrigger:if (memory.a * memory.c) == memory.b
+#内存a和c的乘积需要等于b
+```
 
-#### 除
-代码:/ 中文释义:除<br>
+<hr>
 
+### /
+#### /-代码简介
+代码:/ 中文释义:除 类型:算数运算符
+#### /-要点指示
 除用于将两个逻辑值相除，得到结果，格式为`数据a / 数据b`。
+#### /-演示例子
+```ini
+[action]
+autoTrigger:if (memory.a / memory.c) == memory.b
+#内存a除以c的积需要等于b
+```
 
-#### 求余
-代码:% 中文释义:求余(取模)<br>
+<hr>
 
-求余用于获取两个逻辑值中，第一个除第二个的余数，格式为`数据a % 数据b`。
-例如`7%3=1(7除3余1)`
+### %
+#### %-代码简介
+代码:% 中文释义:求余(取模) 类型:算数运算符
+#### %-要点指示
+求余用于获取两个逻辑值中，第一个除第二个的余数，格式为`数据a % 数据b`，例如`7%3=1(7除3余1)`。
+#### %-演示例子
+```ini
+[action]
+autoTrigger:if (memory.a % memory.c) == memory.b
+#内存a除以c的余数需要等于b
+```
 
-### 单位统计
+<hr>
 
-#### 通用统计关键字
+## 单位统计
+::: tip
+以下的内容为逻辑中用于`单位数值获取`的函数，它们的类型与单位此项数值对应。
+:::
+
+### 通用统计关键字
 单位统计中部分通用的关键字：
 1. `greaterThan` 大于
 2. `lessThan` 小于
@@ -202,7 +306,7 @@ autoTrigger:if (memory.a + memory.c) < memory.b
 4. `full` 满
 5. `equalTo` 等于
 
-#### 内置参数
+### 内置参数-单一或无传参
 单位统计中部分内置参数返回代码（由于过于简单不单独列出）：
 1. `self.hp()` 生命值
 2. `self.maxHp()` 最大生命值
@@ -241,6 +345,10 @@ autoTrigger:if (memory.a + memory.c) < memory.b
 35. `game.mapWidth()` 地图宽度
 36. `game.mapHeight()` 地图高度
 37. `game.nukesEnabled()` 是否启用核武器
+
+### 内置参数-需要传参
+
+<!-- 这一部分因为###被占用，无法按照传统格式 -->
 
 self.hasResources()
 代码:self.hasResources() 中文释义:有资源 返回类型:boolean<br>
@@ -283,7 +391,7 @@ self.numberOfQueuedWaypoints()
 
 `self.numberOfQueuedWaypoints()`用于返回队列中路径点的数量。格式为`self.numberOfQueuedWaypoints(type="路径点类型")`。
 
-#### 单位运动与定位
+### 单位运动与定位
 这部分代码的返回值全部为`boolean`类型，用于检测单位的运动和位置情况
 1. `self.underwater/self.isUnderwater()` 单位在水下
 2. `self.gound/self.ground/self.isAtGroundHeight()` 单位位于地面高度
@@ -314,7 +422,7 @@ self.numberOfQueuedWaypoints()
 
 
 
-### 单位计时
+## 单位计时
 
 self.hasTakenDemage()
 代码:self.hasTakenDemage() 中文释义:受到伤害 返回类型:bool<br>
@@ -351,7 +459,7 @@ resetCustomTimer:true
 showMessageToPlayers:10秒过去了
 ```
 
-### 杂项
+## 杂项
 
 thisActionIndex/index()
 代码:thisActionIndex/index() 中文释义:索引 返回类型:float(number)<br>
@@ -494,9 +602,9 @@ if parent.readUnitMemory("boostTarget", type="unit") == self
 #如果 父单位内存boostTarget的值等于自己
 ```
 
-### 单位参照
+## 单位参照
 
-#### 当前动作目标
+### 当前动作目标
 ::: info
 `thisActionTarget`是一条用于获取当前行动目标的代码，不同的行动中，`thisActionTarget`也不同(或没有)。
 以下是不同情况下的`thisActionTarget`。
@@ -537,7 +645,7 @@ autoTriggerOnEvent: touchTargetSuccess <br>
 
 <!-- 这一段内容是这样的，不知道怎么优化格式好一点，ling帮帮 :D -->
 
-#### 杂项
+### 杂项
 
 attachment
 代码:self.attachment() 中文释义:附属物 返回类型:unit/marker<br>
@@ -614,7 +722,7 @@ nullUnit
 代码:nullUnit 中文释义:空单位 返回类型:unit/marker<br>
 `nullUnit`是铁锈的空单位，用于比较/判断。
 
-#### 标记
+### 标记
 
 getAsMarker
 代码:self.getAsMarker() 中文释义:获取标记 返回类型:unit/marker<br>
@@ -637,7 +745,7 @@ eventSource
 代码:eventSource 中文释义:事件源 返回类型:event<br>
 `eventSource`用于获取`autoTriggerOnEvent`当前触发器,没有则返回`null`，可以看作对于事件的`autoTriggerOnEvent`。
 
-#### 全局函数
+### 全局函数
 
 readUnitMemory
 代码:self.readUnitMemory() 中文释义:读取单位内存 返回类型:跟随内存类型<br>
@@ -753,11 +861,11 @@ rnd
 :::
 
 lowercase
-代码:lowercase() 中文释义:转小写 返回类型:float<br>
+代码:lowercase() 中文释义:转小写 返回类型:string<br>
 `lowercase`用于将一个字符串中的大写字符全部转换成小写，格式为`lowercase(string)`。<br>
 
 uppercase
-代码:uppercase() 中文释义:转大写 返回类型:float<br>
+代码:uppercase() 中文释义:转大写 返回类型:string<br>
 `uppercase`用于将一个字符串中的小写字符全部转换成大写，格式为`uppercase(string)`。<br>
 
 direction
