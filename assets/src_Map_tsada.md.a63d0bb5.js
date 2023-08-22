@@ -1,1 +1,0 @@
-import{_ as a,o as t,c as e}from"./chunks/framework.d377e0cc.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"src/Map/tsada.md","filePath":"src/Map/tsada.md"}'),s={name:"src/Map/tsada.md"};function r(c,o,n,d,p,_){return t(),e("div")}const f=a(s,[["render",r]]);export{m as __pageData,f as default};
