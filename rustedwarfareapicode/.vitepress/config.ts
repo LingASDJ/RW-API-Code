@@ -49,7 +49,7 @@ export default defineConfig({
 
     footer: {
       message: "Rosy-Code Ling Web Stuido",
-      copyright: "Copyright © 2023-RW-API-Code",
+      copyright: "Copyright © 2023-2027-RW-API-Code",
     },
 
     search: {
