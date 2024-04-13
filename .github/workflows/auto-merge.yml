@@ -51,7 +51,7 @@ jobs:
     # 步骤，使用 pascalgn/automerge-action 动作实现自动合并发布版本的 PR 到 master 分支，并定义了环境变量 GITHUB_TOKEN 和 MERGE_FILTER_AUTHOR 条件过滤器。
     steps:
       - name: Automerge # 步骤名称为：Automerge
-        uses: pascalgn/automerge-action@v0.15.6 # 使用 pascalgn/automerge-action 动作进行自动合并 PR 操作
+        uses: pascalgn/automerge-action@v0.16.3 # 使用 pascalgn/automerge-action 动作进行自动合并 PR 操作
         env:
           GITHUB_TOKEN: '${{ secrets.RELEASE_TOKEN }}' # 设置 GitHub Token 密钥，从 secrets 中获取
           MERGE_LABELS: ''
