@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.2-DEV1.0](https://github.com/LingASDJ/RW-API-Code/compare/v0.0.2-Dev3.0...v0.0.2-DEV1.0) (2025-03-09)
+
+
+### Docs
+
+* **contributor:** contrib-readme-action has updated readme ([4644996](https://github.com/LingASDJ/RW-API-Code/commit/4644996895c5c7f89d27f6e1442ccfc0f0bd8fe5))
+
 ## [0.0.2-Dev3.0](https://github.com/LingASDJ/RW-API-Code/compare/v0.0.2-DEV1.0...v0.0.2-Dev3.0) (2023-08-14)
 
 
