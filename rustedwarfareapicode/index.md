@@ -7,7 +7,7 @@ hero:
   text: 轻松编码，轻松学习
   tagline: 学习Mod,制作Mod,创新Mod
   image:
-    src: src/assets/logo.png
+    src: https://jdsalingzx.top/wp-content/uploads/2025/03/logo.png
     alt: RW-API-Code
 
   actions:
