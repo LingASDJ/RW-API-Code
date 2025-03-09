@@ -1,43 +1,7 @@
 // .vitepress/theme/index.js
 import DefaultTheme from "vitepress/theme";
 import "./style/custom.css";
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import { getPerformance } from "firebase/performance";
 import NotFound from "../theme/NotFound.vue";
-
-/**
- * 初始化 Firebase
- * @returns {Promise<string>} 初始化结果
- */
-const initializeFirebase = () => {
-    const firebaseConfig = {
-        apiKey: "AIzaSyANVvapu0ihi1cM8ZzuXTkwjx9lM_J1RyQ",
-        authDomain: "rw-api-code-d0779.firebaseapp.com",
-        projectId: "rw-api-code-d0779",
-        storageBucket: "rw-api-code-d0779.appspot.com",
-        messagingSenderId: "363611843335",
-        appId: "1:363611843335:web:f15aef7ab427f52b4033a2",
-        measurementId: "G-XJH5TKP5VL",
-    };
-
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-    const perf = getPerformance(app);
-
-    return "Firebase initialized successfully";
-};
-
-(async function () {
-    try {
-        const result = await initializeFirebase();
-        console.log(result);
-    } catch (error) {
-        console.error(error);
-    }
-})();
 
 /**
  * 等待指定时间

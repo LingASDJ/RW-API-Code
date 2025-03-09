@@ -221,7 +221,7 @@ buildSpeed:0.0006
 
 代码:isBio 中文释义:是生物 类型:布尔型 隶属于:通用代码组
 
-::: tip {2}
+::: tip
 若设置成true,则会在单位死亡时产生血迹,  
 图像在<font color=orange>drawable/blood_mark.png<br>当hideScorchMark:true</font>时可以隐藏非生物则为黑色爆炸效果。
 :::
