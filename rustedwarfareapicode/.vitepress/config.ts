@@ -48,8 +48,8 @@ export default defineConfig({
     ],
 
     footer: {
-      message: "Rosy-Code Ling Web Stuido",
-      copyright: "Copyright © 2023-2027-RW-API-Code",
+      message: "Spldream Studio",
+      copyright: "Copyright © 2023-2025 RW-API-Code",
     },
 
     search: {
