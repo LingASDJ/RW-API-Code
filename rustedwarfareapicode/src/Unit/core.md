@@ -652,7 +652,7 @@ showInEditor:false
 | de       | （德语）        | fr-FR    | 法语（法国）      
 
 ::: warning
-其它自查(此列表并不全)，不过你应该不会闲着支持这么多语言。另外英文的语言代码`en`可以忽略，因为英文在软件里为默认语言,故而无需加`en`,当然加了也没事。
+其它自查(相关标准有[ISO 639-1](https://baike.baidu.com/item/ISO%20639-1/8292914)和[ISO 3166-1](https://baike.baidu.com/item/ISO%203166-1?fromModule=lemma_search-box))，不过你应该不会闲着支持这么多语言。另外英文的语言代码`en`可以忽略，因为英文在软件里为默认语言,故而无需加`en`,当然加了也没事。
 :::
 
 如果你不想进行多语言化，你应该直接`displayText:坦克`，而不是`displayText_zh:坦克`，如果你写了`displayText_zh:坦克`，<br>你必须再声明一个`displayText:Tank`,否则，游戏会找不到`默认语言缺省值`，将会导致`mod报错而无法运行`。所有可以使用多语言的都有这个检查，还请各位Modder留意。（若有特别的代码，将会在它里面特别提示）

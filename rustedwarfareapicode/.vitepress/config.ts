@@ -5,6 +5,7 @@ export default defineConfig({
   title: "RW-API_Code",
   description: "Easy Code",
   cleanUrls: true,
+  head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [

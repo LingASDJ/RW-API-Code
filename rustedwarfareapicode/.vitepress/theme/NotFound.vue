@@ -17,7 +17,7 @@ const { Layout } = DefaultTheme;
             >
                 <div data-v-6c4a3ffe="" data-v-98ddab3d="" class="NotFound">
                     <img
-                        src="https://jdsalingzx.top/wp-content/uploads/2025/03/logo.png"
+                        src="/logo.png"
                         alt=""
                         class="notfound-img"
                     />
