@@ -1,1 +1,0 @@
-import{_ as e,c as a,o as t}from"./chunks/framework.DPDPlp3K.js";const _=JSON.parse('{"title":"","description":"","frontmatter":{"outline":"deep"},"headers":[],"relativePath":"src/Map/all.md","filePath":"src/Map/all.md"}'),r={name:"src/Map/all.md"};function s(c,o,l,n,p,d){return t(),a("div")}const m=e(r,[["render",s]]);export{_ as __pageData,m as default};
