@@ -70,13 +70,6 @@
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/Thisisafox">
-                    <img src="https://avatars.githubusercontent.com/u/141534430?v=4" width="100;" alt="Thisisafox"/>
-                    <br />
-                    <sub><b>屑狐狸</b></sub>
-                </a>
-            </td>
-            <td align="center">
                 <a href="https://github.com/Mitpoppy">
                     <img src="https://avatars.githubusercontent.com/u/89001400?v=4" width="100;" alt="Mitpoppy"/>
                     <br />
@@ -84,10 +77,24 @@
                 </a>
             </td>
             <td align="center">
+                <a href="https://github.com/Thisisafox">
+                    <img src="https://avatars.githubusercontent.com/u/141534430?v=4" width="100;" alt="Thisisafox"/>
+                    <br />
+                    <sub><b>屑狐狸</b></sub>
+                </a>
+            </td>
+            <td align="center">
                 <a href="https://github.com/n9tank">
                     <img src="https://avatars.githubusercontent.com/u/118785835?v=4" width="100;" alt="n9tank"/>
                     <br />
                     <sub><b>n9tank</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/xingwangzhe">
+                    <img src="https://avatars.githubusercontent.com/u/162127610?v=4" width="100;" alt="xingwangzhe"/>
+                    <br />
+                    <sub><b>王兴家</b></sub>
                 </a>
             </td>
 		</tr>
