@@ -7,10 +7,10 @@ outline: deep
 ## 一.安装RW-Engine
 
 ### 下载RW-Engine
-    蓝奏云:
+蓝奏云:
 
 ### 安装RW-Engine
-    解压下载的ZIP，将里面的RW_Engine这个文件夹整个复制到你的mod的目录下。
+解压下载的ZIP，将里面的RW_Engine这个文件夹整个复制到你的mod的目录下。
 
     文件结构：
     ---units
