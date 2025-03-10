@@ -10,7 +10,7 @@ export default defineConfig({
     nav: [
       { text: '主页', link: '/' },
       { text: '单位API', link: '/src/Unit/core' },
-      { text: '地图API', link: '/src/Map/teada' },
+      { text: '地图API', link: '/src/Map/all' },
       { text: '调试API', link: '/src/Debug/test' },
       { text: '编写指南', link: '/api-dev' },
       { text: 'RW-Engine指南', link: '/src/RW-Engine/quick-start' },
@@ -39,6 +39,8 @@ export default defineConfig({
           { text: '逻辑-LOGIC', link: '/src/Unit/loginboolean' },
           { text: '刷兵/刷单位-SPAWN', link: '/src/Unit/spawnunit_spawnprojectile' },
           { text: '-------------------------', link: '' },
+          { text: '格式', link: '/src/Map/all' },
+          { text: 'Trigger', link: '/src/Map/trigger' }
         ]
       }
     ],

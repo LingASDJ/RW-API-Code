@@ -30,7 +30,7 @@ features:
     linkText: 让我们立刻开始吧！
   - title: 地图代码表
     details: 学习铁锈的地图TMX代码表
-    link: /src/Map/trigger
+    link: /src/Map/all
     linkText: （当前仅Trigger部分）
   - title: 调试代码表
     details: 学习铁锈的高级调试代码表(仅Android)

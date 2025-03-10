@@ -6,9 +6,6 @@ outline: deep
 
 ## 特殊触发（不存在通用触发代码）
 
-- ● 表示使用字段“name”而不是“type”
-
-
 ### ●map_info
 
 - **type**
@@ -138,10 +135,8 @@ outline: deep
 - 在开局时在该处生成的单位从天上降落。
   - 注：对一些单位无效。
 
-### ●string
-
-- **point**
-  - 结合 `move` 中的 `target` 使用。
+### point
+ - 结合 `move` 中的 `target` 使用。
 
 ### ●camera_start
 
