@@ -23,7 +23,7 @@ outline: deep
   - 注：此设置会被房间里的游戏设置覆盖。
 
 - **introText**
-  - 开局弹出的消息，可使用 `/n` 换行。
+  - 开局弹出的消息，可使用 `\n` 换行。
     - `string`
 
 - **winCondition/loseCondition**
@@ -128,7 +128,7 @@ outline: deep
 
 - **dir**
   - 单位旋转角度。
-    - `int`
+    - `float`
 
 ### fall
 
@@ -289,10 +289,10 @@ outline: deep
     - 注：前两位是透明度。
 - **textOffsetX**
   - 文本横向偏移量。
-    - `int`
+    - `float`
 - **textOffsetY**
   - 文本纵向偏移量。
-    - `int`
+    - `float`
 - **textSize**
   - 文本大小，数字越大字符越大。
     - `int`
@@ -332,7 +332,7 @@ outline: deep
 
 - **globalMessage_delayPerChar**
   - 全局消息弹出速度。
-    - `string`（`slow`）/ `int`
+    - `string`（`slow`）/ `time`
 
 - **globalMessage_textColor**
   - 全局消息颜色。
@@ -346,15 +346,15 @@ outline: deep
 
 - **warmup**
   - 当宾语符合触发条件时，效果将根据设定时间延迟，延迟耗尽时激活。
-    - `int`
+    - `time`
   - 注：在没有激活源的情况下，`warmup` 和 `delay` 没有太大差别。
 
 - **delay**
   - 开局或重置后触发宾语的时间。
-    - `int`
+    - `time`
 
 - **activatedBy**
-  - 检测所连接宾语的名称或 `id`，如果连接来源符合则触发。
+  - 检测所连接宾语的名称或 `id`，如果连接来源符合则触发。（此语句为瞬发）
     - `string`（`object name/id`）
     - 例：`activatedBy:1,2`
 
@@ -372,20 +372,20 @@ outline: deep
 
 - **repeatDelay**
   - 重复延迟。宾语被触发后，再次执行效果的时间（会被 `deactivatedBy` 终止）。
-    - `int`
+    - `time`
 
-- **deactivatedBy**
-  - 检测所连接宾语的名称或 `id`，如果连接来源是激活状态，则禁止触发。
+- **deactivatedBy** 
+  - 检测所连接宾语的名称或 `id`，如果连接来源是激活状态，则禁止触发。（此语句为时钟检查）
     - `string`（`object name/id`）
 
 - **alsoActivate**
-  - 在宾语被触发后，触发所连接的宾语。
+  - 在宾语被触发后，触发所连接的宾语。（该语句是一次性的，建议改用 `activatedBy` 或 `deactivatedBy`）
     - `string`（`object name/id`）
     - 例：`alsoActivate:3,4`
 
 - **resetActivationAfter**
   - 重置宾语的时间间隔。重置后，所有已触发的属性将被清除并等待下一次触发。
-    - `int`
+    - `time`
 
 - **activateIds**
   - 同 `alsoActivate`。
@@ -415,7 +415,7 @@ outline: deep
 
 - **spawnChance**
   - 单位生成概率。
-    - `int`（`0-1`）
+    - `float`（`0-1`）
 
 - **maxSpawnLimit**
   - 单位最大生成数量。
@@ -443,35 +443,35 @@ outline: deep
 
 - **offsetX**
   - 单位生成地点偏移度（横轴）。
-    - `int`
+    - `float`
 
 - **offsetY**
   - 单位生成地点偏移度（纵轴）。
-    - `int`
+    - `float`
 
 - **offsetRandomXY**
   - 单位生成地点随机偏移度（横纵轴随机偏移）。
-    - `int`
+    - `float`
     - 注：目前铁锈战争沙盒模式的随机系统有严重问题，建议在普通模式下测试代码效果。
 
 - **offsetRandomX**
   - 单位生成地点随机偏移度（横轴偏移）。
-    - `int`
+    - `float`
     - 注：目前铁锈战争沙盒模式的随机系统有严重问题，建议在普通模式下测试代码效果。
 
 - **offsetRandomY**
   - 单位生成地点随机偏移度（纵轴偏移）。
-    - `int`
+    - `float`
     - 注：目前铁锈战争沙盒模式的随机系统有严重问题，建议在普通模式下测试代码效果。
 
 - **offsetHeight**
   - 单位生成高度。
-    - `int`
+    - `float`
 
 - **offsetRandomDir**
   - 单位生成方向范围随机度。
-    - `int`
+    - `float`
 
 - **offsetDir**
   - 单位生成方向。
-    - `int`
+    - `float`
