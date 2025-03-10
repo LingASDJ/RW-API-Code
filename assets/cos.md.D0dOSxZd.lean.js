@@ -1,1 +1,0 @@
-import{_ as a,c as t,o as i,ag as e}from"./chunks/framework.DPDPlp3K.js";const g=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"cos.md","filePath":"cos.md"}'),v={name:"cos.md"};function d(c,s,l,o,n,r){return i(),t("div",null,s[0]||(s[0]=[e("",1)]))}const m=a(v,[["render",d]]);export{g as __pageData,m as default};
