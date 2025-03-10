@@ -12,13 +12,17 @@ outline: deep
 ### 安装RW-Engine
 解压下载的ZIP，将里面的RW_Engine这个文件夹整个复制到你的mod的目录下。
 
-    文件结构：
-    ---units
-        ---你的mod1
-            ---RW_Engine
-            ---mod-info.txt
-            ---.........
-        ---你的mod2
+文件结构：
+
+> units
+
+>> 你的mod1
+
+>>> RW_Engine</br>
+>>> mod-info.txt</br>
+>>> .........
+
+>> 你的mod2
 
 ## 二.使用RW-Engine
 
