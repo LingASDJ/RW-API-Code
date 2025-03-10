@@ -178,3 +178,40 @@
 * {
 -webkit-tap-highlight-color:rgba(0,0,0,0);
 }
+
+
+/* 新增align-right类 */
+.chat-message.align-right {
+  justify-content: flex-end;
+  margin-left: auto;
+}
+
+.hr-mid-border-content::after{
+  content: attr(data-content);
+  position: absolute;
+  padding: 4px 1ch;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  color: transparent;
+  border: 1px solid #ff0000;
+}
+.hr-solid-content{
+  color: #000000;
+  border: 0;
+  font-size: 16px;
+  padding: 1em 0;
+  position: relative;
+}
+.hr-solid-content::before {
+  content: attr(data-content);
+  position: absolute;
+  padding: 0 1ch;
+  line-height: 1px;
+  border: solid #000000;
+  border-width: 0 19vw;
+  width: fit-content;
+  /* for IE浏览器 */
+  white-space: nowrap;
+  left: 50%;
+  transform: translateX(-50%);
+}
