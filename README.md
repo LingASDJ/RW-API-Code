@@ -77,6 +77,13 @@
                 </a>
             </td>
             <td align="center">
+                <a href="https://github.com/Mitpoppy">
+                    <img src="https://avatars.githubusercontent.com/u/89001400?v=4" width="100;" alt="Mitpoppy"/>
+                    <br />
+                    <sub><b>Mitpoppy</b></sub>
+                </a>
+            </td>
+            <td align="center">
                 <a href="https://github.com/n9tank">
                     <img src="https://avatars.githubusercontent.com/u/118785835?v=4" width="100;" alt="n9tank"/>
                     <br />
