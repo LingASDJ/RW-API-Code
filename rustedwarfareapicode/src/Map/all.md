@@ -19,7 +19,7 @@ outline: deep
  </map>
  ```
 
-&lt;map&gt;中包含了一个&lt;objectgroup&gt;组，它的“name”是“Trigger”（不区分大小写），我们称之它为宾语（触发）。
+&lt;map&gt;中包含了一个&lt;objectgroup&gt;组，它的“name”是“Triggers”（不区分大小写），我们称之它为宾语（触发）。
 
 ```
 <object name="map_info" x="0" y="0" width="20" height="20">
@@ -31,7 +31,9 @@ outline: deep
 
 这是其中一个元素，它符合文档中“●map_info”（●选项表示值为“name”，否则是“type”）特征。
 
-这样是为了方便描述，文档不需要太复杂，参考此处出现的特征符合文档部分相信你自己理解了格式。
+在使用Trigger前，必须定义“map_info”以及“type”。
+
+这样是为了方便描述，文档不需要太复杂，参考此处出现的特征符合文档部分相信你能自己理解格式。
 
 ```
 <object type="unitAdd" x="-Infinity" y="-Infinity">
