@@ -5,7 +5,15 @@ export default defineConfig({
   title: "RW-API_Code",
   description: "Easy Code",
   cleanUrls: true,
-  head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
+  head: [
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    [
+      'script', 
+      {
+        src: 'https://cdn.jsdelivr.net/npm/docsify-chat/lib/docsify-chat.min.js'
+      }
+    ]
+  ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
