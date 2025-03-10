@@ -15,9 +15,9 @@
                         <path d="M900 4272 c-46 -23 -75 -79 -65 -130 6 -33 98 -129 778 -809 l772 -773 -772 -772 c-849 -851 -807 -802 -767 -885 25 -51 77 -78 129 -69 36 7 110 78 813 779 l772 772 773 -772 c702 -701 776 -772 812 -779 52 -9 104 18 129 69 40 83 82 34 -767 885 l-772 772 772 773 c680 680 772 776 778 809 15 82 -61 158 -143 143 -33 -6 -129 -98 -810 -778 l-772 -772 -768 767 c-428 428 -779 772 -795 777 -39 15 -56 14 -97 -7z">
                         </path>
                     </g>
-                </svg></button></div><span class="title" style="font-size: 18px;font-weight: 700;">RW-API-Code 制作团队</span>
+                </svg></button></div><span class="title" style="font-size: 18px;font-weight: 700; color:black;">RW-API-Code 制作团队</span>
     </header>
-    <main class="main-area">
+    <main class="main-area" style="background-color:#f6f8fa; color:0;">
         <div class="chat-message show">
             <div class="avatar">
                 <img src="https://avatars.githubusercontent.com/u/70191651?v=4" width="100" alt="LingASDJ">
@@ -25,7 +25,7 @@
             <div class="message-box">
                 <div class="nickname">JDSALing</div>
                 <div class="message">
-                    <div class="chat-text">RW-API-Code 总站长<br>当前模块负责：全局优化，项目监控</div>
+                    <div class="chat-text" style="color:black">RW-API-Code 总站长<br>当前模块负责：全局优化，项目监控</div>
                 </div>
             </div>
         </div>
@@ -36,7 +36,7 @@
             <div class="message-box">
                 <div class="nickname">十山月</div>
                 <div class="message">
-                    <div class="chat-text">RW-API-Code 外部组<br>当前模块负责：RWE-Plugins</div>
+                   <div class="chat-text" style="color:black">RW-API-Code 外部组<br>当前模块负责：RWE-Plugins</div>
                 </div>
             </div>
         </div>
@@ -47,7 +47,7 @@
             <div class="message-box">
                 <div class="nickname">LiuLiu</div>
                 <div class="message">
-                    <div class="chat-text">RW-API-Code 副站长<br>当前模块负责：UI优化</div>
+                   <div class="chat-text" style="color:black">RW-API-Code 副站长<br>当前模块负责：UI优化</div>
                 </div>
             </div>
         </div>
@@ -58,7 +58,7 @@
             <div class="message-box">
                 <div class="nickname">Mason</div>
                 <div class="message">
-                    <div class="chat-text">RW-API-Code 副站长<br>当前模块负责：全局部署，Vue扩展模块</div>
+                   <div class="chat-text" style="color:black">RW-API-Code 副站长<br>当前模块负责：全局部署，Vue扩展模块</div>
                 </div>
             </div>
         </div>
@@ -69,7 +69,7 @@
             <div class="message-box">
                 <div class="nickname">Mitpoppy</div>
                 <div class="message">
-                    <div class="chat-text">RW-API-Code 全局组<br>当前模块负责：UI调整，数据优化</div>
+                   <div class="chat-text" style="color:black">RW-API-Code 全局组<br>当前模块负责：UI调整，数据优化</div>
                 </div>
             </div>
         </div>
@@ -80,40 +80,7 @@
             <div class="message-box">
                 <div class="nickname">王兴家</div>
                 <div class="message">
-                    <div class="chat-text">RW-API-Code 全局组<br>当前模块负责：全局优化，代码规范化监控</div>
-                </div>
-            </div>
-        </div>       
-        <div class="chat-message show align-right">
-            <div class="avatar">
-                <img src="https://avatars.githubusercontent.com/u/79432329?v=4" width="100" alt="Tobby">
-            </div>
-            <div class="message-box">
-                <div class="nickname">Tobby</div>
-                <div class="message">
-                    <div class="chat-text">RW-API-Code 单位组<br>当前模块负责：逻辑组</div>
-                </div>
-            </div>
-        </div>
-        <div class="chat-message show align-right">
-            <div class="avatar">
-                <img src="https://avatars.githubusercontent.com/u/106828088?v=4" width="100" alt="二月">
-            </div>
-            <div class="message-box">
-                <div class="nickname">二月</div>
-                <div class="message">
-                    <div class="chat-text">RW-API-Code 单位组<br>当前模块负责：图像组</div>
-                </div>
-            </div>
-        </div>
-        <div class="chat-message show align-right">
-            <div class="avatar">
-                <img src="https://avatars.githubusercontent.com/u/141509640?v=4" width="100" alt="WisenextTime">
-            </div>
-            <div class="message-box">
-                <div class="nickname">WisenextTime</div>
-                <div class="message">
-                    <div class="chat-text">RW-API-Code 单位组<br>当前模块负责：移动、刷兵组</div>
+                   <div class="chat-text" style="color:black">RW-API-Code 全局组<br>当前模块负责：全局优化，代码规范化监控</div>
                 </div>
             </div>
         </div>
@@ -124,7 +91,40 @@
             <div class="message-box">
                 <div class="nickname">屑狐狸</div>
                 <div class="message">
-                    <div class="chat-text">RW-API-Code 单位组<br>当前模块负责：攻击、贴花组</div>
+                   <div class="chat-text" style="color:black">RW-API-Code 单位组<br>当前模块负责：攻击、贴花、附属、炮塔组</div>
+                </div>
+            </div>
+        </div>       
+        <div class="chat-message show align-right">
+            <div class="avatar">
+                <img src="https://avatars.githubusercontent.com/u/79432329?v=4" width="100" alt="Tobby">
+            </div>
+            <div class="message-box">
+                <div class="nickname">Tobby</div>
+                <div class="message">
+                   <div class="chat-text" style="color:black">RW-API-Code 单位组<br>当前模块负责：逻辑组</div>
+                </div>
+            </div>
+        </div>
+        <div class="chat-message show align-right">
+            <div class="avatar">
+                <img src="https://avatars.githubusercontent.com/u/106828088?v=4" width="100" alt="二月">
+            </div>
+            <div class="message-box">
+                <div class="nickname">二月</div>
+                <div class="message">
+                   <div class="chat-text" style="color:black">RW-API-Code 单位组<br>当前模块负责：图像组</div>
+                </div>
+            </div>
+        </div>
+        <div class="chat-message show align-right">
+            <div class="avatar">
+                <img src="https://avatars.githubusercontent.com/u/141509640?v=4" width="100" alt="WisenextTime">
+            </div>
+            <div class="message-box">
+                <div class="nickname">WisenextTime</div>
+                <div class="message">
+                   <div class="chat-text" style="color:black">RW-API-Code 单位组<br>当前模块负责：移动、刷兵组</div>
                 </div>
             </div>
         </div>
@@ -135,7 +135,7 @@
             <div class="message-box">
                 <div class="nickname">N9Tank</div>
                 <div class="message">
-                    <div class="chat-text">RW-API-Code 地图组<br>当前模块负责：全局地图代码组</div>
+                   <div class="chat-text" style="color:black">RW-API-Code 地图组<br>当前模块负责：全局地图代码组</div>
                 </div>
             </div>
         </div>
