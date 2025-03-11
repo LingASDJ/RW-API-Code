@@ -66,7 +66,7 @@
                 <a href="https://github.com/WisenextTime">
                     <img src="https://avatars.githubusercontent.com/u/141509640?v=4" width="100;" alt="WisenextTime"/>
                     <br />
-                    <sub><b>Null</b></sub>
+                    <sub><b>WisenextTime</b></sub>
                 </a>
             </td>
             <td align="center">
