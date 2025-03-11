@@ -5,13 +5,21 @@ export default defineConfig({
   title: "RW-API_Code",
   description: "Easy Code",
   cleanUrls: true,
+  head: [
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    [
+      'script', 
+      {
+        src: 'https://cdn.jsdelivr.net/npm/docsify-chat/lib/docsify-chat.min.js'
+      }
+    ]
+  ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '主页', link: '/' },
       { text: '单位API', link: '/src/Unit/core' },
-      { text: '地图API', link: '/src/Map/teada' },
-      { text: '调试API', link: '/src/Debug/test' },
+      { text: '地图API', link: '/src/Map/all' },
       { text: '编写指南', link: '/api-dev' },
       { text: 'RW-Engine指南', link: '/src/RW-Engine/quick-start' },
       { text: '感谢名单', link: '/cos' }
@@ -41,6 +49,8 @@ export default defineConfig({
           { text: '贴花-DECAL', link: '/src/Unit/decal' },
           { text: '刷兵/刷单位-SPAWN', link: '/src/Unit/spawnunit_spawnprojectile' },
           { text: '-------------------------', link: '' },
+          { text: '地图格式', link: '/src/Map/all' },
+          { text: 'Trigger', link: '/src/Map/trigger' }
         ]
       }
     ],

@@ -6,7 +6,7 @@ outline: deep
 <h1>RTS-Code-API---开发规范</h1>
 </div>
 <div style="display:flex;align-content: flex-start;flex-wrap: nowrap;flex-direction: row;justify-content: center;">
- <img src="https://jdsalingzx.top/wp-content/uploads/2025/03/logo.png">
+ <img src="/logo.png">
  </div>
 
 ::: tip

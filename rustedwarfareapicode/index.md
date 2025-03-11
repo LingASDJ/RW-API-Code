@@ -7,7 +7,7 @@ hero:
   text: 轻松编码，轻松学习
   tagline: 学习Mod,制作Mod,创新Mod
   image:
-    src: https://jdsalingzx.top/wp-content/uploads/2025/03/logo.png
+    src: /logo.png
     alt: RW-API-Code
 
   actions:
@@ -28,13 +28,14 @@ features:
     details: 学习最基础的铁锈单位API-Code
     link: /src/Unit/core
     linkText: 让我们立刻开始吧！
+  - title: 单位代码表（NDT)
+    details: NDT数据集
+    link: /src/UnitNDT/index
+    linkText: 查阅
   - title: 地图代码表
     details: 学习铁锈的地图TMX代码表
-    link: /src/Map/trigger
+    link: /src/Map/all
     linkText: （当前仅Trigger部分）
-  - title: 调试代码表
-    details: 学习铁锈的高级调试代码表(仅Android)
-    linkText: 让我们立刻开始吧！[开发中]
   - title: RW-Engine指南
     details: 学习铁锈Mod RW-Engine的使用(仅Android)
     link: /src/RW-Engine/quick-start
