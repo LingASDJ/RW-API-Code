@@ -16,16 +16,17 @@ outline: deep
 定义单位的运动类型，判定单位是否可在某种地形上运动，可用值为NONE、LAND、BUILDING、AIR、WATER、HOVER、OVER_CLIFF、OVER_CLIFF_WATER。
 ::: tip
 不同的运动类型特点如下
-|类型|可跨陆地|可跨悬崖|可跨水|可跨岩浆|
-|-|-|-|-|-
-|NONE|✓|✓|✓|✓|
-|LAND|✓|×|×|×|
-|BUILDING|✓|×|×|×|
-|AIR|✓|✓|✓|✓|
-|WATER|×|×|✓|×|
-|HOVER|✓|×|✓|×|
-|OVER_CLIFF|✓|✓|×|×|
-|OVER_CLIFF_WATER|✓|✓|✓|×|
+
+| 类型               | 可跨陆地 | 可跨悬崖 | 可跨水 | 可跨岩浆 |
+|------------------|------|------|-----|------|
+| NONE             | ✓    | ✓    | ✓   | ✓    |
+| LAND             | ✓    | ×    | ×   | ×    |
+| BUILDING         | ✓    | ×    | ×   | ×    |
+| AIR              | ✓    | ✓    | ✓   | ✓    |
+| WATER            | ×    | ×    | ✓   | ×    |
+| HOVER            | ✓    | ×    | ✓   | ×    |
+| OVER_CLIFF       | ✓    | ✓    | ×   | ×    |
+| OVER_CLIFF_WATER | ✓    | ✓    | ✓   | ×    |
 :::
 ::: tip
 类型NONE虽然说移动无视地形，但是只能在LAND类型地块进行放置
