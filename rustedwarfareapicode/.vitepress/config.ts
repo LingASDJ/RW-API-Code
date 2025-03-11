@@ -37,6 +37,8 @@ export default defineConfig({
           { text: '攻击-ATTACK', link: '/src/Unit/attack' },
           { text: '运动-MOVEMENT', link: '/src/Unit/movement' },
           { text: '逻辑-LOGIC', link: '/src/Unit/loginboolean' },
+          { text: '资源-RESOURCE', link: '/src/Unit/resource' },
+          { text: '贴花-DECAL', link: '/src/Unit/decal' },
           { text: '刷兵/刷单位-SPAWN', link: '/src/Unit/spawnunit_spawnprojectile' },
           { text: '-------------------------', link: '' },
         ]
