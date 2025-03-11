@@ -371,7 +371,7 @@ outline: deep
       ```
 
 - **repeatDelay**
-  - 重复延迟。宾语被触发后，再次执行效果的时间（会被 `deactivatedBy` 终止）。
+  - 重复延迟。宾语被触发后，再次执行效果的时间（不会检查`activatedBy`，会被 `deactivatedBy` 终止）。
     - `time`
 
 - **deactivatedBy** 
