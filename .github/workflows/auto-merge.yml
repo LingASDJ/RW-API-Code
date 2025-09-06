@@ -28,7 +28,7 @@ jobs:
         uses: actions/checkout@v3 # 使用 actions/checkout 动作
 
       - name: Setup Node.js environment # 步骤名称为：Setup Node.js environment
-        uses: actions/setup-node@v3 # 使用 actions/setup-node 动作安装 Node.js 环境
+        uses: actions/setup-node@v5 # 使用 actions/setup-node 动作安装 Node.js 环境
         with:
           node-version: '14.x'
 
