@@ -25,7 +25,7 @@ jobs:
     # 步骤，包括代码 checkout、Node.js 环境设置、依赖安装、代码 lint、单元测试等操作
     steps:
       - name: Checkout code # 步骤名称为：Checkout code
-        uses: actions/checkout@v3 # 使用 actions/checkout 动作
+        uses: actions/checkout@v6 # 使用 actions/checkout 动作
 
       - name: Setup Node.js environment # 步骤名称为：Setup Node.js environment
         uses: actions/setup-node@v3 # 使用 actions/setup-node 动作安装 Node.js 环境
