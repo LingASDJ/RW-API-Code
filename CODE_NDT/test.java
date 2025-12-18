@@ -16,9 +16,18 @@ public class test {
  /*
   https://products.aspose.app/cells/zh/conversion/xlsx-to-json
   NDT-1.15.json xlxs2json
+   {
+  "Column2": "代码",
+  "Column3": "代码翻译",
+  "Column4": "描述",
+  "Column5": "例子",
+  "Column6": "值类型",
+  "键注意事项": "注意事项"
+ },
   */
  public static void outfromdata() throws Exception {
   JSONObject js=pare(new File("sdcard/a"));
+  //git文件没更新数据集，自己换个
   BufferedWriter index=new BufferedWriter(new FileWriter(new File(outPath, "index.md")));
   index.write("# index");
   JSONArray list= js.getJSONArray("单位代码");
@@ -32,9 +41,9 @@ public class test {
     }
     continue;
    }
-   String str=obj.optString("key翻译");
+   String str=obj.optString("Column3");
    if (str == null)continue;
-   String key=obj.optString("key描述解释");
+   String key=obj.optString("Column4");
    boolean isSection=key == null ?false: key.startsWith("[") && key.endsWith("]");
    if (isSection || str.matches("[a-zA-Z]{2,}")) {
     if (buff != null)buff.close();
@@ -59,13 +68,13 @@ public class test {
     index.write(str);
     index.write(".md");
     index.write(")\n");
-    index.write(obj.optString("key代码"));
+    index.write(obj.optString("Column2"));
     buff = new BufferedWriter(new FileWriter(new File(outPath, str + ".md")));
     buff.write("# ");
     buff.write(rstr);
     buff.write("\n");
    } else if (buff != null) {
-    key = obj.optString("key代码");
+    key = obj.optString("Column2");
     if (key == null || key.length() == 0)continue;
     char c=key.charAt(0);
     if (Character.isLowerCase(c) || Character.isUpperCase(c) || c == '@') {
@@ -74,16 +83,14 @@ public class test {
      buff.write("\ntranslation:");
      buff.write(str.replaceFirst(":$", ""));
      buff.write("\n<br>type:");
-     String type=obj.optString("key值类型", "string");
+     String type=obj.optString("Column6", "string");
      buff.write(type);
-     String type2=obj.optString("Column8");
-     if (type2 != null && type2.length() > 0) {
-      if (!type.equals(type2)) {
-       buff.write('/');
-       buff.write(type2);
-      }
+     String type2 = obj.optString("Column5");
+     if (type2 != null ){
+	buff.write("\n<br>example:");
+	buff.write(type2);
      }
-     str = obj.optString("key描述解释");
+     str = obj.optString("Column4");
      if (str != null) {
       buff.write("\n<br>");
       buff.write(str);
@@ -103,4 +110,3 @@ public class test {
   return new JSONObject(new String(by));
  }
 }
-
