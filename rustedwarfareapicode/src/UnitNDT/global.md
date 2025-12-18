@@ -67,7 +67,7 @@ translation:在动作(action)的描述中显示资源颜色
 ## appendResourceInHUD
 translation:在HUD中追加资源
 <br>type:(global) resource code name
-<br>example:appendResourceInHUD:<resources:name>
+<br>example:appendResourceInHUD: `resources:name`
 <br>使用后，在游戏界面中这个资源值将会叠在目标资源值的后面，并且继承目标资源的颜色和图标。这个资源值后面也能继续叠加其它资源值
 ## displayPrefixInHUD
 translation:在HUD中显示前缀
